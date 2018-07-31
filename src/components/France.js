@@ -1,4 +1,3 @@
-
 import React, { Component } from "react"
 import { get } from "axios"
 import { feature } from "topojson-client"
@@ -10,10 +9,14 @@ import {
   Markers,
   Marker,
 } from "react-simple-maps"
+import { geoPath } from "d3-geo"
+import { geoTimes } from "d3-geo-projection"
 import Button from '@material-ui/core/Button'
 import chroma from "chroma-js"
 import { VictoryPie } from "victory"
-import { geoAlbers } from "d3-geo"
+import MapDescription from '../components/MapDescription'
+import dataLyon from '../static/dataLyon'
+import dataSubregions from '../static/subregions'
 
 const wrapperStyles = {
   width: "100%",
@@ -22,46 +25,30 @@ const wrapperStyles = {
   fontFamily: "Roboto, sans-serif",
 }
 
-const setSize = {
-  width: 800,
-  height: 600
+const wrapperDataVisualisationStyles = {
+  width: "100%",
+  maxWidth: 980,
+  margin: "0 auto",
+  fontFamily: "Roboto, sans-serif",
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-around',
 }
 
-const colorScale = chroma
-  .scale([
-    '#CCCCCC',
-    '#F0F1EE',
-    '#C4D4AF',
-  ])
-  .mode('lch')
-  .colors(24)
+const wrapperDescriptionStyles = {
+  flex: "1",
+  marginLeft: 15
+}
 
-const subregions = [
-  "AQUITAINE",
-  "AUVERGNE",
-  "BASSE-NORMANDIE",
-  "ALSACE",
-  "BRETAGNE",
-  "LANGUEDOC-ROUSSILLON",
-  "CHAMPAGNE-ARDENNE",
-  "BOURGOGNE",
-  "CORSE",
-  "FRANCHE-COMTE",
-  "CENTRE",
-  "CHAMPAGNE-ARDENNE",
-  "DRDELYON",
-  "ILE-DE-FRANCE",
-  "LORRAINE",
-  "HAUTE-NORMANDIE",
-  "PAYSDELALOIRE",
-  "LIMOUSIN",
-  "MIDI-PYRENEES",
-  "PICARDIE",
-  "PROVENCE-ALPES-COTED'AZUR",
-  "POITOU-CHARENTES",
-  "RHONE-ALPES",
-  "NORD-PAS-DE-CALAIS",
-]
+const wrapperMapStyles = {
+  width: "100%",
+  height: "auto",
+  flex: "5"
+}
+
+const colorScale = chroma.scale(['white', 'black']).gamma(1).correctLightness().colors(24);
+
+const subregions = dataSubregions
 
 
 class France extends Component {
@@ -72,117 +59,36 @@ class France extends Component {
       center:  [2.454071, 46.279229],
       geographyPaths: [],
       zoom: 1,
-      cities: [{ id:1, markerOffset: 37, name: "Lyon", coordinates: [4.85,45.75],
-        languages: [
-          { name: "German", value: 83.1 },
-          { name: "French", value: 3 },
-          { name: "Italian", value: 5.9 },
-          { name: "Romansh", value: 0.4 }] },
-        { id:2, markerOffset: 37, name: "Trevoux", coordinates: [4.774296000000049,45.94094],
-          languages: [
-            { name: "German", value: 83.1 },
-            { name: "French", value: 3 },
-            { name: "Italian", value: 5.9 },
-            { name: "Romansh", value: 0.4 }
-          ] },
-       /* { id:3, markerOffset: 37, name: "Miribel", coordinates: [4.954543000000058,45.82450799999999],
-          languages: [
-            { name: "German", value: 83.1 },
-            { name: "French", value: 3 },
-            { name: "Italian", value: 5.9 },
-            { name: "Romansh", value: 0.4 }
-          ] },*/
-        { id:4, markerOffset: 37, name: "Meyzieu", coordinates: [5.003657999999973,45.766821],
-          languages: [
-            { name: "German", value: 83.1 },
-            { name: "French", value: 3 },
-            { name: "Italian", value: 5.9 },
-            { name: "Romansh", value: 0.4 }
-          ] },
-        { id:5, markerOffset: -20, name: "Villefranche-sur-Saône", coordinates: [4.718820999999934,45.991471],
-          languages: [
-            { name: "German", value: 83.1 },
-            { name: "French", value: 3 },
-            { name: "Italian", value: 5.9 },
-            { name: "Romansh", value: 0.4 }
-          ] },
-        { id:6, markerOffset: -20, name: "Montluel", coordinates: [5.056991000000039,45.8498919],
-          languages: [
-            { name: "German", value: 83.1 },
-            { name: "French", value: 3 },
-            { name: "Italian", value: 5.9 },
-            { name: "Romansh", value: 0.4 }
-          ] },
-        { id:7, markerOffset: -20, name: "Chalamont", coordinates: [5.172362000000021,45.996513],
-          languages: [
-            { name: "German", value: 83.1 },
-            { name: "French", value: 3 },
-            { name: "Italian", value: 5.9 },
-            { name: "Romansh", value: 0.4 }
-          ] },
-        { id:8, markerOffset: 37, name: "Ambérieu-en-Bugey", coordinates: [5.359555999999998,45.95843600000001],
-          languages: [
-            { name: "German", value: 83.1 },
-            { name: "French", value: 3 },
-            { name: "Italian", value: 5.9 },
-            { name: "Romansh", value: 0.4 }
-          ] },
-        { id:9, markerOffset: -20, name: "Hauteville-Lompnes", coordinates: [5.601784899999984,45.9769859],
-          languages: [
-            { name: "German", value: 83.1 },
-            { name: "French", value: 3 },
-            { name: "Italian", value: 5.9 },
-            { name: "Romansh", value: 0.4 }
-          ] },
-        { id:10, markerOffset: -20, name: "Bellegarde-sur-Valserine", coordinates: [5.826179000000025,46.10759900000001],
-          languages: [
-            { name: "German", value: 83.1 },
-            { name: "French", value: 3 },
-            { name: "Italian", value: 5.9 },
-            { name: "Romansh", value: 0.4 }
-          ] },
-        { id:11, markerOffset: -20, name: "Oyonnax", coordinates: [5.655335000000036,46.257773],
-          languages: [
-            { name: "German", value: 83.1 },
-            { name: "French", value: 3 },
-            { name: "Italian", value: 5.9 },
-            { name: "Romansh", value: 0.4 }
-          ] },
-        { id:12, markerOffset: 37, name: "Pont-de-Vaux", coordinates: [4.938149000000067,46.43027800000001],
-          languages: [
-            { name: "German", value: 83.1 },
-            { name: "French", value: 3 },
-            { name: "Italian", value: 5.9 },
-            { name: "Romansh", value: 0.4 }
-          ] },
-        { id:13, markerOffset: 37, name: "Bourg-en-Bresse", coordinates: [5.225500699999998,46.20516749999999],
-          languages: [
-            { name: "German", value: 83.1 },
-            { name: "French", value: 3 },
-            { name: "Italian", value: 5.9 },
-            { name: "Romansh", value: 0.4 }
-          ] },
-        { id:14, markerOffset: -20, name: "Ferney-Voltaire", coordinates: [6.1086689999999635,46.25763200000001],
-          languages: [
-            { name: "German", value: 83.1 },
-            { name: "French", value: 3 },
-            { name: "Italian", value: 5.9 },
-            { name: "Romansh", value: 0.4 }
-          ] },
-
-
-      ]
+      selectedDr: '',
+      cities: dataLyon
     }
     this.loadPaths = this.loadPaths.bind(this)
     this.handleZoomIn = this.handleZoomIn.bind(this)
     this.handleZoomOut = this.handleZoomOut.bind(this)
     this.handleCitySelection = this.handleCitySelection.bind(this)
     this.handleReset = this.handleReset.bind(this)
+    this.onMouseEnterHandler = this.onMouseEnterHandler.bind(this)
+    this.handleGeographyClick = this.handleGeographyClick.bind(this)
+    this.projection = this.projection.bind(this)
+  }
+  projection() {
+    return geoTimes()
+      .translate([2.454071, 46.279229])
+      .scale(2600)
+  }
+  handleGeographyClick(geography) {
+    console.log(geography.properties)
+    const path = geoPath().projection(this.projection())
+    const centroid = this.projection().invert(path.centroid(geography))
+    this.setState({
+      center: centroid,
+      zoom: 4,
+      currentCountry: geography.properties.iso_a3,
+    })
+
   }
   handleCitySelection(evt) {
-    console.log(evt.target)
-    const cityId = evt.target.getAttribute("data-city")
-    const city = this.state.cities[cityId]
+    const city = this.state.cities[11]
     this.setState({
       center: city.coordinates,
       zoom: 10,
@@ -198,14 +104,11 @@ class France extends Component {
     this.loadPaths()
   }
   loadPaths() {
-    get("/world-110m.json")
+    get("/france-dr.json")
       .then(res => {
         if (res.status !== 200) return
         const france = res.data.features
-        // console.log(france.properties)
-        // const departements = null//feature(france, france.objects[Object.keys(france.objects)[0]]).features
         this.setState({ geographyPaths: france })
-        console.log(this.state.geographyPaths )
       })
   }
   handleZoomIn() {
@@ -218,77 +121,78 @@ class France extends Component {
       zoom: this.state.zoom / 2,
     })
   }
+  onMouseEnterHandler(a) {
+    let selectDr = a.properties.NOM_DEPT
+    this.setState(() => {
+      return { selectedDr: selectDr}
+    })
+    console.log(selectDr);
+  }
   render() {
     return (
       <div>
-        <Button onClick={ this.handleZoomIn } variant="contained" color="primary">
-          { "Zoom in" }
-        </Button>
-        <Button onClick={ this.handleZoomOut } variant="contained" color="primary">
-          { "Zoom out" }
+        <Button variant="contained" onClick={this.handleReset}>
+          { "Reset" }
         </Button>
         <div style={wrapperStyles}>
           {
-            this.state.cities.map((city, i) => (
-              <button
-                style={this.drButton}
-                key={i}
-                className="btn px1"
-                data-city={i}
+            this.state.cities.map((city, i) => {
+              if(city.name === "Bourg-en-Bresse") {
+               return ( <Button
+                 key={i}
+                variant="contained"
+                color="primary"
                 onClick={this.handleCitySelection}
-              >
-                { city.name }
-              </button>
-            )).filter(city => city.props.children == 'Bourg-en-Bresse')
+                >
+                {"DR Lyon"}
+                </Button> )
+              } else {
+                return null
+              }
+          })
           }
-          <button onClick={this.handleReset}>
-            { "Reset" }
-          </button>
         </div>
-        <div style={wrapperStyles}>
+        <div style={wrapperDataVisualisationStyles}>
           <ComposableMap
             projectionConfig={{
               center: [2.454071, 46.279229],
               scale: 2600,
 
             }}
-            width={setSize.width}
-            height={setSize.height}
-            style={{
-              width: "100%",
-              height: "auto",
-            }}
+            width={this.props.width}
+            height={this.props.height}
+            style={wrapperMapStyles}
           >
-            <ZoomableGroup center={this.state.center} zoom={this.state.zoom}>
-              <Geographies geography={this.state.geographyPaths} disableOptimization>
+            <ZoomableGroup center={this.state.center}
+                           zoom={this.state.zoom}>
+              <Geographies geography={this.state.geographyPaths}
+                           disableOptimization>
                 {(geographies, projection) =>
                   geographies.map((geography, i) =>
                     <Geography
                       key={`${geography.properties.NOM_DEPT}-${i}`}
+                      onMouseEnter={this.onMouseEnterHandler}
+                      onClick={this.handleGeographyClick}
                       cacheId={`path-${geography.properties.NOM_DEPT}-${i}`}
+                      data-tip={geography.properties.NOM_DEPT}
                       id={`${geography.properties.NOM_DEPT}`}
                       round
                       geography={geography}
                       projection={projection}
                       style={{
                       default: {
-                        //fill: "#ECEFF1",
-                        //fill: colorScale(geography.properties.NOM_DEPT),
                         fill: colorScale[subregions.indexOf(geography.properties.NOM_REGION)],
                         stroke: "#607D8B",
                         strokeWidth: 0.07,
                         outline: "none",
                       },
                       hover: {
-                        //fill: "#FF5722",
-                        //fill: colorScale(geography.properties.CODE_DEPT),
                         fill: chroma(colorScale[subregions.indexOf(geography.properties.NOM_REGION)]).darken(0.5),
                         stroke: "#607D8B",
                         strokeWidth: 0.075,
                         outline: "none",
                       },
                       pressed: {
-                        //fill: "#FF5722",
                         fill: chroma(colorScale[subregions.indexOf(geography.properties.NOM_REGION)]).brighten(0.5),
                         stroke: "#607D8B",
                         strokeWidth: 0.075,
@@ -298,37 +202,6 @@ class France extends Component {
                   />
                 )}
               </Geographies>
-{/*              <Markers>
-                {
-                  this.state.zoom >= 10 ?  this.state.cities.map((city, i) => (
-                    <Marker key={i} marker={city}>
-                      <circle
-                        cx={0}
-                        cy={0}
-                        r={5}
-                        style={{
-                          stroke: "#FF5722",
-                          strokeWidth: 2,
-                          opacity: 0.9,
-                        }}
-                      />
-                      <text
-                        textAnchor="middle"
-                        y={city.markerOffset}
-                        style={{
-                          fontFamily: "Roboto, sans-serif",
-                          fontSize: " 5 px",
-                          fill: "#607D8B",
-                        }}
-                      >
-                        {city.name}
-                      </text>
-                    </Marker>
-
-
-                  )) : ''
-                }
-              </Markers>*/}
               <Markers>
                 { this.state.zoom >= 10 ? this.state.cities.map((city, i) => (
                   <Marker
@@ -373,7 +246,7 @@ class France extends Component {
                       style={{
                         fontFamily: "Roboto, sans-serif",
                         fontSize: " 5 px",
-                        fill: "#607D8B",
+                        fill: "#DFF2FF",
                       }}
                     >
                       {city.name}
@@ -402,6 +275,7 @@ class France extends Component {
               </Markers>
             </ZoomableGroup>
           </ComposableMap>
+          <MapDescription selectDr={this.state.selectedDr} style={wrapperDescriptionStyles}/>
         </div>
       </div>
     )

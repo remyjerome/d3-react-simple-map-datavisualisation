@@ -11,7 +11,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Poke Fiducial Map D3.js / React</h1>
         </header>
-        <France/>
+        <France   width={800} height={650} className="map"/>
       </div>
     );
   }
