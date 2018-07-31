@@ -16,7 +16,8 @@ import chroma from "chroma-js"
 import { VictoryPie } from "victory"
 import MapDescription from '../components/MapDescription'
 import dataLyon from '../static/dataLyon'
-import dataSubregions from '../static/subregions'
+import dataSubregions from '../static/dataSubDgr'
+import dataDgrZoom from '../static/dataDgrZoom'
 
 const wrapperStyles = {
   width: "100%",
@@ -46,8 +47,9 @@ const wrapperMapStyles = {
   flex: "5"
 }
 
-const colorScale = chroma.scale(['white', 'black']).gamma(1).correctLightness().colors(24);
-
+// const colorScale = chroma.scale(['white', 'black']).gamma(1).correctLightness().colors(24);
+// const colorScale = chroma.scale(['#FF6E40', 'FFD740', '#00B8D4',]).colors(7)
+const colorScale = chroma.scale(['#fafa6e','#2A4858']).mode('lch').colors(7)
 const subregions = dataSubregions
 
 
@@ -60,6 +62,7 @@ class France extends Component {
       geographyPaths: [],
       zoom: 1,
       selectedDr: '',
+      selectedDgr: '',
       cities: dataLyon
     }
     this.loadPaths = this.loadPaths.bind(this)
@@ -70,6 +73,16 @@ class France extends Component {
     this.onMouseEnterHandler = this.onMouseEnterHandler.bind(this)
     this.handleGeographyClick = this.handleGeographyClick.bind(this)
     this.projection = this.projection.bind(this)
+    this.handleDgrSelection = this.handleDgrSelection.bind(this)
+  }
+  handleDgrSelection(evt) {
+    const dgrId = evt.target.getAttribute("data-dgr")
+    const dgr = dataDgrZoom[dgrId]
+    console.log(evt.target.getAttribute("data-dgr"))
+    this.setState({
+      center: dgr.coordinates,
+      zoom: dgr.zoom,
+    })
   }
   projection() {
     return geoTimes()
@@ -136,6 +149,21 @@ class France extends Component {
         </Button>
         <div style={wrapperStyles}>
           {
+            dataDgrZoom.map((dgr, i) => {
+               return ( <Button
+                 key={i}
+                variant="contained"
+                color="primary"
+                onClick={this.handleDgrSelection}
+                 data-dgr={i}
+                >
+                { dgr.name }
+                </Button> )
+          })
+          }
+        </div>
+        {/*        <div style={wrapperStyles}>
+          {
             this.state.cities.map((city, i) => {
               if(city.name === "Bourg-en-Bresse") {
                return ( <Button
@@ -151,7 +179,7 @@ class France extends Component {
               }
           })
           }
-        </div>
+        </div>*/}
         <div style={wrapperDataVisualisationStyles}>
           <ComposableMap
             projectionConfig={{
@@ -181,19 +209,19 @@ class France extends Component {
                       projection={projection}
                       style={{
                       default: {
-                        fill: colorScale[subregions.indexOf(geography.properties.NOM_REGION)],
+                        fill: colorScale[subregions.indexOf(geography.properties.NOM_DGR)],
                         stroke: "#607D8B",
                         strokeWidth: 0.07,
                         outline: "none",
                       },
                       hover: {
-                        fill: chroma(colorScale[subregions.indexOf(geography.properties.NOM_REGION)]).darken(0.5),
+                        fill: chroma(colorScale[subregions.indexOf(geography.properties.NOM_DGR)]).darken(0.5),
                         stroke: "#607D8B",
                         strokeWidth: 0.075,
                         outline: "none",
                       },
                       pressed: {
-                        fill: chroma(colorScale[subregions.indexOf(geography.properties.NOM_REGION)]).brighten(0.5),
+                        fill: chroma(colorScale[subregions.indexOf(geography.properties.NOM_DGR)]).brighten(0.5),
                         stroke: "#607D8B",
                         strokeWidth: 0.075,
                         outline: "none",
