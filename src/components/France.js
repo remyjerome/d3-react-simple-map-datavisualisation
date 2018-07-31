@@ -74,6 +74,20 @@ class France extends Component {
     this.handleGeographyClick = this.handleGeographyClick.bind(this)
     this.projection = this.projection.bind(this)
     this.handleDgrSelection = this.handleDgrSelection.bind(this)
+    this.handleZoomIn = this.handleZoomIn.bind(this)
+    this.handleZoomOut = this.handleZoomOut.bind(this)
+    this.handleMoveStart = this.handleMoveStart.bind(this)
+    this.handleMoveEnd = this.handleMoveStart.bind(this)
+  }
+  handleZoomIn() {
+    this.setState({
+      zoom: this.state.zoom * 2,
+    })
+  }
+  handleZoomOut() {
+    this.setState({
+      zoom: this.state.zoom / 2,
+    })
   }
   handleDgrSelection(evt) {
     const dgrId = evt.target.getAttribute("data-dgr")
@@ -82,6 +96,7 @@ class France extends Component {
     this.setState({
       center: dgr.coordinates,
       zoom: dgr.zoom,
+      selectedDgr: dgr
     })
   }
   projection() {
@@ -126,20 +141,27 @@ class France extends Component {
   }
   handleZoomIn() {
     this.setState({
-      zoom: this.state.zoom * 2,
+      zoom: this.state.zoom * 1.1,
     })
   }
   handleZoomOut() {
     this.setState({
-      zoom: this.state.zoom / 2,
+      zoom: this.state.zoom / 1.1,
     })
+  }
+  handleMoveStart(currentCenter) {
+    console.log("New center: ", currentCenter)
+  }
+
+  handleMoveEnd(newCenter) {
+    console.log("New center: ", newCenter)
   }
   onMouseEnterHandler(a) {
     let selectDr = a.properties.NOM_DEPT
     this.setState(() => {
       return { selectedDr: selectDr}
     })
-    console.log(selectDr);
+    // console.log(selectDr);
   }
   render() {
     return (
@@ -147,10 +169,12 @@ class France extends Component {
         <Button variant="contained" onClick={this.handleReset}>
           { "Reset" }
         </Button>
+        <Button onClick={ this.handleZoomIn }>{ "Zoom in" }</Button>
+        <Button onClick={ this.handleZoomOut }>{ "Zoom out" }</Button>
         <div style={wrapperStyles}>
           {
             dataDgrZoom.map((dgr, i) => {
-               return ( <Button
+               return ( <button
                  key={i}
                 variant="contained"
                 color="primary"
@@ -158,7 +182,7 @@ class France extends Component {
                  data-dgr={i}
                 >
                 { dgr.name }
-                </Button> )
+                </button> )
           })
           }
         </div>
@@ -192,7 +216,9 @@ class France extends Component {
             style={wrapperMapStyles}
           >
             <ZoomableGroup center={this.state.center}
-                           zoom={this.state.zoom}>
+                           zoom={this.state.zoom}
+                           onMoveStart={this.handleMoveStart}
+                           onMoveEnd={this.handleMoveEnd}>
               <Geographies geography={this.state.geographyPaths}
                            disableOptimization>
                 {(geographies, projection) =>
@@ -200,7 +226,7 @@ class France extends Component {
                     <Geography
                       key={`${geography.properties.NOM_DEPT}-${i}`}
                       onMouseEnter={this.onMouseEnterHandler}
-                      onClick={this.handleGeographyClick}
+                      // onClick={this.handleGeographyClick}
                       cacheId={`path-${geography.properties.NOM_DEPT}-${i}`}
                       data-tip={geography.properties.NOM_DEPT}
                       id={`${geography.properties.NOM_DEPT}`}
