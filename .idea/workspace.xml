@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8434e9e-1594-430b-a1b5-266b4f417c71" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/static/dataSubDr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/france-dr.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/france-dr.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/France.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/France.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MapDescription.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MapDescription.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/static/dataDgrZoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/dataDgrZoom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/subregion" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,6 +18,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="France.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/France.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="128" column="12" lean-forward="true" selection-start-line="128" selection-start-column="12" selection-end-line="128" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="france-dr.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/france-dr.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="6062" column="30" selection-start-line="6062" selection-start-column="19" selection-end-line="6062" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dataDgrZoom.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/static/dataDgrZoom.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="117" selection-start-line="5" selection-start-column="117" selection-end-line="5" selection-end-column="117" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="dataSubDr.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/static/dataSubDr.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -43,30 +69,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="France.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/France.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="105" column="8" selection-start-line="105" selection-start-column="8" selection-end-line="105" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataTable.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/DataTable.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="47" column="26" lean-forward="true" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -78,18 +80,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>height</find>
-      <find>setSi</find>
-      <find>DR</find>
-      <find>&quot;CODE_DEPT&quot;: &quot;54&quot;,</find>
-      <find>&quot;CODE_DEPT&quot;: &quot;55&quot;,</find>
-      <find>&quot;CODE_DEPT&quot;: &quot;88&quot;,</find>
-      <find>&quot;CODE_DEPT&quot;: &quot;2B&quot;,</find>
-      <find>geo</find>
-      <find>sub</find>
-      <find>&quot;CODE_DEPT&quot;: &quot;12&quot;,</find>
-      <find>&quot;CODE_DEPT&quot;:</find>
-      <find>&quot;NOM_DGR&quot;:</find>
       <find>&quot;NOM_REGION&quot;:</find>
       <find>color</find>
       <find>NOM_REGION</find>
@@ -97,17 +87,29 @@
       <find>handleReset</find>
       <find>CODE_DGR</find>
       <find>filter</find>
-      <find>console.log</find>
       <find>onMouseEnterHandler</find>
       <find>selectedDr</find>
-      <find>handleDgrSelection</find>
       <find>colorScale</find>
       <find>subregions</find>
       <find>NOM_DGR</find>
       <find>dataSubDr</find>
       <find>console</find>
       <find>hoverInfo</find>
+      <find>handleGeographyClick</find>
+      <find>dataDgrZoom</find>
+      <find>data-dgr</find>
+      <find>handleDgrSelection</find>
+      <find>console.log</find>
+      <find>handleDrSelection</find>
+      <find>CODE_DR</find>
+      <find>setState</find>
+      <find>AMIENS</find>
+      <find>PARIS</find>
       <find>selectedDrDgr</find>
+      <find>MONPELLIER</find>
+      <find>51</find>
+      <find>NICE</find>
+      <find>MONTPELLIER</find>
     </findStrings>
     <replaceStrings>
       <replace>departements</replace>
@@ -148,11 +150,11 @@
         <option value="$PROJECT_DIR$/src/static/subDgr.js" />
         <option value="$PROJECT_DIR$/src/static/dataSubDgr.js" />
         <option value="$PROJECT_DIR$/src/static/dataDgrZoom.json" />
-        <option value="$PROJECT_DIR$/public/france-dr.json" />
         <option value="$PROJECT_DIR$/src/static/dataSubDr.js" />
-        <option value="$PROJECT_DIR$/src/static/dataDgrZoom.js" />
         <option value="$PROJECT_DIR$/src/components/MapDescription.js" />
         <option value="$PROJECT_DIR$/src/components/France.js" />
+        <option value="$PROJECT_DIR$/src/static/dataDgrZoom.js" />
+        <option value="$PROJECT_DIR$/public/france-dr.json" />
       </list>
     </option>
   </component>
@@ -271,12 +273,12 @@
       <updated>1531726771114</updated>
       <workItem from="1531726772269" duration="34322000" />
       <workItem from="1532932249913" duration="15993000" />
-      <workItem from="1532953731966" duration="48151000" />
+      <workItem from="1532953731966" duration="59273000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98466000" />
+    <option name="totallyTimeSpent" value="109588000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -467,13 +469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/france-dr.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="37" column="19" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="37" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -512,20 +507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/static/dataSubDgr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/static/dataDgrZoom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/registerServiceWorker.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-707">
@@ -540,10 +521,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/static/dataSubDr.js">
+    <entry file="file://$PROJECT_DIR$/src/static/dataSubDgr.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+        <state relative-caret-position="68">
+          <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -567,13 +548,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/static/dataSubDr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/France.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="105" column="8" selection-start-line="105" selection-start-column="8" selection-end-line="105" selection-end-column="8" />
+        <state relative-caret-position="92">
+          <caret line="128" column="12" lean-forward="true" selection-start-line="128" selection-start-column="12" selection-end-line="128" selection-end-column="12" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/france-dr.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6062" column="30" selection-start-line="6062" selection-start-column="19" selection-end-line="6062" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/static/dataDgrZoom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="117" selection-start-line="5" selection-start-column="117" selection-end-line="5" selection-end-column="117" />
         </state>
       </provider>
     </entry>

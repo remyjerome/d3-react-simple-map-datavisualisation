@@ -64,7 +64,9 @@ class France extends Component {
       zoom: 1.4641000000000006,
       hoverInfo:null,
       selectedDgr: null,
-      cities: dataLyon
+      selectedDgr: null,
+      cities: dataLyon,
+      niveau: 3,
     }
     this.loadPaths = this.loadPaths.bind(this)
     this.handleZoomIn = this.handleZoomIn.bind(this)
@@ -80,15 +82,30 @@ class France extends Component {
     this.handleMoveStart = this.handleMoveStart.bind(this)
     this.handleMoveEnd = this.handleMoveStart.bind(this)
     this.colorMapStyle = this.colorMapStyle.bind(this)
+    this.handleDrSelection = this.handleDrSelection.bind(this)
   }
   handleDgrSelection(evt) {
     const dgrId = evt.target.getAttribute("data-dgr")
     const dgr = dataDgrZoom[dgrId]
+
     this.setState({
       center: dgr.coordinates,
       zoom: dgr.zoom,
       selectedDgr: dgr,
+      selectedDr: null,
       hoverInfo: null,
+      niveau: 2,
+    })
+  }
+  handleDrSelection(evt) {
+    const dr = this.state.selectedDgr.dr[evt.target.getAttribute("data-dr")]
+    console.log(dr)
+    this.setState({
+      center: dr.coordinates,
+      zoom: dr.zoom,
+      selectedDr: dr,
+      hoverInfo: null,
+      niveau: 1,
     })
   }
   projection() {
@@ -97,6 +114,7 @@ class France extends Component {
       .scale(2600)
   }
   handleGeographyClick(geography) {
+
     /*const path = geoPath().projection(this.projection())
     const centroid = this.projection().invert(path.centroid(geography))
     this.setState({
@@ -104,6 +122,32 @@ class France extends Component {
       zoom: 4,
       currentCountry: geography.properties.iso_a3,
     })*/
+    if(this.state.niveau === 3) {
+      const dgrId = geography.properties.CODE_DGR
+      const dgr = dataDgrZoom.filter((dgr, i) => {
+        if(dgr.id === dgrId) { return dgr }
+      } )[0]
+
+      this.setState({
+        center: dgr.coordinates,
+        zoom: dgr.zoom,
+        selectedDgr: dgr,
+        niveau: 2,
+      })
+    }
+    else if(this.state.niveau === 2) {
+      const drId = geography.properties.CODE_DR
+      const dr = this.state.selectedDgr.dr.filter((dr, i) => {
+        if(dr.id === drId) { return dr }
+      })[0]
+      console.log(dr)
+      this.setState({
+        center: dr.coordinates,
+        zoom: dr.zoom,
+        selectedDr: dr,
+        niveau: 1,
+      })
+    }
 
   }
   handleCitySelection(evt) {
@@ -118,6 +162,8 @@ class France extends Component {
       center:  [2.454071, 46.279229],
       zoom: 1.4641000000000006,
       selectedDgr: null,
+      selectedDr: null,
+      niveau: 3,
     })
   }
   componentDidMount() {
@@ -142,11 +188,11 @@ class France extends Component {
     })
   }
   handleMoveStart(currentCenter) {
-    console.log("New center: ", currentCenter)
+    console.log("New center: ", `[${currentCenter}], zoom: ${this.state.zoom}`)
   }
 
   handleMoveEnd(newCenter) {
-    console.log("New center: ", newCenter)
+    console.log("New center: ", newCenter, this.state.zoom)
   }
   onMouseEnterHandler(a) {
     let hoverInfo = a.properties
@@ -159,7 +205,7 @@ class France extends Component {
         default: {
           fill: colorScaleDr[subDr.indexOf(geography.properties.NOM_DR)],
           stroke: "#607D8B",
-          strokeWidth: 0.007,
+          strokeWidth: 0.02,
           outline: "none",
         },
         hover: {
@@ -178,7 +224,7 @@ class France extends Component {
       default: {
         fill: colorScaleDgr[subDgr.indexOf(geography.properties.NOM_DGR)],
         stroke: "#607D8B",
-        strokeWidth: 0.007,
+        strokeWidth: 0.02,
         outline: "none",
     },
       hover: {
@@ -219,6 +265,26 @@ class France extends Component {
           })
           }
         </div>
+        <div style={wrapperStyles}>
+          {
+            this.state.niveau === 2 || this.state.niveau === 1? dataDgrZoom.filter((dgr, i) => {
+              if( dgr.id === this.state.selectedDgr.id ) {
+                // A modifier pour correspondre au selectedDgr.id
+                return dgr.dr
+              }
+            })[0].dr.map((dr, i) => {
+              return ( <button
+                key={i}
+                variant="contained"
+                color="primary"
+                onClick={this.handleDrSelection}
+                data-dr={i}
+              >
+                { dr.name }
+              </button> )
+            }) : ''
+          }
+        </div>
         <div style={wrapperDataVisualisationStyles}>
           <ComposableMap
             projectionConfig={{
@@ -238,7 +304,7 @@ class France extends Component {
                            disableOptimization>
                 {(geographies, projection) =>
                   geographies.filter(geography =>
-                      this.state.selectedDgr ? this.state.selectedDgr.id === geography.properties.CODE_DGR : 1===1
+                      this.state.selectedDgr ? this.state.selectedDr ? this.state.selectedDr.id === geography.properties.CODE_DR :this.state.selectedDgr.id === geography.properties.CODE_DGR : 1===1
                   ).map((geography, i) =>
                     <Geography
                       key={`${geography.properties.NOM_DEPT}-${i}`}
