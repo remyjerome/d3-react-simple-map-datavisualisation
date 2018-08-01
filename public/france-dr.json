@@ -12,7 +12,7 @@
       "properties": {
         "ID_GEOFLA": 1,
         "CODE_DEPT": "01",
-        "CODE_DGR": "4",
+        "CODE_DGR": 4,
         "NOM_DGR": "CENTRE-EST",
         "CODE_DR": "44",
         "NOM_DR": "LYON",
@@ -527,7 +527,7 @@
       "properties": {
         "ID_GEOFLA": 2,
         "CODE_DEPT": "02",
-        "CODE_DGR": "2",
+        "CODE_DGR": 2,
         "NOM_DGR": "NORD",
         "CODE_DR": "21",
         "NOM_DR": "AMIENS",
@@ -1170,7 +1170,7 @@
       "properties": {
         "ID_GEOFLA": 3,
         "CODE_DEPT": "03",
-        "CODE_DGR": "4",
+        "CODE_DGR": 4,
         "NOM_DGR": "CENTRE-EST",
         "CODE_DR": "42",
         "NOM_DR": "CLERMONT",
@@ -1765,7 +1765,7 @@
       "properties": {
         "ID_GEOFLA": 4,
         "CODE_DEPT": "04",
-        "CODE_DGR": "5",
+        "CODE_DGR": 5,
         "NOM_DGR": "SUD-EST",
         "CODE_DR": "53",
         "NOM_DR": "MARSEILLE",
@@ -2396,7 +2396,7 @@
       "properties": {
         "ID_GEOFLA": 5,
         "CODE_DEPT": "05",
-        "CODE_DGR": "5",
+        "CODE_DGR": 5,
         "NOM_DGR": "SUD-EST",
         "CODE_DR": "53",
         "NOM_DR": "MARSEILLE",
@@ -3007,7 +3007,7 @@
       "properties": {
         "ID_GEOFLA": 6,
         "CODE_DEPT": "06",
-        "CODE_DGR": "5",
+        "CODE_DGR": 5,
         "NOM_DGR": "SUD-EST",
         "CODE_DR": "51",
         "NOM_DR": "NICE",
@@ -3474,7 +3474,7 @@
       "properties": {
         "ID_GEOFLA": 7,
         "CODE_DEPT": "07",
-        "CODE_DGR": "4",
+        "CODE_DGR": 4,
         "NOM_DGR": "CENTRE-EST",
         "CODE_DR": "45",
         "NOM_DR": "VIENNE",
@@ -3969,7 +3969,7 @@
       "properties": {
         "ID_GEOFLA": 8,
         "CODE_DEPT": "08",
-        "CODE_DGR": "3",
+        "CODE_DGR": 3,
         "NOM_DGR": "EST",
         "CODE_DR": "32",
         "NOM_DR": "NANCY",
@@ -4492,7 +4492,7 @@
       "properties": {
         "ID_GEOFLA": 9,
         "CODE_DEPT": "09",
-        "CODE_DGR": "6",
+        "CODE_DGR": 6,
         "NOM_DGR": "SUD-OUEST",
         "CODE_DR": "64",
         "NOM_DR": "TOULOUSE",
@@ -5039,7 +5039,7 @@
       "properties": {
         "ID_GEOFLA": 10,
         "CODE_DEPT": "10",
-        "CODE_DGR": "3",
+        "CODE_DGR": 3,
         "NOM_DGR": "EST",
         "CODE_DR": "34",
         "NOM_DR": "AUXERRE",
@@ -5554,7 +5554,7 @@
       "properties": {
         "ID_GEOFLA": 11,
         "CODE_DEPT": "11",
-        "CODE_DGR": "5",
+        "CODE_DGR": 5,
         "NOM_DGR": "SUD-EST",
         "CODE_DR": "51",
         "NOM_DR": "MONTPELLIER",
@@ -6057,7 +6057,7 @@
       "properties": {
         "ID_GEOFLA": 12,
         "CODE_DEPT": "12",
-        "CODE_DGR": "5",
+        "CODE_DGR": 5,
         "NOM_DGR": "SUD-EST",
         "CODE_DR": "51",
         "NOM_DR": "MONTPELLIER",
@@ -6684,7 +6684,7 @@
       "properties": {
         "ID_GEOFLA": 13,
         "CODE_DEPT": "13",
-        "CODE_DGR": "5",
+        "CODE_DGR": 5,
         "NOM_DGR": "SUD-EST",
         "CODE_DR": "55",
         "NOM_DR": "ARLES",
@@ -7261,7 +7261,7 @@
       "properties": {
         "ID_GEOFLA": 14,
         "CODE_DEPT": "14",
-        "CODE_DGR": "2",
+        "CODE_DGR": 2,
         "NOM_DGR": "NORD",
         "CODE_DR": "25",
         "NOM_DR": "ROUEN",
@@ -7736,7 +7736,7 @@
       "properties": {
         "ID_GEOFLA": 15,
         "CODE_DEPT": "15",
-        "CODE_DGR": "4",
+        "CODE_DGR": 4,
         "NOM_DGR": "CENTRE-EST",
         "CODE_DR": "42",
         "NOM_DR": "CLERMONT",
@@ -8275,7 +8275,7 @@
       "properties": {
         "ID_GEOFLA": 16,
         "CODE_DEPT": "16",
-        "CODE_DGR": "1",
+        "CODE_DGR": 1,
         "NOM_DGR": "OUEST",
         "CODE_DR": "13",
         "NOM_DR": "POITIERS",
@@ -8842,7 +8842,7 @@
       "properties": {
         "ID_GEOFLA": 17,
         "CODE_DEPT": "17",
-        "CODE_DGR": "1",
+        "CODE_DGR": 1,
         "NOM_DGR": "OUEST",
         "CODE_DR": "13",
         "NOM_DR": "POITIERS",
@@ -9635,7 +9635,7 @@
       "properties": {
         "ID_GEOFLA": 18,
         "CODE_DEPT": "18",
-        "CODE_DGR": "2",
+        "CODE_DGR": 2,
         "NOM_DGR": "NORD",
         "CODE_DR": "23",
         "NOM_DR": "BLOIS",
@@ -10230,7 +10230,7 @@
       "properties": {
         "ID_GEOFLA": 19,
         "CODE_DEPT": "19",
-        "CODE_DGR": "6",
+        "CODE_DGR": 6,
         "NOM_DGR": "SUD-OUEST",
         "CODE_DR": "65",
         "NOM_DR": "LIMOGES",
@@ -10737,7 +10737,7 @@
       "properties": {
         "ID_GEOFLA": 20,
         "CODE_DEPT": "21",
-        "CODE_DGR": "3",
+        "CODE_DGR": 3,
         "NOM_DGR": "EST",
         "CODE_DR": "31",
         "NOM_DR": "DIJON",
@@ -11330,7 +11330,7 @@
       "properties": {
         "ID_GEOFLA": 21,
         "CODE_DEPT": "22",
-        "CODE_DGR": "1",
+        "CODE_DGR": 1,
         "NOM_DGR": "OUEST",
         "CODE_DR": "14",
         "NOM_DR": "RENNES",
@@ -12027,7 +12027,7 @@
       "properties": {
         "ID_GEOFLA": 22,
         "CODE_DEPT": "23",
-        "CODE_DGR": "6",
+        "CODE_DGR": 6,
         "NOM_DGR": "SUD-OUEST",
         "CODE_DR": "65",
         "NOM_DR": "LIMOGES",
@@ -12498,7 +12498,7 @@
       "properties": {
         "ID_GEOFLA": 23,
         "CODE_DEPT": "24",
-        "CODE_DGR": "6",
+        "CODE_DGR": 6,
         "NOM_DGR": "SUD-OUEST",
         "CODE_DR": "62",
         "NOM_DR": "BORDEAUX",
@@ -13145,7 +13145,7 @@
       "properties": {
         "ID_GEOFLA": 24,
         "CODE_DEPT": "25",
-        "CODE_DGR": "3",
+        "CODE_DGR": 3,
         "NOM_DGR": "EST",
         "CODE_DR": "31",
         "NOM_DR": "DIJON",
@@ -13724,7 +13724,7 @@
       "properties": {
         "ID_GEOFLA": 25,
         "CODE_DEPT": "26",
-        "CODE_DGR": "4",
+        "CODE_DGR": 4,
         "NOM_DGR": "CENTRE-EST",
         "CODE_DR": "45",
         "NOM_DR": "VIENNE",
@@ -14413,7 +14413,7 @@
       "properties": {
         "ID_GEOFLA": 26,
         "CODE_DEPT": "27",
-        "CODE_DGR": "2",
+        "CODE_DGR": 2,
         "NOM_DGR": "NORD",
         "CODE_DR": "25",
         "NOM_DR": "ROUEN",
@@ -14964,7 +14964,7 @@
       "properties": {
         "ID_GEOFLA": 27,
         "CODE_DEPT": "28",
-        "CODE_DGR": "2",
+        "CODE_DGR": 2,
         "NOM_DGR": "NORD",
         "CODE_DR": "23",
         "NOM_DR": "BLOIS",
@@ -15515,7 +15515,7 @@
       "properties": {
         "ID_GEOFLA": 28,
         "CODE_DEPT": "29",
-        "CODE_DGR": "1",
+        "CODE_DGR": 1,
         "NOM_DGR": "OUEST",
         "CODE_DR": "14",
         "NOM_DR": "RENNES",
@@ -16628,7 +16628,7 @@
       "properties": {
         "ID_GEOFLA": 29,
         "CODE_DEPT": "2A",
-        "CODE_DGR": "5",
+        "CODE_DGR": 5,
         "NOM_DGR": "SUD-EST",
         "CODE_DR": "51",
         "NOM_DR": "NICE",
@@ -17171,7 +17171,7 @@
       "properties": {
         "ID_GEOFLA": 30,
         "CODE_DEPT": "2B",
-        "CODE_DGR": "5",
+        "CODE_DGR": 5,
         "NOM_DGR": "SUD-EST",
         "CODE_DR": "51",
         "NOM_DR": "NICE",
@@ -17638,7 +17638,7 @@
       "properties": {
         "ID_GEOFLA": 31,
         "CODE_DEPT": "30",
-        "CODE_DGR": "5",
+        "CODE_DGR": 5,
         "NOM_DGR": "SUD-EST",
         "CODE_DR": "55",
         "NOM_DR": "ARLES",
@@ -18269,7 +18269,7 @@
       "properties": {
         "ID_GEOFLA": 32,
         "CODE_DEPT": "31",
-        "CODE_DGR": "6",
+        "CODE_DGR": 6,
         "NOM_DGR": "SUD-OUEST",
         "CODE_DR": "64",
         "NOM_DR": "TOULOUSE",
@@ -19048,7 +19048,7 @@
       "properties": {
         "ID_GEOFLA": 33,
         "CODE_DEPT": "32",
-        "CODE_DGR": "6",
+        "CODE_DGR": 6,
         "NOM_DGR": "SUD-OUEST",
         "CODE_DR": "64",
         "NOM_DR": "TOULOUSE",
@@ -19595,7 +19595,7 @@
       "properties": {
         "ID_GEOFLA": 34,
         "CODE_DEPT": "33",
-        "CODE_DGR": "6",
+        "CODE_DGR": 6,
         "NOM_DGR": "SUD-OUEST",
         "CODE_DR": "62",
         "NOM_DR": "BORDEAUX",
@@ -20242,7 +20242,7 @@
       "properties": {
         "ID_GEOFLA": 35,
         "CODE_DEPT": "34",
-        "CODE_DGR": "5",
+        "CODE_DGR": 5,
         "NOM_DGR": "SUD-EST",
         "CODE_DR": "51",
         "NOM_DR": "MONTPELLIER",
@@ -20713,7 +20713,7 @@
       "properties": {
         "ID_GEOFLA": 36,
         "CODE_DEPT": "35",
-        "CODE_DGR": "1",
+        "CODE_DGR": 1,
         "NOM_DGR": "OUEST",
         "CODE_DR": "14",
         "NOM_DR": "RENNES",
@@ -21334,7 +21334,7 @@
       "properties": {
         "ID_GEOFLA": 37,
         "CODE_DEPT": "36",
-        "CODE_DGR": "6",
+        "CODE_DGR": 6,
         "NOM_DGR": "SUD-OUEST",
         "CODE_DR": "65",
         "NOM_DR": "LIMOGES",
@@ -21877,7 +21877,7 @@
       "properties": {
         "ID_GEOFLA": 38,
         "CODE_DEPT": "37",
-        "CODE_DGR": "1",
+        "CODE_DGR": 1,
         "NOM_DGR": "OUEST",
         "CODE_DR": "11",
         "NOM_DR": "ANGERS",
@@ -22388,7 +22388,7 @@
       "properties": {
         "ID_GEOFLA": 39,
         "CODE_DEPT": "38",
-        "CODE_DGR": "4",
+        "CODE_DGR": 4,
         "NOM_DGR": "CENTRE-EST",
         "CODE_DR": "43",
         "NOM_DR": "ANNECY",
@@ -23019,7 +23019,7 @@
       "properties": {
         "ID_GEOFLA": 40,
         "CODE_DEPT": "39",
-        "CODE_DGR": "3",
+        "CODE_DGR": 3,
         "NOM_DGR": "EST",
         "CODE_DR": "31",
         "NOM_DR": "DIJON",
@@ -23526,7 +23526,7 @@
       "properties": {
         "ID_GEOFLA": 41,
         "CODE_DEPT": "40",
-        "CODE_DGR": "6",
+        "CODE_DGR": 6,
         "NOM_DGR": "SUD-OUEST",
         "CODE_DR": "67",
         "NOM_DR": "PAU",
@@ -24025,7 +24025,7 @@
       "properties": {
         "ID_GEOFLA": 42,
         "CODE_DEPT": "41",
-        "CODE_DGR": "2",
+        "CODE_DGR": 2,
         "NOM_DGR": "NORD",
         "CODE_DR": "23",
         "NOM_DR": "BLOIS",
@@ -24652,7 +24652,7 @@
       "properties": {
         "ID_GEOFLA": 43,
         "CODE_DEPT": "42",
-        "CODE_DGR": "4",
+        "CODE_DGR": 4,
         "NOM_DGR": "CENTRE-EST",
         "CODE_DR": "45",
         "NOM_DR": "VIENNE",
@@ -25219,7 +25219,7 @@
       "properties": {
         "ID_GEOFLA": 44,
         "CODE_DEPT": "43",
-        "CODE_DGR": "4",
+        "CODE_DGR": 4,
         "NOM_DGR": "CENTRE-EST",
         "CODE_DR": "42",
         "NOM_DR": "CLERMONT",
@@ -25702,7 +25702,7 @@
       "properties": {
         "ID_GEOFLA": 45,
         "CODE_DEPT": "44",
-        "CODE_DGR": "1",
+        "CODE_DGR": 1,
         "NOM_DGR": "OUEST",
         "CODE_DR": "12",
         "NOM_DR": "NANTES",
@@ -26377,7 +26377,7 @@
       "properties": {
         "ID_GEOFLA": 46,
         "CODE_DEPT": "45",
-        "CODE_DGR": "2",
+        "CODE_DGR": 2,
         "NOM_DGR": "NORD",
         "CODE_DR": "23",
         "NOM_DR": "BLOIS",
@@ -26952,7 +26952,7 @@
       "properties": {
         "ID_GEOFLA": 47,
         "CODE_DEPT": "46",
-        "CODE_DGR": "6",
+        "CODE_DGR": 6,
         "NOM_DGR": "SUD-OUEST",
         "CODE_DR": "64",
         "NOM_DR": "TOULOUSE",
@@ -27423,7 +27423,7 @@
       "properties": {
         "ID_GEOFLA": 48,
         "CODE_DEPT": "47",
-        "CODE_DGR": "6",
+        "CODE_DGR": 6,
         "NOM_DGR": "SUD-OUEST",
         "CODE_DR": "62",
         "NOM_DR": "BORDEAUX",
@@ -27930,7 +27930,7 @@
       "properties": {
         "ID_GEOFLA": 49,
         "CODE_DEPT": "48",
-        "CODE_DGR": "5",
+        "CODE_DGR": 5,
         "NOM_DGR": "SUD-EST",
         "CODE_DR": "51",
         "NOM_DR": "MONTPELLIER",
@@ -28357,7 +28357,7 @@
       "properties": {
         "ID_GEOFLA": 50,
         "CODE_DEPT": "49",
-        "CODE_DGR": "1",
+        "CODE_DGR": 1,
         "NOM_DGR": "OUEST",
         "CODE_DR": "11",
         "NOM_DR": "ANGERS",
@@ -28964,7 +28964,7 @@
       "properties": {
         "ID_GEOFLA": 51,
         "CODE_DEPT": "50",
-        "CODE_DGR": "2",
+        "CODE_DGR": 2,
         "NOM_DGR": "NORD",
         "CODE_DR": "25",
         "NOM_DR": "ROUEN",
@@ -29595,7 +29595,7 @@
       "properties": {
         "ID_GEOFLA": 52,
         "CODE_DEPT": "51",
-        "CODE_DGR": "3",
+        "CODE_DGR": 3,
         "NOM_DGR": "EST",
         "CODE_DR": "32",
         "NOM_DR": "NANCY",
@@ -30190,7 +30190,7 @@
       "properties": {
         "ID_GEOFLA": 53,
         "CODE_DEPT": "52",
-        "CODE_DGR": "3",
+        "CODE_DGR": 3,
         "NOM_DGR": "EST",
         "CODE_DR": "32",
         "NOM_DR": "NANCY",
@@ -30765,7 +30765,7 @@
       "properties": {
         "ID_GEOFLA": 54,
         "CODE_DEPT": "53",
-        "CODE_DGR": "1",
+        "CODE_DGR": 1,
         "NOM_DGR": "OUEST",
         "CODE_DR": "11",
         "NOM_DR": "ANGERS",
@@ -31260,7 +31260,7 @@
       "properties": {
         "ID_GEOFLA": 55,
         "CODE_DEPT": "54",
-        "CODE_DGR": "3",
+        "CODE_DGR": 3,
         "NOM_DGR": "EST",
         "CODE_DR": "32",
         "NOM_DR": "NANCY",
@@ -32013,7 +32013,7 @@
       "properties": {
         "ID_GEOFLA": 56,
         "CODE_DEPT": "55",
-        "CODE_DGR": "3",
+        "CODE_DGR": 3,
         "NOM_DGR": "EST",
         "CODE_DR": "32",
         "NOM_DR": "NANCY",
@@ -32602,7 +32602,7 @@
       "properties": {
         "ID_GEOFLA": 57,
         "CODE_DEPT": "56",
-        "CODE_DGR": "1",
+        "CODE_DGR": 1,
         "NOM_DGR": "OUEST",
         "CODE_DR": "12",
         "NOM_DR": "NANTES",
@@ -33515,7 +33515,7 @@
       "properties": {
         "ID_GEOFLA": 58,
         "CODE_DEPT": "57",
-        "CODE_DGR": "3",
+        "CODE_DGR":   3,
         "NOM_DGR": "EST",
         "CODE_DR": "32",
         "NOM_DR": "NANCY",
@@ -34246,7 +34246,7 @@
       "properties": {
         "ID_GEOFLA": 59,
         "CODE_DEPT": "58",
-        "CODE_DGR": "3",
+        "CODE_DGR": 3,
         "NOM_DGR": "EST",
         "CODE_DR": "34",
         "NOM_DR": "AUXERRE",
@@ -34809,7 +34809,7 @@
       "properties": {
         "ID_GEOFLA": 60,
         "CODE_DEPT": "59",
-        "CODE_DGR": "8",
+        "CODE_DGR": 8,
         "NOM_DGR": "NORD-EUROPE",
         "CODE_DR": "81",
         "NOM_DR": "LILLE",
@@ -35530,7 +35530,7 @@
       "properties": {
         "ID_GEOFLA": 61,
         "CODE_DEPT": "60",
-        "CODE_DGR": "2",
+        "CODE_DGR": 2,
         "NOM_DGR": "NORD",
         "CODE_DR": "21",
         "NOM_DR": "AMIENS",
@@ -36169,7 +36169,7 @@
       "properties": {
         "ID_GEOFLA": 62,
         "CODE_DEPT": "61",
-        "CODE_DGR": "2",
+        "CODE_DGR": 2,
         "NOM_DGR": "NORD",
         "CODE_DR": "25",
         "NOM_DR": "ROUEN",
@@ -36756,7 +36756,7 @@
       "properties": {
         "ID_GEOFLA": 63,
         "CODE_DEPT": "62",
-        "CODE_DGR": "8",
+        "CODE_DGR": 8,
         "NOM_DGR": "NORD-EUROPE",
         "CODE_DR": "81",
         "NOM_DR": "LILLE",
@@ -37373,7 +37373,7 @@
       "properties": {
         "ID_GEOFLA": 64,
         "CODE_DEPT": "63",
-        "CODE_DGR": "4",
+        "CODE_DGR": 4,
         "NOM_DGR": "CENTRE-EST",
         "CODE_DR": "42",
         "NOM_DR": "CLERMONT",
@@ -37932,7 +37932,7 @@
       "properties": {
         "ID_GEOFLA": 65,
         "CODE_DEPT": "64",
-        "CODE_DGR": "6",
+        "CODE_DGR": 6,
         "NOM_DGR": "SUD-OUEST",
         "CODE_DR": "67",
         "NOM_DR": "PAU",
@@ -38551,7 +38551,7 @@
       "properties": {
         "ID_GEOFLA": 66,
         "CODE_DEPT": "65",
-        "CODE_DGR": "6",
+        "CODE_DGR": 6,
         "NOM_DGR": "SUD-OUEST",
         "CODE_DR": "67",
         "NOM_DR": "PAU",
@@ -39072,7 +39072,7 @@
       "properties": {
         "ID_GEOFLA": 67,
         "CODE_DEPT": "66",
-        "CODE_DGR": "5",
+        "CODE_DGR": 5,
         "NOM_DGR": "SUD-EST",
         "CODE_DR": "51",
         "NOM_DR": "MONTPELLIER",
@@ -39541,7 +39541,7 @@
       "properties": {
         "ID_GEOFLA": 68,
         "CODE_DEPT": "67",
-        "CODE_DGR": "3",
+        "CODE_DGR": 3,
         "NOM_DGR": "EST",
         "CODE_DR": "32",
         "NOM_DR": "NANCY",
@@ -39996,7 +39996,7 @@
       "properties": {
         "ID_GEOFLA": 69,
         "CODE_DEPT": "68",
-        "CODE_DGR": "3",
+        "CODE_DGR": 3,
         "NOM_DGR": "EST",
         "CODE_DR": "31",
         "NOM_DR": "DIJON",
@@ -40311,7 +40311,7 @@
       "properties": {
         "ID_GEOFLA": 70,
         "CODE_DEPT": "69",
-        "CODE_DGR": "4",
+        "CODE_DGR": 4,
         "NOM_DGR": "CENTRE-EST",
         "CODE_DR": "44",
         "NOM_DR": "LYON",
@@ -40758,7 +40758,7 @@
       "properties": {
         "ID_GEOFLA": 71,
         "CODE_DEPT": "70",
-        "CODE_DGR": "3",
+        "CODE_DGR": 3,
         "NOM_DGR": "EST",
         "CODE_DR": "31",
         "NOM_DR": "DIJON",
@@ -41285,7 +41285,7 @@
       "properties": {
         "ID_GEOFLA": 72,
         "CODE_DEPT": "71",
-        "CODE_DGR": "3",
+        "CODE_DGR": 3,
         "NOM_DGR": "EST",
         "CODE_DR": "31",
         "NOM_DR": "DIJON",
@@ -42044,7 +42044,7 @@
       "properties": {
         "ID_GEOFLA": 73,
         "CODE_DEPT": "72",
-        "CODE_DGR": "1",
+        "CODE_DGR": 1,
         "NOM_DGR": "OUEST",
         "CODE_DR": "11",
         "NOM_DR": "ANGERS",
@@ -42531,7 +42531,7 @@
       "properties": {
         "ID_GEOFLA": 74,
         "CODE_DEPT": "73",
-        "CODE_DGR": "4",
+        "CODE_DGR": 4,
         "NOM_DGR": "CENTRE-EST",
         "CODE_DR": "43",
         "NOM_DR": "ANNECY",
@@ -43106,7 +43106,7 @@
       "properties": {
         "ID_GEOFLA": 75,
         "CODE_DEPT": "74",
-        "CODE_DGR": "4",
+        "CODE_DGR": 4,
         "NOM_DGR": "CENTRE-EST",
         "CODE_DR": "43",
         "NOM_DR": "ANNECY",
@@ -43573,7 +43573,7 @@
       "properties": {
         "ID_GEOFLA": 76,
         "CODE_DEPT": "75",
-        "CODE_DGR": "2",
+        "CODE_DGR": 2,
         "NOM_DGR": "NORD",
         "CODE_DR": "21",
         "NOM_DR": "PARIS",
@@ -43660,7 +43660,7 @@
       "properties": {
         "ID_GEOFLA": 77,
         "CODE_DEPT": "76",
-        "CODE_DGR": "2",
+        "CODE_DGR": 2,
         "NOM_DGR": "NORD",
         "CODE_DR": "25",
         "NOM_DR": "ROUEN",
@@ -44123,7 +44123,7 @@
       "properties": {
         "ID_GEOFLA": 78,
         "CODE_DEPT": "77",
-        "CODE_DGR": "2",
+        "CODE_DGR": 2,
         "NOM_DGR": "NORD",
         "CODE_DR": "21",
         "NOM_DR": "PARIS",
@@ -44694,7 +44694,7 @@
       "properties": {
         "ID_GEOFLA": 79,
         "CODE_DEPT": "78",
-        "CODE_DGR": "2",
+        "CODE_DGR": 2,
         "NOM_DGR": "NORD",
         "CODE_DR": "21",
         "NOM_DR": "PARIS",
@@ -45057,7 +45057,7 @@
       "properties": {
         "ID_GEOFLA": 80,
         "CODE_DEPT": "79",
-        "CODE_DGR": "1",
+        "CODE_DGR": 1,
         "NOM_DGR": "OUEST",
         "CODE_DR": "13",
         "NOM_DR": "POITIERS",
@@ -45648,7 +45648,7 @@
       "properties": {
         "ID_GEOFLA": 81,
         "CODE_DEPT": "80",
-        "CODE_DGR": "2",
+        "CODE_DGR": 2,
         "NOM_DGR": "NORD",
         "CODE_DR": "21",
         "NOM_DR": "AMIENS",
@@ -46299,7 +46299,7 @@
       "properties": {
         "ID_GEOFLA": 82,
         "CODE_DEPT": "81",
-        "CODE_DGR": "5",
+        "CODE_DGR": 5,
         "NOM_DGR": "SUD-EST",
         "CODE_DR": "51",
         "NOM_DR": "MONTPELLIER",
@@ -46790,7 +46790,7 @@
       "properties": {
         "ID_GEOFLA": 83,
         "CODE_DEPT": "82",
-        "CODE_DGR": "6",
+        "CODE_DGR": 6,
         "NOM_DGR": "SUD-OUEST",
         "CODE_DR": "64",
         "NOM_DR": "TOULOUSE",
@@ -47357,7 +47357,7 @@
       "properties": {
         "ID_GEOFLA": 84,
         "CODE_DEPT": "83",
-        "CODE_DGR": "5",
+        "CODE_DGR": 5,
         "NOM_DGR": "SUD-EST",
         "CODE_DR": "51",
         "NOM_DR": "NICE",
@@ -47914,7 +47914,7 @@
       "properties": {
         "ID_GEOFLA": 85,
         "CODE_DEPT": "84",
-        "CODE_DGR": "5",
+        "CODE_DGR": 5,
         "NOM_DGR": "SUD-EST",
         "CODE_DR": "55",
         "NOM_DR": "ARLES",
@@ -48339,7 +48339,7 @@
       "properties": {
         "ID_GEOFLA": 86,
         "CODE_DEPT": "85",
-        "CODE_DGR": "1",
+        "CODE_DGR": 1,
         "NOM_DGR": "OUEST",
         "CODE_DR": "12",
         "NOM_DR": "NANTES",
@@ -48928,7 +48928,7 @@
       "properties": {
         "ID_GEOFLA": 87,
         "CODE_DEPT": "86",
-        "CODE_DGR": "1",
+        "CODE_DGR": 1,
         "NOM_DGR": "OUEST",
         "CODE_DR": "13",
         "NOM_DR": "POITIERS",
@@ -49507,7 +49507,7 @@
       "properties": {
         "ID_GEOFLA": 88,
         "CODE_DEPT": "87",
-        "CODE_DGR": "6",
+        "CODE_DGR": 6,
         "NOM_DGR": "SUD-OUEST",
         "CODE_DR": "65",
         "NOM_DR": "LIMOGES",
@@ -50066,7 +50066,7 @@
       "properties": {
         "ID_GEOFLA": 89,
         "CODE_DEPT": "88",
-        "CODE_DGR": "3",
+        "CODE_DGR": 3,
         "NOM_DGR": "EST",
         "CODE_DR": "32",
         "NOM_DR": "NANCY",
@@ -50637,7 +50637,7 @@
       "properties": {
         "ID_GEOFLA": 90,
         "CODE_DEPT": "89",
-        "CODE_DGR": "3",
+        "CODE_DGR": 3,
         "NOM_DGR": "EST",
         "CODE_DR": "34",
         "NOM_DR": "AUXERRE",
@@ -51292,7 +51292,7 @@
       "properties": {
         "ID_GEOFLA": 91,
         "CODE_DEPT": "90",
-        "CODE_DGR": "3",
+        "CODE_DGR": 3,
         "NOM_DGR": "EST",
         "CODE_DR": "31",
         "NOM_DR": "DIJON",
@@ -51499,7 +51499,7 @@
       "properties": {
         "ID_GEOFLA": 92,
         "CODE_DEPT": "91",
-        "CODE_DGR": "2",
+        "CODE_DGR": 2,
         "NOM_DGR": "NORD",
         "CODE_DR": "21",
         "NOM_DR": "PARIS",
@@ -51790,7 +51790,7 @@
       "properties": {
         "ID_GEOFLA": 93,
         "CODE_DEPT": "92",
-        "CODE_DGR": "2",
+        "CODE_DGR": 2,
         "NOM_DGR": "NORD",
         "CODE_DR": "26",
         "NOM_DR": "PARIS",
@@ -51909,7 +51909,7 @@
       "properties": {
         "ID_GEOFLA": 94,
         "CODE_DEPT": "93",
-        "CODE_DGR": "2",
+        "CODE_DGR": 2,
         "NOM_DGR": "NORD",
         "CODE_DR": "26",
         "NOM_DR": "PARIS",
@@ -52044,7 +52044,7 @@
       "properties": {
         "ID_GEOFLA": 95,
         "CODE_DEPT": "94",
-        "CODE_DGR": "2",
+        "CODE_DGR": 2,
         "NOM_DGR": "NORD",
         "CODE_DR": "26",
         "NOM_DR": "PARIS",
@@ -52167,7 +52167,7 @@
       "properties": {
         "ID_GEOFLA": 96,
         "CODE_DEPT": "95",
-        "CODE_DGR": "2",
+        "CODE_DGR": 2,
         "NOM_DGR": "NORD",
         "CODE_DR": "26",
         "NOM_DR": "PARIS",

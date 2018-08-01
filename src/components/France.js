@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { get } from "axios"
-import { feature } from "topojson-client"
 import {
   ComposableMap,
   ZoomableGroup,
@@ -16,8 +15,9 @@ import chroma from "chroma-js"
 import { VictoryPie } from "victory"
 import MapDescription from '../components/MapDescription'
 import dataLyon from '../static/dataLyon'
-import dataSubregions from '../static/dataSubDgr'
+import dataSubDgr from '../static/dataSubDgr'
 import dataDgrZoom from '../static/dataDgrZoom'
+import dataSubDr from '../static/dataSubDr'
 
 const wrapperStyles = {
   width: "100%",
@@ -47,10 +47,11 @@ const wrapperMapStyles = {
   flex: "5"
 }
 
-// const colorScale = chroma.scale(['white', 'black']).gamma(1).correctLightness().colors(24);
-// const colorScale = chroma.scale(['#FF6E40', 'FFD740', '#00B8D4',]).colors(7)
-const colorScale = chroma.scale(['#fafa6e','#2A4858']).mode('lch').colors(7)
-const subregions = dataSubregions
+const colorScaleDgr = chroma.scale(['#fafa6e','#2A4858']).mode('lch').colors(7)
+const colorScaleDr = chroma.scale(['#fafa6e','#2A4858']).mode('lch').colors(24)
+
+const subDr = dataSubDr
+const subDgr = dataSubDgr
 
 
 class France extends Component {
@@ -60,9 +61,9 @@ class France extends Component {
     this.state = {
       center:  [2.454071, 46.279229],
       geographyPaths: [],
-      zoom: 1,
-      selectedDr: '',
-      selectedDgr: '',
+      zoom: 1.4641000000000006,
+      hoverInfo:null,
+      selectedDgr: null,
       cities: dataLyon
     }
     this.loadPaths = this.loadPaths.bind(this)
@@ -78,25 +79,16 @@ class France extends Component {
     this.handleZoomOut = this.handleZoomOut.bind(this)
     this.handleMoveStart = this.handleMoveStart.bind(this)
     this.handleMoveEnd = this.handleMoveStart.bind(this)
-  }
-  handleZoomIn() {
-    this.setState({
-      zoom: this.state.zoom * 2,
-    })
-  }
-  handleZoomOut() {
-    this.setState({
-      zoom: this.state.zoom / 2,
-    })
+    this.colorMapStyle = this.colorMapStyle.bind(this)
   }
   handleDgrSelection(evt) {
     const dgrId = evt.target.getAttribute("data-dgr")
     const dgr = dataDgrZoom[dgrId]
-    console.log(evt.target.getAttribute("data-dgr"))
     this.setState({
       center: dgr.coordinates,
       zoom: dgr.zoom,
-      selectedDgr: dgr
+      selectedDgr: dgr,
+      hoverInfo: null,
     })
   }
   projection() {
@@ -105,14 +97,13 @@ class France extends Component {
       .scale(2600)
   }
   handleGeographyClick(geography) {
-    console.log(geography.properties)
-    const path = geoPath().projection(this.projection())
+    /*const path = geoPath().projection(this.projection())
     const centroid = this.projection().invert(path.centroid(geography))
     this.setState({
       center: centroid,
       zoom: 4,
       currentCountry: geography.properties.iso_a3,
-    })
+    })*/
 
   }
   handleCitySelection(evt) {
@@ -125,7 +116,8 @@ class France extends Component {
   handleReset() {
     this.setState({
       center:  [2.454071, 46.279229],
-      zoom: 1,
+      zoom: 1.4641000000000006,
+      selectedDgr: null,
     })
   }
   componentDidMount() {
@@ -157,11 +149,52 @@ class France extends Component {
     console.log("New center: ", newCenter)
   }
   onMouseEnterHandler(a) {
-    let selectDr = a.properties.NOM_DEPT
+    let hoverInfo = a.properties
     this.setState(() => {
-      return { selectedDr: selectDr}
+      return { hoverInfo: hoverInfo}
     })
-    // console.log(selectDr);
+  }
+  colorMapStyle(geography) {
+    const colorMap = (this.state.selectedDgr != null) ? {
+        default: {
+          fill: colorScaleDr[subDr.indexOf(geography.properties.NOM_DR)],
+          stroke: "#607D8B",
+          strokeWidth: 0.007,
+          outline: "none",
+        },
+        hover: {
+          fill: chroma(colorScaleDr[subDr.indexOf(geography.properties.NOM_DR)]).darken(0.5),
+          stroke: "#607D8B",
+          strokeWidth: 0.075,
+          outline: "none",
+        },
+        pressed: {
+          fill: chroma(colorScaleDr[subDr.indexOf(geography.properties.NOM_DR)]).brighten(0.5),
+          stroke: "#607D8B",
+          strokeWidth: 0.075,
+          outline: "none",
+        },
+      } : {
+      default: {
+        fill: colorScaleDgr[subDgr.indexOf(geography.properties.NOM_DGR)],
+        stroke: "#607D8B",
+        strokeWidth: 0.007,
+        outline: "none",
+    },
+      hover: {
+        fill: chroma(colorScaleDgr[subDgr.indexOf(geography.properties.NOM_DGR)]).darken(0.5),
+          stroke: "#607D8B",
+          strokeWidth: 0.075,
+          outline: "none",
+      },
+      pressed: {
+        fill: chroma(colorScaleDgr[subDgr.indexOf(geography.properties.NOM_DGR)]).brighten(0.5),
+          stroke: "#607D8B",
+          strokeWidth: 0.075,
+          outline: "none",
+      },
+    }
+    return colorMap
   }
   render() {
     return (
@@ -186,24 +219,6 @@ class France extends Component {
           })
           }
         </div>
-        {/*        <div style={wrapperStyles}>
-          {
-            this.state.cities.map((city, i) => {
-              if(city.name === "Bourg-en-Bresse") {
-               return ( <Button
-                 key={i}
-                variant="contained"
-                color="primary"
-                onClick={this.handleCitySelection}
-                >
-                {"DR Lyon"}
-                </Button> )
-              } else {
-                return null
-              }
-          })
-          }
-        </div>*/}
         <div style={wrapperDataVisualisationStyles}>
           <ComposableMap
             projectionConfig={{
@@ -222,37 +237,20 @@ class France extends Component {
               <Geographies geography={this.state.geographyPaths}
                            disableOptimization>
                 {(geographies, projection) =>
-                  geographies.map((geography, i) =>
+                  geographies.filter(geography =>
+                      this.state.selectedDgr ? this.state.selectedDgr.id === geography.properties.CODE_DGR : 1===1
+                  ).map((geography, i) =>
                     <Geography
                       key={`${geography.properties.NOM_DEPT}-${i}`}
                       onMouseEnter={this.onMouseEnterHandler}
-                      // onClick={this.handleGeographyClick}
+                      onClick={this.handleGeographyClick}
                       cacheId={`path-${geography.properties.NOM_DEPT}-${i}`}
                       data-tip={geography.properties.NOM_DEPT}
                       id={`${geography.properties.NOM_DEPT}`}
                       round
                       geography={geography}
                       projection={projection}
-                      style={{
-                      default: {
-                        fill: colorScale[subregions.indexOf(geography.properties.NOM_DGR)],
-                        stroke: "#607D8B",
-                        strokeWidth: 0.07,
-                        outline: "none",
-                      },
-                      hover: {
-                        fill: chroma(colorScale[subregions.indexOf(geography.properties.NOM_DGR)]).darken(0.5),
-                        stroke: "#607D8B",
-                        strokeWidth: 0.075,
-                        outline: "none",
-                      },
-                      pressed: {
-                        fill: chroma(colorScale[subregions.indexOf(geography.properties.NOM_DGR)]).brighten(0.5),
-                        stroke: "#607D8B",
-                        strokeWidth: 0.075,
-                        outline: "none",
-                      },
-                    }}
+                      style={this.colorMapStyle(geography)}
                   />
                 )}
               </Geographies>
@@ -329,7 +327,7 @@ class France extends Component {
               </Markers>
             </ZoomableGroup>
           </ComposableMap>
-          <MapDescription selectDr={this.state.selectedDr} style={wrapperDescriptionStyles}/>
+          <MapDescription hoverInfo={this.state.hoverInfo} style={wrapperDescriptionStyles}/>
         </div>
       </div>
     )
