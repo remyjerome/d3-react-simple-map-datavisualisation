@@ -8,15 +8,14 @@ import {
   Markers,
   Marker,
 } from "react-simple-maps"
-import { geoPath } from "d3-geo"
 import { geoTimes } from "d3-geo-projection"
 import Button from '@material-ui/core/Button'
 import chroma from "chroma-js"
-import { VictoryPie } from "victory"
+// import { VictoryPie } from "victory"
 import MapDescription from '../components/MapDescription'
 import dataLyon from '../static/dataLyon'
 import dataSubDgr from '../static/dataSubDgr'
-import dataDgrZoom from '../static/dataDgrZoom'
+import dataStructureZoom from '../static/dataStructureZoom'
 import dataSubDr from '../static/dataSubDr'
 
 const wrapperStyles = {
@@ -64,7 +63,7 @@ class France extends Component {
       zoom: 1.4641000000000006,
       hoverInfo:null,
       selectedDgr: null,
-      selectedDgr: null,
+      selectedDr: null,
       cities: dataLyon,
       niveau: 3,
     }
@@ -85,8 +84,8 @@ class France extends Component {
     this.handleDrSelection = this.handleDrSelection.bind(this)
   }
   handleDgrSelection(evt) {
-    const dgrId = evt.target.getAttribute("data-dgr")
-    const dgr = dataDgrZoom[dgrId]
+    const dgrId = evt.currentTarget.getAttribute("datadgr")
+    const dgr = dataStructureZoom[dgrId]
 
     this.setState({
       center: dgr.coordinates,
@@ -98,7 +97,7 @@ class France extends Component {
     })
   }
   handleDrSelection(evt) {
-    const dr = this.state.selectedDgr.dr[evt.target.getAttribute("data-dr")]
+    const dr = this.state.selectedDgr.dr[evt.currentTarget.getAttribute("datadr")]
     console.log(dr)
     this.setState({
       center: dr.coordinates,
@@ -124,7 +123,7 @@ class France extends Component {
     })*/
     if(this.state.niveau === 3) {
       const dgrId = geography.properties.CODE_DGR
-      const dgr = dataDgrZoom.filter((dgr, i) => {
+      const dgr = dataStructureZoom.filter((dgr) => {
         if(dgr.id === dgrId) { return dgr }
       } )[0]
 
@@ -243,6 +242,7 @@ class France extends Component {
     return colorMap
   }
   render() {
+    const data = this.state.niveau === 3 ? dataStructureZoom : this.state.niveau === 2 ? this.state.selectedDgr.dr.map((dr) => dr) : ''
     return (
       <div>
         <Button variant="contained" onClick={this.handleReset}>
@@ -252,36 +252,45 @@ class France extends Component {
         <Button onClick={ this.handleZoomOut }>{ "Zoom out" }</Button>
         <div style={wrapperStyles}>
           {
-            dataDgrZoom.map((dgr, i) => {
-               return ( <button
+            dataStructureZoom.map((dgr, i) => {
+               return ( <Button
                  key={i}
                 variant="contained"
-                color="primary"
+                style={{
+                  backgroundColor: "#2980b9",
+                  color: "#ecf0f1"
+                }}
+                 size="medium"
                 onClick={this.handleDgrSelection}
-                 data-dgr={i}
+                 datadgr={i}
+                 variant="contained"
                 >
                 { dgr.name }
-                </button> )
+                </Button> )
           })
           }
         </div>
         <div style={wrapperStyles}>
           {
-            this.state.niveau === 2 || this.state.niveau === 1? dataDgrZoom.filter((dgr, i) => {
+            this.state.niveau === 2 || this.state.niveau === 1? dataStructureZoom.filter((dgr, i) => {
               if( dgr.id === this.state.selectedDgr.id ) {
                 // A modifier pour correspondre au selectedDgr.id
                 return dgr.dr
               }
             })[0].dr.map((dr, i) => {
-              return ( <button
+              return ( <Button
                 key={i}
                 variant="contained"
-                color="primary"
+                style={{
+                  backgroundColor: "#34495e",
+                  color: "#ecf0f1"
+                }}
+                size="small"
                 onClick={this.handleDrSelection}
-                data-dr={i}
+                datadr={i}
               >
                 { dr.name }
-              </button> )
+              </Button> )
             }) : ''
           }
         </div>
@@ -320,7 +329,7 @@ class France extends Component {
                   />
                 )}
               </Geographies>
-              <Markers>
+{/*              <Markers>
                 { this.state.zoom >= 10 ? this.state.cities.map((city, i) => (
                   <Marker
                     key={ `city-${city.id}` }
@@ -390,6 +399,33 @@ class France extends Component {
                   />
 
                 </Marker> }
+              </Markers>*/}
+              <Markers>
+                { data !=='' ? data.map((item, i) => (
+                <Marker
+                    key={i}
+                    marker={item}
+                    style={{
+                      default: { fill: "#FF5722" },
+                      hover: { fill: "#FFFFFF" },
+                      pressed: { fill: "#FF5722" },
+                    }}
+                  >
+                  <text
+                      textAnchor="middle"
+                      y={item.markerOffset}
+                      style={{
+                        fontFamily: "Roboto, sans-serif",
+                        fontSize: "3em",
+                        fill: "#ecf0f1",
+                        textShadow: "-1px -1px 0 rgba(44,66,80,0.30),1px -1px 0 rgba(44,66,80,0.30), -1px 1px 0 rgba(44,66,80,0.30),1px 1px 0 rgba(44,66,80,0.30)",
+                        pointerEvents: "none",
+                      }}
+                    >
+                      { `${item.id}%`} {/* data a modifier */}
+                    </text>
+                  </Marker>
+                )): ''}
               </Markers>
             </ZoomableGroup>
           </ComposableMap>

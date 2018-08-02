@@ -1,4 +1,4 @@
- const dataLyon = [{ id:1, markerOffset: 37, name: "Lyon", coordinates: [4.85,45.75],
+ const dataLyon = [{ id:1, markerOffset: 37, name: "Lyon", coordinates: [4.85,45.75], 
   languages: [
     { name: "German", value: 83.1 },
     { name: "French", value: 3 },

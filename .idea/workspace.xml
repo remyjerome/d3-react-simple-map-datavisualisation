@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/components/France.js" line="49" />
+    <bookmark url="file://$PROJECT_DIR$/src/components/France.js" line="48" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8434e9e-1594-430b-a1b5-266b4f417c71" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/public/france-dr.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/france-dr.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/dataStructureZoom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SwitchesGroup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/France.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/France.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/dataDgrZoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/dataDgrZoom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MapDescription.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MapDescription.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/dataDgrZoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/dataStructureZoom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/dataLyon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/dataLyon.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,38 +25,41 @@
       <file leaf-file-name="France.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/France.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="128" column="12" lean-forward="true" selection-start-line="128" selection-start-column="12" selection-end-line="128" selection-end-column="12" />
+            <state relative-caret-position="119">
+              <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#350#407#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="france-dr.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/france-dr.json">
+      <file leaf-file-name="dataLyon.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/static/dataLyon.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="6062" column="30" selection-start-line="6062" selection-start-column="19" selection-end-line="6062" selection-end-column="30" />
+            <state relative-caret-position="119">
+              <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dataDgrZoom.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/static/dataDgrZoom.js">
+      <file leaf-file-name="dataStructureZoom.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/static/dataStructureZoom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="117" selection-start-line="5" selection-start-column="117" selection-end-line="5" selection-end-column="117" />
+            <state relative-caret-position="170">
+              <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dataSubDr.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/static/dataSubDr.js">
+      <file leaf-file-name="DataTable.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/DataTable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+            <state relative-caret-position="323">
+              <caret line="46" column="19" lean-forward="true" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,11 +67,20 @@
       <file leaf-file-name="MapDescription.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/MapDescription.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+            <state relative-caret-position="153">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SwitchesGroup.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/SwitchesGroup.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="66" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -80,10 +96,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&quot;NOM_REGION&quot;:</find>
-      <find>color</find>
-      <find>NOM_REGION</find>
-      <find>reset</find>
       <find>handleReset</find>
       <find>CODE_DGR</find>
       <find>filter</find>
@@ -96,20 +108,24 @@
       <find>console</find>
       <find>hoverInfo</find>
       <find>handleGeographyClick</find>
-      <find>dataDgrZoom</find>
       <find>data-dgr</find>
-      <find>handleDgrSelection</find>
       <find>console.log</find>
       <find>handleDrSelection</find>
       <find>CODE_DR</find>
       <find>setState</find>
       <find>AMIENS</find>
       <find>PARIS</find>
-      <find>selectedDrDgr</find>
-      <find>MONPELLIER</find>
       <find>51</find>
       <find>NICE</find>
+      <find>MONPELLIER</find>
+      <find>dataDgrZoom</find>
+      <find>dataStructureZoom</find>
+      <find>rgba(0,0,255,0.30)</find>
       <find>MONTPELLIER</find>
+      <find>data</find>
+      <find>selectedDrDgr</find>
+      <find>handleDgrSelection</find>
+      <find>data-</find>
     </findStrings>
     <replaceStrings>
       <replace>departements</replace>
@@ -119,7 +135,9 @@
       <replace>valeur</replace>
       <replace>dataSubDgr</replace>
       <replace>NOM_DR</replace>
+      <replace>dataStructureZoom</replace>
       <replace>hoverInfo</replace>
+      <replace>rgba(44,66,80,0.30)</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -143,7 +161,6 @@
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/components/DataTable.js" />
         <option value="$PROJECT_DIR$/src/static/dataLyon.json" />
-        <option value="$PROJECT_DIR$/src/static/dataLyon.js" />
         <option value="$PROJECT_DIR$/src/static/subregions.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/App.js" />
@@ -151,10 +168,13 @@
         <option value="$PROJECT_DIR$/src/static/dataSubDgr.js" />
         <option value="$PROJECT_DIR$/src/static/dataDgrZoom.json" />
         <option value="$PROJECT_DIR$/src/static/dataSubDr.js" />
-        <option value="$PROJECT_DIR$/src/components/MapDescription.js" />
-        <option value="$PROJECT_DIR$/src/components/France.js" />
-        <option value="$PROJECT_DIR$/src/static/dataDgrZoom.js" />
         <option value="$PROJECT_DIR$/public/france-dr.json" />
+        <option value="$PROJECT_DIR$/src/static/dataDgrZoom.js" />
+        <option value="$PROJECT_DIR$/src/static/dataStructureZoom.js" />
+        <option value="$PROJECT_DIR$/src/static/dataLyon.js" />
+        <option value="$PROJECT_DIR$/src/components/MapDescription.js" />
+        <option value="$PROJECT_DIR$/src/components/SwitchesGroup.js" />
+        <option value="$PROJECT_DIR$/src/components/France.js" />
       </list>
     </option>
   </component>
@@ -238,15 +258,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src\components" />
-      <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src\stylesheets" />
-      <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\public" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src" />
       <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\public" />
       <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src\static" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\public" />
+      <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src\components" />
+      <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src\stylesheets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -273,12 +293,12 @@
       <updated>1531726771114</updated>
       <workItem from="1531726772269" duration="34322000" />
       <workItem from="1532932249913" duration="15993000" />
-      <workItem from="1532953731966" duration="59273000" />
+      <workItem from="1532953731966" duration="72977000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109588000" />
+    <option name="totallyTimeSpent" value="123292000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -290,10 +310,11 @@
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3297062" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3297062" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3297062" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -303,7 +324,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3297062" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,7 +360,7 @@
         <state relative-caret-position="459">
           <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#350#407#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -394,7 +414,7 @@
         <state relative-caret-position="3111">
           <caret line="197" column="15" lean-forward="true" selection-start-line="197" selection-start-column="15" selection-end-line="197" selection-end-column="15" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#350#407#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -500,13 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/static/dataLyon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="60" lean-forward="true" selection-start-column="60" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/registerServiceWorker.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-707">
@@ -528,40 +541,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DataTable.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/react-dom/cjs/react-dom.development.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="47" column="26" lean-forward="true" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="189">
+          <caret line="13154" selection-start-line="13154" selection-end-line="13154" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MapDescription.js">
+    <entry file="file://$PROJECT_DIR$/public/dataStructureZoom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/static/dataSubDr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/France.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="128" column="12" lean-forward="true" selection-start-line="128" selection-start-column="12" selection-end-line="128" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -572,10 +562,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/static/dataDgrZoom.js">
+    <entry file="file://$PROJECT_DIR$/src/static/dataSubDr.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="117" selection-start-line="5" selection-start-column="117" selection-end-line="5" selection-end-column="117" />
+        <state relative-caret-position="408">
+          <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/static/dataStructureZoom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DataTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="46" column="19" lean-forward="true" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MapDescription.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SwitchesGroup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="66" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/France.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding>
+            <element signature="e#350#407#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/static/dataLyon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
         </state>
       </provider>
     </entry>
