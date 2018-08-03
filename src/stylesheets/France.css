@@ -2,27 +2,23 @@
 .wrapperStyles {
     width: 100%;
     max-width: 980px;
-    margin: 0 auto;
+    margin: 10px auto;
     font-family: Roboto, sans-serif;
 }
 
 .wrapperDataVisualisationStyles {
-    width: 100%;
-    max-width: 980px;
     margin: 0 auto;
     font-family: Roboto, sans-serif;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: start;
 }
 
 .wrapperDescriptionStyles {
-    flex: 1;
-    margin-left: 15px;
+    flex: 2;
 }
 
 .wrapperMapStyles {
-    width: 100%;
-    height: auto;
-    flex: 5;
+    flex: 3;
 }
