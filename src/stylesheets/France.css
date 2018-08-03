@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+.wrapperStyles {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    font-family: Roboto, sans-serif;
+}
+
+.wrapperDataVisualisationStyles {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.wrapperDescriptionStyles {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.wrapperMapStyles {
+    width: 100%;
+    height: auto;
+    flex: 5;
+}

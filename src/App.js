@@ -9,7 +9,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Pok Fiducial Map D3.js / React</h1>
+          <h1 className="App-title">Poc Fiducial Map D3.js / React</h1>
         </header>
         <France width={800} height={650} className="map"/>
       </div>

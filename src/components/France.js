@@ -12,39 +12,14 @@ import { geoTimes } from "d3-geo-projection"
 import Button from '@material-ui/core/Button'
 import chroma from "chroma-js"
 // import { VictoryPie } from "victory"
-import MapDescription from '../components/MapDescription'
+import MapDescription from './MapDescription'
+import MapOption from './MapOption'
 import dataLyon from '../static/dataLyon'
 import dataSubDgr from '../static/dataSubDgr'
 import dataStructureZoom from '../static/dataStructureZoom'
 import dataSubDr from '../static/dataSubDr'
 
-const wrapperStyles = {
-  width: "100%",
-  maxWidth: 980,
-  margin: "0 auto",
-  fontFamily: "Roboto, sans-serif",
-}
-
-const wrapperDataVisualisationStyles = {
-  width: "100%",
-  maxWidth: 980,
-  margin: "0 auto",
-  fontFamily: "Roboto, sans-serif",
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'space-around',
-}
-
-const wrapperDescriptionStyles = {
-  flex: "1",
-  marginLeft: 15
-}
-
-const wrapperMapStyles = {
-  width: "100%",
-  height: "auto",
-  flex: "5"
-}
+import '../stylesheets/France.css';
 
 const colorScaleDgr = chroma.scale(['#fafa6e','#2A4858']).mode('lch').colors(7)
 const colorScaleDr = chroma.scale(['#fafa6e','#2A4858']).mode('lch').colors(24)
@@ -66,6 +41,7 @@ class France extends Component {
       selectedDr: null,
       cities: dataLyon,
       niveau: 3,
+      showAgence: true,
     }
     this.loadPaths = this.loadPaths.bind(this)
     this.handleZoomIn = this.handleZoomIn.bind(this)
@@ -98,7 +74,7 @@ class France extends Component {
   }
   handleDrSelection(evt) {
     const dr = this.state.selectedDgr.dr[evt.currentTarget.getAttribute("datadr")]
-    console.log(dr)
+
     this.setState({
       center: dr.coordinates,
       zoom: dr.zoom,
@@ -123,9 +99,7 @@ class France extends Component {
     })*/
     if(this.state.niveau === 3) {
       const dgrId = geography.properties.CODE_DGR
-      const dgr = dataStructureZoom.filter((dgr) => {
-        if(dgr.id === dgrId) { return dgr }
-      } )[0]
+      const dgr = dataStructureZoom.filter((dgr) => dgr.id === dgrId )[0]
 
       this.setState({
         center: dgr.coordinates,
@@ -133,13 +107,12 @@ class France extends Component {
         selectedDgr: dgr,
         niveau: 2,
       })
+
     }
     else if(this.state.niveau === 2) {
       const drId = geography.properties.CODE_DR
-      const dr = this.state.selectedDgr.dr.filter((dr, i) => {
-        if(dr.id === drId) { return dr }
-      })[0]
-      console.log(dr)
+      const dr = this.state.selectedDgr.dr.filter((dr) => dr.id === drId)[0]
+
       this.setState({
         center: dr.coordinates,
         zoom: dr.zoom,
@@ -147,7 +120,6 @@ class France extends Component {
         niveau: 1,
       })
     }
-
   }
   handleCitySelection(evt) {
     const city = this.state.cities[11]
@@ -187,11 +159,11 @@ class France extends Component {
     })
   }
   handleMoveStart(currentCenter) {
-    console.log("New center: ", `[${currentCenter}], zoom: ${this.state.zoom}`)
+    // console.log("New center: ", `[${currentCenter}], zoom: ${this.state.zoom}`)
   }
 
   handleMoveEnd(newCenter) {
-    console.log("New center: ", newCenter, this.state.zoom)
+    // console.log("New center: ", newCenter, this.state.zoom)
   }
   onMouseEnterHandler(a) {
     let hoverInfo = a.properties
@@ -241,16 +213,21 @@ class France extends Component {
     }
     return colorMap
   }
+  handleShowAgence = (evt) => {
+    // console.log('Parent', evt)
+    this.setState({
+      showAgence: evt.agence ? true : false
+    })
+  }
   render() {
     const data = this.state.niveau === 3 ? dataStructureZoom : this.state.niveau === 2 ? this.state.selectedDgr.dr.map((dr) => dr) : ''
     return (
       <div>
-        <Button variant="contained" onClick={this.handleReset}>
-          { "Reset" }
-        </Button>
-        <Button onClick={ this.handleZoomIn }>{ "Zoom in" }</Button>
-        <Button onClick={ this.handleZoomOut }>{ "Zoom out" }</Button>
-        <div style={wrapperStyles}>
+        {/*<Button variant="contained" onClick={this.handleReset}>{ "Reset" }</Button>*/}
+        {/*<Button onClick={ this.handleZoomIn }>{ "Zoom in" }</Button>*/}
+        {/*<Button onClick={ this.handleZoomOut }>{ "Zoom out" }</Button>*/}
+        <MapOption onChange={this.handleShowAgence} onHandleReset={this.handleReset} />
+        <div className="wrapperStyles">
           {
             dataStructureZoom.map((dgr, i) => {
                return ( <Button
@@ -263,47 +240,40 @@ class France extends Component {
                  size="medium"
                 onClick={this.handleDgrSelection}
                  datadgr={i}
-                 variant="contained"
                 >
                 { dgr.name }
                 </Button> )
           })
           }
         </div>
-        <div style={wrapperStyles}>
+        <div className="wrapperStyles">
           {
-            this.state.niveau === 2 || this.state.niveau === 1? dataStructureZoom.filter((dgr, i) => {
-              if( dgr.id === this.state.selectedDgr.id ) {
-                // A modifier pour correspondre au selectedDgr.id
-                return dgr.dr
-              }
-            })[0].dr.map((dr, i) => {
-              return ( <Button
-                key={i}
-                variant="contained"
-                style={{
-                  backgroundColor: "#34495e",
-                  color: "#ecf0f1"
-                }}
-                size="small"
-                onClick={this.handleDrSelection}
-                datadr={i}
-              >
-                { dr.name }
-              </Button> )
-            }) : ''
+            this.state.niveau === 2 || this.state.niveau === 1? this.state.selectedDgr.dr.map((dr, i) =>
+                ( <Button
+                  key={i}
+                  variant="contained"
+                  style={{
+                    backgroundColor: "#34495e",
+                    color: "#ecf0f1"
+                  }}
+                  size="small"
+                  onClick={this.handleDrSelection}
+                  datadr={i}
+                >
+                  { dr.name }
+                </Button> )
+              ): ''
           }
         </div>
-        <div style={wrapperDataVisualisationStyles}>
+        <div className="wrapperDataVisualisationStyles">
           <ComposableMap
             projectionConfig={{
               center: [2.454071, 46.279229],
               scale: 2600,
-
             }}
             width={this.props.width}
             height={this.props.height}
-            style={wrapperMapStyles}
+            className="wrapperMapStyles"
           >
             <ZoomableGroup center={this.state.center}
                            zoom={this.state.zoom}
@@ -313,7 +283,7 @@ class France extends Component {
                            disableOptimization>
                 {(geographies, projection) =>
                   geographies.filter(geography =>
-                      this.state.selectedDgr ? this.state.selectedDr ? this.state.selectedDr.id === geography.properties.CODE_DR :this.state.selectedDgr.id === geography.properties.CODE_DGR : 1===1
+                      this.state.selectedDgr ? this.state.selectedDr ? this.state.selectedDr.id === geography.properties.CODE_DR :this.state.selectedDgr.id === geography.properties.CODE_DGR : true
                   ).map((geography, i) =>
                     <Geography
                       key={`${geography.properties.NOM_DEPT}-${i}`}
@@ -329,77 +299,6 @@ class France extends Component {
                   />
                 )}
               </Geographies>
-{/*              <Markers>
-                { this.state.zoom >= 10 ? this.state.cities.map((city, i) => (
-                  <Marker
-                    key={ `city-${city.id}` }
-                    marker={ city }
-                    style={{
-                      default: {
-                        outline: "none",
-                      },
-                      hover: {
-                        outline: "none",
-                      },
-                      pressed: {
-                        outline: "none",
-                      },
-                    }}
-                  >
-                    <g transform="translate(-15,-15)">
-                      <circle cx={20} cy={20} r={21} fill="transparent" stroke="#607D8B" />
-                      <circle cx={20} cy={20} r={9} fill="transparent" stroke="#607D8B" />
-                      <VictoryPie
-                        standalone={ false }
-                        width={ 40 }
-                        height={ 40 }
-                        padding={ 0 }
-                        innerRadius={ 10 }
-                        style={{
-                          labels: { fill: "transparent" },
-                          data: { stroke: "#ECEFF1" },
-                        }}
-                        data={[
-                          { x: null, y: city.languages[0].value, fill: "#FF5722" },
-                          { x: null, y: city.languages[1].value, fill: "#00BCD4" },
-                          { x: null, y: city.languages[2].value, fill: "#FFC107" },
-                          { x: null, y: city.languages[3].value, fill: "#8BC34A" },
-                        ]}
-                      />
-                    </g>
-                    <text
-                      textAnchor="middle"
-                      y={city.markerOffset}
-                      style={{
-                        fontFamily: "Roboto, sans-serif",
-                        fontSize: " 5 px",
-                        fill: "#DFF2FF",
-                      }}
-                    >
-                      {city.name}
-                    </text>
-                  </Marker>
-                )) : <Marker key="1" marker={this.state.cities[11]} >
-                  <circle
-                    onClick={ () => {
-                      const city = this.state.cities[11]
-                      this.setState({
-                        center: city.coordinates,
-                        zoom: 10,
-                      })
-                    }}
-                    cx={0}
-                    cy={0}
-                    r={5}
-                    style={{
-                      stroke: "#FF5722",
-                      strokeWidth: 2,
-                      opacity: 0.9,
-                    }}
-                  />
-
-                </Marker> }
-              </Markers>*/}
               <Markers>
                 { data !=='' ? data.map((item, i) => (
                 <Marker
@@ -429,7 +328,7 @@ class France extends Component {
               </Markers>
             </ZoomableGroup>
           </ComposableMap>
-          <MapDescription hoverInfo={this.state.hoverInfo} style={wrapperDescriptionStyles}/>
+          <MapDescription hoverInfo={this.state.hoverInfo} className="wrapperDescriptionStyles"/>
         </div>
       </div>
     )
