@@ -300,6 +300,9 @@ class France extends Component {
                 )}
               </Geographies>
               <Markers>
+                { dataStructureZoom.map(dgr => dgr.dr.map(dr => console.log(dr.agence))) }
+              </Markers>
+              <Markers>
                 { data !=='' ? data.map((item, i) => (
                 <Marker
                     key={i}
