@@ -58,6 +58,7 @@ class France extends Component {
     this.handleMoveEnd = this.handleMoveStart.bind(this)
     this.colorMapStyle = this.colorMapStyle.bind(this)
     this.handleDrSelection = this.handleDrSelection.bind(this)
+    this.getAgence = this.getAgence.bind(this)
   }
   handleDgrSelection(evt) {
     const dgrId = evt.currentTarget.getAttribute("datadgr")
@@ -219,6 +220,18 @@ class France extends Component {
       showAgence: evt.agence ? true : false
     })
   }
+  getAgence () {
+    let agence = []
+    if(this.state.niveau === 3) {
+      dataStructureZoom.map(dgr => dgr.dr.map( dr => dr.agence.forEach(item => agence.push(item)) ) )
+    } else if (this.state.niveau === 2) {
+      this.state.selectedDgr.dr.map( dr => dr.agence.forEach(item => agence.push(item) ))
+
+    } else if (this.state.niveau === 1) {
+      agence = this.state.selectedDr.agence
+    }
+    return agence
+  }
   render() {
     const data = this.state.niveau === 3 ? dataStructureZoom : this.state.niveau === 2 ? this.state.selectedDgr.dr.map((dr) => dr) : ''
     return (
@@ -299,8 +312,41 @@ class France extends Component {
                   />
                 )}
               </Geographies>
-              <Markers>
-                { dataStructureZoom.map(dgr => dgr.dr.map(dr => console.log(dr.agence))) }
+             <Markers>
+                { this.state.showAgence ? this.getAgence().map((agence,i) => (
+                  <Marker
+                    key={i}
+                    marker={agence}
+                    style={{
+                      default: { fill: "#c0392b" },
+                      hover: { fill: "#FFFFFF" },
+                      pressed: { fill: "#FF5722" },
+                    }}
+                  >
+                    <circle
+                      cx={0}
+                      cy={0}
+                      r={this.state.niveau === 3 ? 2 : this.state.niveau === 2 ? 5 : this.state.niveau === 1 ? 8 : 0}
+                      style={{
+                        stroke: "#ecf0f1",
+                        strokeWidth: 1,
+                        opacity: 0.6,
+                      }}
+                    />
+                    {this.state.niveau === 1 ? (<text
+                      textAnchor="middle"
+                      y={agence.markerOffset}
+                      style={{
+                        fontFamily: "Roboto, sans-serif",
+                        fill: "#ecf0f1",
+                        textShadow: "-1px -1px 0 rgba(44,66,80,0.30),1px -1px 0 rgba(44,66,80,0.30), -1px 1px 0 rgba(44,66,80,0.30),1px 1px 0 rgba(44,66,80,0.30)",
+                        pointerEvents: "none",
+                      }}
+                    >
+                      {agence.name}
+                    </text>) : '' }
+                  </Marker>
+                )): '' }
               </Markers>
               <Markers>
                 { data !=='' ? data.map((item, i) => (
