@@ -27,89 +27,54 @@ const styles = theme => ({
   },
 });
 
+const ListItemNm = ({type="TEST", data="900%", icon=(<Grain />), toggle=false, open=false, handleClick=null, cls="defList"}) => (
+  <div>
+    <ListItem button  onClick={handleClick} className={cls}>
+      <ListItemIcon>
+        { icon }
+      </ListItemIcon>
+      <ListItemText inset primary={ type } />
+      <ListItemText inset primary={ data } />
+      { toggle && (open ? <ExpandLess /> : <ExpandMore />) }
+    </ListItem>
+    <Divider />
+  </div>
+
+)
+
+const Expend = ({open, classes, name, data}) => (
+  <Collapse in={open} timeout="auto" unmountOnExit>
+    <List component="div" disablePadding dense={true}>
+      <ListItemNm type={name} data={data} cls={classes}/>
+      <Divider />
+    </List>
+  </Collapse>
+)
+
+
+
 class NestedList extends React.Component {
-  state = { open: true };
+  state = { open: false };
 
   handleClick = () => {
     this.setState(state => ({ open: !state.open }));
   };
 
   render() {
-    const { classes } = this.props;
-
+    const { classes, niveau, data } = this.props;
     return (
       <div className={classes.root}>
         <List
           component="nav"
           subheader={<ListSubheader component="div">Data</ListSubheader>}
         >
-          <ListItem button>
-            <ListItemIcon>
-              <FiberManualRecord />
-            </ListItemIcon>
-            <ListItemText inset primary="National" />
-            <ListItemText inset primary="999%" />
-          </ListItem>
-          <Divider />
-          <ListItem button onClick={this.handleClick}>
-            <ListItemIcon>
-              <ScatterPlot />
-            </ListItemIcon>
-            <ListItemText inset primary="DGR" />
-            <ListItemText inset primary="999%" />
-            {this.state.open ? <ExpandLess /> : <ExpandMore />}
-          </ListItem>
-          <Collapse in={this.state.open} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding dense={true}>
-              <ListItem button className={classes.nested}>
-                <ListItemText inset primary="DR1 - OUEST" />
-                <ListItemText inset primary="999%" />
-              </ListItem>
-              <Divider />
-              <ListItem button className={classes.nested}>
-                <ListItemText inset primary="DR2 - OUEST" />
-                <ListItemText inset primary="999%" />
-              </ListItem>
-              <Divider />
-              <ListItem button className={classes.nested}>
-                <ListItemText inset primary="DR3 - OUEST" />
-                <ListItemText inset primary="999%" />
-              </ListItem>
-              <Divider />
-              <ListItem button className={classes.nested}>
-                <ListItemText inset primary="DR4 - OUEST" />
-                <ListItemText inset primary="999%" />
-              </ListItem>
-              <Divider />
-              <ListItem button className={classes.nested}>
-                <ListItemText inset primary="DR5 - OUEST" />
-                <ListItemText inset primary="999%" />
-              </ListItem>
-              <Divider />
-              <ListItem button className={classes.nested}>
-                <ListItemText inset primary="DR6 - OUEST" />
-                <ListItemText inset primary="999%" />
-              </ListItem>
-            </List>
-          </Collapse>
-          <Divider />
-          <ListItem button>
-            <ListItemIcon>
-              <Grain />
-            </ListItemIcon>
-            <ListItemText inset primary="DR" />
-            <ListItemText style={{
-              float: "right",
-            }} inset primary="999%" />
-          </ListItem>
-          <Divider />
-          <ListItem button>
-            <ListItemIcon>
-              <Business />
-            </ListItemIcon>
-            <ListItemText inset primary="Agence" />
-            <ListItemText inset primary="999%" />
-          </ListItem>
+          <ListItemNm type="National" data="99%" icon={<FiberManualRecord />} />
+          <ListItemNm type="DGR" data="99%" icon={<ScatterPlot />} toggle={niveau===3?true:false} open={this.state.open} handleClick={niveau===3?this.handleClick:null}/>
+          { niveau===3 && (data.map( (data, i) => (<Expend key={i} open={this.state.open} classes={classes.nested} name={data.name} data={`${data.id}%`} />))) }
+          <ListItemNm type="DR" data="99%" icon={<Grain />} toggle={niveau===2?true:false} open={this.state.open} handleClick={niveau===2?this.handleClick:null}/>
+          { niveau===2 && (data.map( (data, i) => (<Expend key={i} open={this.state.open} classes={classes.nested} name={data.name} data={`${data.id}%`} />))) }
+          <ListItemNm type="Agence" data="99%" icon={<Business />} toggle={niveau===1?true:false} open={this.state.open} handleClick={niveau===1?this.handleClick:null}/>
+          { niveau===1 && (data.map( (data, i) => (<Expend key={i} open={this.state.open} classes={classes.nested} name={data.name} data={`${data.id}%`} />))) }
         </List>
       </div>
     );

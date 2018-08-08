@@ -28,7 +28,7 @@ const subDr = dataSubDr
 const subDgr = dataSubDgr
 
 
-class France extends Component {
+class France extends React.PureComponent  {
 
   constructor() {
     super()
@@ -39,6 +39,7 @@ class France extends Component {
       hoverInfo:null,
       selectedDgr: null,
       selectedDr: null,
+      hoverAgence: null,
       cities: dataLyon,
       niveau: 3,
       showAgence: true,
@@ -59,6 +60,7 @@ class France extends Component {
     this.colorMapStyle = this.colorMapStyle.bind(this)
     this.handleDrSelection = this.handleDrSelection.bind(this)
     this.getAgence = this.getAgence.bind(this)
+    this.onMouseEnterHandlerAgence = this.onMouseEnterHandlerAgence.bind(this)
   }
   handleDgrSelection(evt) {
     const dgrId = evt.currentTarget.getAttribute("datadgr")
@@ -90,7 +92,6 @@ class France extends Component {
       .scale(2600)
   }
   handleGeographyClick(geography) {
-
     /*const path = geoPath().projection(this.projection())
     const centroid = this.projection().invert(path.centroid(geography))
     this.setState({
@@ -135,6 +136,7 @@ class France extends Component {
       zoom: 1.4641000000000006,
       selectedDgr: null,
       selectedDr: null,
+      hoverAgence: null,
       niveau: 3,
     })
   }
@@ -220,20 +222,28 @@ class France extends Component {
       showAgence: evt.agence ? true : false
     })
   }
-  getAgence () {
+  getAgence() {
+    // console.time("get agence")
     let agence = []
     if(this.state.niveau === 3) {
-      dataStructureZoom.map(dgr => dgr.dr.map( dr => dr.agence.forEach(item => agence.push(item)) ) )
+      dataStructureZoom.map(dgr => dgr.dr.map( dr => dr.agence.map(item => agence.push(item)) ) )
     } else if (this.state.niveau === 2) {
       this.state.selectedDgr.dr.map( dr => dr.agence.forEach(item => agence.push(item) ))
 
     } else if (this.state.niveau === 1) {
       agence = this.state.selectedDr.agence
     }
+    // console.timeEnd("get agence")
+    // console.log("call get agence", agence)
     return agence
   }
+  onMouseEnterHandlerAgence(a) {
+    this.setState({
+      hoverAgence: a
+    })
+  }
   render() {
-    const data = this.state.niveau === 3 ? dataStructureZoom : this.state.niveau === 2 ? this.state.selectedDgr.dr.map((dr) => dr) : ''
+    const data = this.state.niveau === 3 ? dataStructureZoom : this.state.niveau === 2 ? this.state.selectedDgr.dr : this.state.niveau===1 ? this.state.selectedDr.agence : null
     return (
       <div>
         {/*<Button variant="contained" onClick={this.handleReset}>{ "Reset" }</Button>*/}
@@ -313,8 +323,11 @@ class France extends Component {
                 )}
               </Geographies>
              <Markers>
-                { this.state.showAgence ? this.getAgence().map((agence,i) => (
+                { this.state.showAgence ? this.getAgence().map((agence,i) => {
+                  const isGroup = (agence.cy!== undefined && agence.cx !== undefined)
+                  return (
                   <Marker
+                    onMouseEnter={this.onMouseEnterHandlerAgence}
                     key={i}
                     marker={agence}
                     style={{
@@ -324,8 +337,8 @@ class France extends Component {
                     }}
                   >
                     <circle
-                      cx={0}
-                      cy={0}
+                      cx={agence.cx ? agence.cx : 0}
+                      cy={agence.cy ? agence.cy : 0}
                       r={this.state.niveau === 3 ? 2 : this.state.niveau === 2 ? 5 : this.state.niveau === 1 ? 8 : 0}
                       style={{
                         stroke: "#ecf0f1",
@@ -337,19 +350,21 @@ class France extends Component {
                       textAnchor="middle"
                       y={agence.markerOffset}
                       style={{
+                        // display: (isGroup && agence.groupName !== undefined )?"none":"initial",
                         fontFamily: "Roboto, sans-serif",
                         fill: "#ecf0f1",
+                        fontSize: "0.6em",
                         textShadow: "-1px -1px 0 rgba(44,66,80,0.30),1px -1px 0 rgba(44,66,80,0.30), -1px 1px 0 rgba(44,66,80,0.30),1px 1px 0 rgba(44,66,80,0.30)",
                         pointerEvents: "none",
                       }}
                     >
-                      {agence.name}
+                      {(isGroup || agence.groupName !== undefined )? agence.groupName : agence.name}
                     </text>) : '' }
                   </Marker>
-                )): '' }
+                )}): '' }
               </Markers>
               <Markers>
-                { data !=='' ? data.map((item, i) => (
+                { (data !== null && this.state.niveau !== 1) ? data.map((item, i) => (
                 <Marker
                     key={i}
                     marker={item}
@@ -377,7 +392,7 @@ class France extends Component {
               </Markers>
             </ZoomableGroup>
           </ComposableMap>
-          <MapDescription hoverInfo={this.state.hoverInfo} className="wrapperDescriptionStyles"/>
+          <MapDescription hoverInfo={this.state.hoverInfo} niveau={this.state.niveau} agence={this.state.hoverAgence} className="wrapperDescriptionStyles" structure={data}/>
         </div>
       </div>
     )
