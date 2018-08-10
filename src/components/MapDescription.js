@@ -4,7 +4,7 @@ import NestedList from '../components/NestedList'
 import '../stylesheets/MapDescription.css';
 class MapDescription extends React.Component {
   render() {
-    const { hoverInfo, niveau, agence, structure } = this.props;
+    const { hoverInfo, niveau, agence, structure } = this.props
     return (
           <div className="map-description-container">
             <div className="state-name">DGR {hoverInfo === null ? '' : `${hoverInfo.CODE_DGR} / ${hoverInfo.NOM_DGR}`}</div>

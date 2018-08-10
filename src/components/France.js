@@ -9,15 +9,12 @@ import {
   Marker,
 } from "react-simple-maps"
 import { geoTimes } from "d3-geo-projection"
-import Button from '@material-ui/core/Button'
 import chroma from "chroma-js"
-// import { VictoryPie } from "victory"
 import MapDescription from './MapDescription'
-import MapOption from './MapOption'
-import dataLyon from '../static/dataLyon'
 import dataSubDgr from '../static/dataSubDgr'
 import dataStructureZoom from '../static/dataStructureZoom'
 import dataSubDr from '../static/dataSubDr'
+import NavMap from './NavMap'
 
 import '../stylesheets/France.css';
 
@@ -40,14 +37,12 @@ class France extends React.PureComponent  {
       selectedDgr: null,
       selectedDr: null,
       hoverAgence: null,
-      cities: dataLyon,
       niveau: 3,
       showAgence: true,
     }
     this.loadPaths = this.loadPaths.bind(this)
     this.handleZoomIn = this.handleZoomIn.bind(this)
     this.handleZoomOut = this.handleZoomOut.bind(this)
-    this.handleCitySelection = this.handleCitySelection.bind(this)
     this.handleReset = this.handleReset.bind(this)
     this.onMouseEnterHandler = this.onMouseEnterHandler.bind(this)
     this.handleGeographyClick = this.handleGeographyClick.bind(this)
@@ -122,23 +117,6 @@ class France extends React.PureComponent  {
         niveau: 1,
       })
     }
-  }
-  handleCitySelection(evt) {
-    const city = this.state.cities[11]
-    this.setState({
-      center: city.coordinates,
-      zoom: 10,
-    })
-  }
-  handleReset() {
-    this.setState({
-      center:  [2.454071, 46.279229],
-      zoom: 1.4641000000000006,
-      selectedDgr: null,
-      selectedDr: null,
-      hoverAgence: null,
-      niveau: 3,
-    })
   }
   componentDidMount() {
     this.loadPaths()
@@ -217,13 +195,11 @@ class France extends React.PureComponent  {
     return colorMap
   }
   handleShowAgence = (evt) => {
-    // console.log('Parent', evt)
     this.setState({
       showAgence: evt.agence ? true : false
     })
   }
   getAgence() {
-    // console.time("get agence")
     let agence = []
     if(this.state.niveau === 3) {
       dataStructureZoom.map(dgr => dgr.dr.map( dr => dr.agence.map(item => agence.push(item)) ) )
@@ -233,8 +209,6 @@ class France extends React.PureComponent  {
     } else if (this.state.niveau === 1) {
       agence = this.state.selectedDr.agence
     }
-    // console.timeEnd("get agence")
-    // console.log("call get agence", agence)
     return agence
   }
   onMouseEnterHandlerAgence(a) {
@@ -242,52 +216,21 @@ class France extends React.PureComponent  {
       hoverAgence: a
     })
   }
+  handleReset() {
+    this.setState({
+      center:  [2.454071, 46.279229],
+      zoom: 1.4641000000000006,
+      selectedDgr: null,
+      selectedDr: null,
+      hoverAgence: null,
+      niveau: 3,
+    })
+  }
   render() {
     const data = this.state.niveau === 3 ? dataStructureZoom : this.state.niveau === 2 ? this.state.selectedDgr.dr : this.state.niveau===1 ? this.state.selectedDr.agence : null
     return (
       <div>
-        {/*<Button variant="contained" onClick={this.handleReset}>{ "Reset" }</Button>*/}
-        {/*<Button onClick={ this.handleZoomIn }>{ "Zoom in" }</Button>*/}
-        {/*<Button onClick={ this.handleZoomOut }>{ "Zoom out" }</Button>*/}
-        <MapOption onChange={this.handleShowAgence} onHandleReset={this.handleReset} />
-        <div className="wrapperStyles">
-          {
-            dataStructureZoom.map((dgr, i) => {
-               return ( <Button
-                 key={i}
-                variant="contained"
-                style={{
-                  backgroundColor: "#2980b9",
-                  color: "#ecf0f1"
-                }}
-                 size="medium"
-                onClick={this.handleDgrSelection}
-                 datadgr={i}
-                >
-                { dgr.name }
-                </Button> )
-          })
-          }
-        </div>
-        <div className="wrapperStyles">
-          {
-            this.state.niveau === 2 || this.state.niveau === 1? this.state.selectedDgr.dr.map((dr, i) =>
-                ( <Button
-                  key={i}
-                  variant="contained"
-                  style={{
-                    backgroundColor: "#34495e",
-                    color: "#ecf0f1"
-                  }}
-                  size="small"
-                  onClick={this.handleDrSelection}
-                  datadr={i}
-                >
-                  { dr.name }
-                </Button> )
-              ): ''
-          }
-        </div>
+        <NavMap niveau={this.state.niveau} selectedDgr={this.state.selectedDgr} dataStructure={dataStructureZoom} handleReset={this.handleReset} handleDgrSelection={this.handleDgrSelection} handleDrSelection={this.handleDrSelection} handleShowAgence={this.handleShowAgence} />
         <div className="wrapperDataVisualisationStyles">
           <ComposableMap
             projectionConfig={{
@@ -385,7 +328,7 @@ class France extends React.PureComponent  {
                         pointerEvents: "none",
                       }}
                     >
-                      { `${item.id}%`} {/* data a modifier */}
+                      { `${item.id}%`}
                     </text>
                   </Marker>
                 )): ''}
