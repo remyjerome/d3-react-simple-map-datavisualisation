@@ -10,7 +10,7 @@ const dataSubDr= [
   'DIJON',
   'NANCY',
   'AUXERRE',
-  'CLERMONT',
+  'CLERMONT-FERRAND',
   'ANNECY',
   'LYON',
   'VIENNE',
@@ -22,7 +22,8 @@ const dataSubDr= [
   'TOULOUSE',
   'LIMOGES',
   'PAU',
-  'LILLE',
+  'LILLE'
+
 ]
 
 export default dataSubDr

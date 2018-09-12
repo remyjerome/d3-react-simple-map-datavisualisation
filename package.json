@@ -12,15 +12,18 @@
     "material-ui-icons": "^1.0.0-beta.36",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
     "react-simple-maps": "^0.12.1",
+    "redux": "^4.0.0",
     "victory": "^0.27.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "redux": "./node_modules/.bin/babel-node ./src/indexRedux.js"
   },
   "devDependencies": {
     "prop-types": "^15.6.2"
