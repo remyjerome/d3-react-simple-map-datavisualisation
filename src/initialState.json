@@ -1,6 +1,6 @@
 {
   "level": 3,
-  "options": [],
+  "options": ["heatmap"],
   "dgr": null,
   "dr": null,
   "zoom": 1.4641000000000006,

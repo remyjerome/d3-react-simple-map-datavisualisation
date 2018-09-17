@@ -45,10 +45,10 @@ class SimpleSelect extends React.Component {
     return (
 
       <form className={classes.root} autoComplete="off">
-        <List style={{width:"100%"}} subheader={<ListSubheader>Map Data</ListSubheader>}>
+        <List style={{width:"100%"}} subheader={<ListSubheader>Indicateurs</ListSubheader>}>
           <ListItem >
             <FormControl className={classes.formControl}>
-              <InputLabel htmlFor="idc-simple">Data</InputLabel>
+              <InputLabel htmlFor="idc-simple">IDC</InputLabel>
               <Select
                 value={this.state.idc}
                 onChange={this.handleChange}

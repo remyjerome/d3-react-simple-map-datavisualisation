@@ -72,19 +72,6 @@ class MapSettings extends React.Component {
               />
             </ListItemSecondaryAction>
           </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <AddLocation />
-            </ListItemIcon>
-            <ListItemText primary="Zone théorique" />
-            <ListItemSecondaryAction>
-              <Switch
-                disabled
-                onChange={this.handleToggle('theorique')}
-                checked={this.state.checked.indexOf('theorique') !== -1}
-              />
-            </ListItemSecondaryAction>
-          </ListItem>
         </List>
       </div>
     );

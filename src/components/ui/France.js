@@ -14,7 +14,6 @@ import MapDescription from './MapDescription'
 import dataSubDgr from '../../static/dataSubDgr'
 import dataStructureZoom from '../../static/dataStructureZoom'
 import dataSubDr from '../../static/dataSubDr'
-import NavMap from './NavMap'
 import { scaleLinear } from "d3-scale"
 
 import '../../stylesheets/France.css';
@@ -40,9 +39,7 @@ const subDgr = dataSubDgr
 
 
 class France extends React.Component  {
-  shouldComponentUpdate(nextProps, nextState) {
-    return true
-  }
+
   constructor(props) {
     super(props)
     this.state = {
@@ -114,7 +111,7 @@ class France extends React.Component  {
   handleDgrSelection(evt) {
     const dgrId = evt.currentTarget.getAttribute("datadgr")
     const dgr = dataStructureZoom[dgrId]
-
+    console.log(dgr)
     this.props.onSetLevel(2)
     this.props.onSetCenter(dgr.coordinates)
     this.props.onSetZoom(dgr.zoom)
@@ -164,7 +161,6 @@ class France extends React.Component  {
     })
   }
   loadPaths() {
-    // get(this.props.showTheorique ? "/zone_fusion_theo.geojson" : "/france-dr.json")
     get("/zone_theo_db.geojson")
       .then(res => {
         if (res.status !== 200) return
@@ -266,11 +262,10 @@ class France extends React.Component  {
     this.props.onClearDr()
   }
   render() {
-    const loadPath = this.state.didMount && this.loadPaths()
+    this.state.didMount && this.loadPaths()
     const data = this.props.niveau === 3 ? dataStructureZoom : this.props.niveau === 2 ? this.props.selectedDgr.dr : this.props.niveau===1 ? this.props.selectedDr.agence : null
     return (
       <div>
-        <NavMap niveau={this.props.niveau} selectedDgr={this.props.selectedDgr} dataStructure={dataStructureZoom} handleReset={this.handleReset} handleDgrSelection={this.handleDgrSelection} handleDrSelection={this.handleDrSelection}/>
         <div className="wrapperDataVisualisationStyles">
           <ComposableMap
             projectionConfig={{
@@ -290,7 +285,7 @@ class France extends React.Component  {
                            >
                 {(geographies, projection) =>
                   geographies.filter(geography =>
-                      this.props.selectedDgr ? this.props.selectedDr ? this.props.selectedDr.id == geography.properties.CODE_DR :this.props.selectedDgr.id == geography.properties.CODE_DGR : true
+                      this.props.selectedDgr ? this.props.selectedDr ? this.props.selectedDr.id === geography.properties.CODE_DR :this.props.selectedDgr.id === geography.properties.CODE_DGR : true
                   ).map((geography, i) =>
                     <Geography
                       key={`${geography.properties.id_site}-${i}`}
@@ -338,7 +333,7 @@ class France extends React.Component  {
               </Markers>
             </ZoomableGroup>
           </ComposableMap>
-          <MapDescription hoverInfo={this.props.hoverInfo} niveau={this.props.niveau} agence={this.props.hoverAgence} className="wrapperDescriptionStyles" structure={data}/>
+          <MapDescription niveau={this.props.niveau} className="wrapperDescriptionStyles" structure={data}/>
         </div>
       </div>
     )

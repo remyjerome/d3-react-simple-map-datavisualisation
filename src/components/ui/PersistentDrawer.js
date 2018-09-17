@@ -13,8 +13,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 import MapSettings from '../containers/MapSettings'
-import MapData from '../containers/MapData'
-import MapLocation from '../containers/MapLocation'
+import DataList from '../containers/DataList'
 
 const drawerWidth = 240;
 
@@ -70,7 +69,7 @@ const styles = theme => ({
   },
   content: {
     flexGrow: 1,
-    backgroundColor: "#a4b8c4",
+    backgroundColor: "#fff",
     padding: theme.spacing.unit * 3,
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
@@ -136,9 +135,7 @@ class PersistentDrawer extends React.Component {
         <Divider />
         <MapSettings options={['agence']}/>
         <Divider />
-        <MapLocation map={'france'}/>
-        <Divider />
-        <MapData />
+        <DataList dataList={[{ name:'indicateur-1', label: 'MCD' },{ name:'indicateur-2', label: 'P-R' }]}/>
       </Drawer>
     );
 
@@ -170,7 +167,7 @@ class PersistentDrawer extends React.Component {
                 <MenuIcon />
               </IconButton>
               <Typography variant="title" color="inherit" noWrap>
-                Poc datavisualisation D3.js / React.js
+                { this.props.data != null ?  this.props.data : null }
               </Typography>
             </Toolbar>
           </AppBar>
