@@ -14,7 +14,7 @@ const mapStateToProps = (state) => {
     showAgence: state.options.indexOf('agence') !== -1,
     showTheorique: state.options.indexOf('theorique') !== -1,
     width: 800,
-    height: 650,
+    height: 700,
     showHeatmap: state.options.indexOf('heatmap') !== -1,
     data: state.data
   }

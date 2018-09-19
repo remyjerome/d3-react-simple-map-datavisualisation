@@ -7,14 +7,19 @@ import {
   Geography,
   Markers,
   Marker,
+  Lines,
+  Line
 } from "react-simple-maps"
-import { geoTimes } from "d3-geo-projection"
 import chroma from "chroma-js"
 import MapDescription from './MapDescription'
 import dataSubDgr from '../../static/dataSubDgr'
 import dataStructureZoom from '../../static/dataStructureZoom'
 import dataSubDr from '../../static/dataSubDr'
 import { scaleLinear } from "d3-scale"
+import { mesh, feature } from "topojson-client"
+import * as d3 from 'd3'
+import { geoPath } from 'd3-geo'
+import { geoTimes } from 'd3-geo-projection'
 
 import '../../stylesheets/France.css';
 
@@ -38,6 +43,7 @@ const subDr = dataSubDr
 const subDgr = dataSubDgr
 
 
+
 class France extends React.Component  {
 
   constructor(props) {
@@ -53,15 +59,14 @@ class France extends React.Component  {
     this.handleReset = this.handleReset.bind(this)
     this.onMouseEnterHandler = this.onMouseEnterHandler.bind(this)
     this.handleGeographyClick = this.handleGeographyClick.bind(this)
-    this.projection = this.projection.bind(this)
     this.handleDgrSelection = this.handleDgrSelection.bind(this)
-    this.handleMoveStart = this.handleMoveStart.bind(this)
-    this.handleMoveEnd = this.handleMoveStart.bind(this)
     this.colorMapStyle = this.colorMapStyle.bind(this)
     this.handleDrSelection = this.handleDrSelection.bind(this)
     this.getAgence = this.getAgence.bind(this)
     this.onMouseEnterHandlerAgence = this.onMouseEnterHandlerAgence.bind(this)
   }
+
+
   createMarker= () => {
     let markers = []
     let agence = this.getAgence()
@@ -92,7 +97,6 @@ class France extends React.Component  {
             textAnchor="middle"
             y={agence[i].markerOffset}
             style={{
-              // display: (isGroup && agence.groupName !== undefined )?"none":"initial",
               fontFamily: "Roboto, sans-serif",
               fill: "#ecf0f1",
               fontSize: "0.6em",
@@ -128,11 +132,7 @@ class France extends React.Component  {
     this.props.onClearHoverInfo()
     this.props.onSetDr(dr)
   }
-  projection() {
-    return geoTimes()
-      .translate([2.454071, 46.279229])
-      .scale(2600)
-  }
+
   handleGeographyClick(geography) {
     if(this.props.niveau === 3) {
       const dgrId = geography.properties.CODE_DGR
@@ -154,39 +154,96 @@ class France extends React.Component  {
       this.props.onSetDr(dr)
     }
   }
-  componentDidMount() {
-    // this.loadPaths()
-    this.setState({
-      didMount: true
-    })
+  componentWillMount() {
+    this.loadPaths()
   }
+
+
   loadPaths() {
-    get("/zone_theo_db.geojson")
+    get("/zone_theo_db.json")
       .then(res => {
         if (res.status !== 200) return
-        const france = res.data.features
-        this.setState({ geographyPaths: france })
+        const world = res.data
+
+        const projection = geoTimes()
+          .scale(2600)
+          .translate([this.props.width/2,this.props.height/2])
+
+        const path = geoPath()
+          .projection(projection)
+
+
+        const france = feature(world, world.objects[Object.keys(world.objects)[0]]).features
+
+
+        // DGR BORDER
+        var borderDgr = path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(4, 3)))
+        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(4, 6)))
+        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(4, 5)))
+
+
+        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(6, 1)))
+        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(6, 2)))
+        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(6, 5)))
+
+        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(1, 2)))
+
+        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(2, 8)))
+        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(2, 3)))
+
+        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], function(a, b) { return a == b }))
+
+
+
+        console.log(borderDgr)
+
+        this.setState({
+          geographyPaths: france,
+          dgr: borderDgr
+        })
       })
   }
+
+  bd(id0, id1) {
+    return function(a, b) {
+      return a.properties.CODE_DGR === id0 && b.properties.CODE_DGR === id1
+        || a.properties.CODE_DGR === id1 && b.properties.CODE_DGR === id0;
+    };
+  }
+
+  renderBorder(d, style) {
+
+    return(
+      <g className="rsm-lines">
+        <path className="rsm-line " tabIndex="0"
+              d={d}
+              style={style}></path>
+      </g>
+    )
+  }
+
+  renderBorder(d,style) {
+
+    return(
+      <g className="rsm-lines">
+        <path className="rsm-line " tabIndex="0"
+              d={d}
+              style={style}></path>
+      </g>
+    )
+  }
+
   handleZoomIn() {
     this.props.onSetZoom(this.props.zoom*1.1)
   }
   handleZoomOut() {
     this.props.onSetZoom(this.props.zoom/1.1)
   }
-  handleMoveStart(currentCenter) {
-    // console.log("New center: ", `[${currentCenter}], zoom: ${this.state.zoom}`)
-  }
-
-  handleMoveEnd(newCenter) {
-    // console.log("New center: ", newCenter, this.state.zoom)
-  }
   onMouseEnterHandler(a) {
     let hoverInfo = a.properties
     this.props.onSetHoverInfo(hoverInfo)
   }
   colorMapStyle(geography, i) {
-    // console.log(subDgr.indexOf(geography.properties.NOM_DGR))
     const colorMap = (this.props.selectedDgr != null) ? {
         default: {
           fill: this.props.showHeatmap ? popScale(i) : colorScaleDr[subDr.indexOf(geography.properties.NOM_DR)],
@@ -262,7 +319,6 @@ class France extends React.Component  {
     this.props.onClearDr()
   }
   render() {
-    this.state.didMount && this.loadPaths()
     const data = this.props.niveau === 3 ? dataStructureZoom : this.props.niveau === 2 ? this.props.selectedDgr.dr : this.props.niveau===1 ? this.props.selectedDr.agence : null
     return (
       <div>
@@ -276,31 +332,38 @@ class France extends React.Component  {
             height={this.props.height}
             className="wrapperMapStyles"
           >
+
             <ZoomableGroup center={this.props.center}
                            zoom={this.props.zoom}
                            onMoveStart={this.handleMoveStart}
                            onMoveEnd={this.handleMoveEnd}>
+
               <Geographies geography={this.state.geographyPaths}
                            disableOptimization
                            >
-                {(geographies, projection) =>
+                {
+                  (geographies, projection) => {
+                    return (
                   geographies.filter(geography =>
                       this.props.selectedDgr ? this.props.selectedDr ? this.props.selectedDr.id === geography.properties.CODE_DR :this.props.selectedDgr.id === geography.properties.CODE_DGR : true
                   ).map((geography, i) =>
-                    <Geography
-                      key={`${geography.properties.id_site}-${i}`}
-                      onMouseEnter={this.onMouseEnterHandler}
-                      onClick={this.handleGeographyClick}
-                      cacheId={`path-${geography.properties.id_site}-${i}`}
-                      data-tip={geography.properties.id_site}
-                      id={`${geography.properties.id_site}`}
-                      round
-                      geography={geography}
-                      projection={projection}
-                      style={this.colorMapStyle(geography, i)}
-                  />
-                )}
+                      <Geography
+
+                        key={`${geography.properties.id_site}-${i}`}
+                        onMouseEnter={this.onMouseEnterHandler}
+                        onClick={this.handleGeographyClick}
+                        cacheId={`path-${geography.properties.id_site}-${i}`}
+                        data-tip={geography.properties.id_site}
+                        id={`${geography.properties.id_site}`}
+                        round
+                        geography={geography}
+                        projection={projection}
+                        style={this.colorMapStyle(geography, i)}
+                      />
+                ))}}
               </Geographies>
+              {/* this.renderBorder(this.state.line, {stroke: "rgb(102, 102, 102)", strokeWidth: 0.5, fill: "none"}) */}
+              { this.props.niveau === 3 && this.renderBorder(this.state.dgr, {stroke: "rgb(0,0,0)", strokeWidth: 0.6, fill: "none"}) }
               <Markers>
                 { this.props.showAgence && this.createMarker() }
               </Markers>
@@ -333,7 +396,7 @@ class France extends React.Component  {
               </Markers>
             </ZoomableGroup>
           </ComposableMap>
-          <MapDescription niveau={this.props.niveau} className="wrapperDescriptionStyles" structure={data}/>
+          <MapDescription niveau={this.props.niveau} className="wrapperDescriptionStyles" structure={data} hoverInfo={this.props.hoverInfo}/>
         </div>
       </div>
     )
