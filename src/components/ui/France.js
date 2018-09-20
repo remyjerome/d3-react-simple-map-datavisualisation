@@ -6,9 +6,7 @@ import {
   Geographies,
   Geography,
   Markers,
-  Marker,
-  Lines,
-  Line
+  Marker
 } from "react-simple-maps"
 import chroma from "chroma-js"
 import MapDescription from './MapDescription'
@@ -17,9 +15,8 @@ import dataStructureZoom from '../../static/dataStructureZoom'
 import dataSubDr from '../../static/dataSubDr'
 import { scaleLinear } from "d3-scale"
 import { mesh, feature } from "topojson-client"
-import * as d3 from 'd3'
 import { geoPath } from 'd3-geo'
-import { geoTimes } from 'd3-geo-projection'
+import { geoConicConformalFrance } from 'd3-composite-projections'
 
 import '../../stylesheets/France.css';
 
@@ -46,6 +43,9 @@ const subDgr = dataSubDgr
 
 class France extends React.Component  {
 
+  projection(width, height, config) {
+    return geoConicConformalFrance()
+  }
   constructor(props) {
     super(props)
     this.state = {
@@ -154,20 +154,19 @@ class France extends React.Component  {
       this.props.onSetDr(dr)
     }
   }
-  componentWillMount() {
+  componentDidMount() {
     this.loadPaths()
   }
 
 
   loadPaths() {
-    get("/zone_theo_db.json")
+    get("/zone_theo_db_outremer.json")
       .then(res => {
         if (res.status !== 200) return
         const world = res.data
 
-        const projection = geoTimes()
-          .scale(2600)
-          .translate([this.props.width/2,this.props.height/2])
+        const projection = geoConicConformalFrance()
+
 
         const path = geoPath()
           .projection(projection)
@@ -177,6 +176,7 @@ class France extends React.Component  {
 
 
         // DGR BORDER
+        // console.log(path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(4, 3))))
         var borderDgr = path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(4, 3)))
         borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(4, 6)))
         borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(4, 5)))
@@ -194,12 +194,9 @@ class France extends React.Component  {
         borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], function(a, b) { return a == b }))
 
 
-
-        console.log(borderDgr)
-
         this.setState({
           geographyPaths: france,
-          dgr: borderDgr
+          borderDgr: borderDgr
         })
       })
   }
@@ -324,10 +321,7 @@ class France extends React.Component  {
       <div>
         <div className="wrapperDataVisualisationStyles">
           <ComposableMap
-            projectionConfig={{
-              center: this.props.center,
-              scale: 2600,
-            }}
+            projection={this.projection}
             width={this.props.width}
             height={this.props.height}
             className="wrapperMapStyles"
@@ -363,7 +357,7 @@ class France extends React.Component  {
                 ))}}
               </Geographies>
               {/* this.renderBorder(this.state.line, {stroke: "rgb(102, 102, 102)", strokeWidth: 0.5, fill: "none"}) */}
-              { this.props.niveau === 3 && this.renderBorder(this.state.dgr, {stroke: "rgb(0,0,0)", strokeWidth: 0.6, fill: "none"}) }
+              { (this.props.niveau === 3 && this.props.showBorder)&& this.renderBorder(this.state.borderDgr, {stroke: "rgb(0,0,0)", strokeWidth: 0.6, fill: "none"}) }
               <Markers>
                 { this.props.showAgence && this.createMarker() }
               </Markers>

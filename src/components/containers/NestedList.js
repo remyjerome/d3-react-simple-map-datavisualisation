@@ -1,15 +1,40 @@
 import NestedList from '../ui/NestedList'
 import { connect } from 'react-redux'
-import { setLevel, setCenter, setZoom, clearHoverAgency, clearDgr, clearDr, clearHoverInfo, setDgr, setDr } from '../../actions'
+import {
+  setLevel,
+  setCenter,
+  setZoom,
+  clearHoverAgency,
+  clearDgr,
+  clearDr,
+  clearHoverInfo,
+  setDgr,
+  setDr,
+  addOption,
+  clearOption
+} from '../../actions'
 
 const mapStateToProps = (state) => {
   return {
-    niveau: state.level
+    niveau: state.level,
+    dgr: state.dgr,
+    dr: state.dr,
+    options: state.options
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
+    onAddOption(option) {
+      dispatch(
+        addOption(option)
+      )
+    },
+    onClearOption(index) {
+      dispatch(
+        clearOption(index)
+      )
+    },
     onSetLevel(level) {
       dispatch(
         setLevel(level)

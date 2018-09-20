@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/components/ui/France.js" line="25" />
+    <bookmark url="file://$PROJECT_DIR$/src/components/ui/France.js" line="22" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8434e9e-1594-430b-a1b5-266b4f417c71" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/static/francedom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/MenuData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/zone_theo_db_outremer.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/zone_theo_db_outremer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/containers/France.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/containers/France.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/containers/NestedList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/containers/NestedList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/France.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/France.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/MapDescription.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/MapDescription.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/MapSettings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/MapSettings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/NestedList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/NestedList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/PersistentDrawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/PersistentDrawer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/initialState.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/initialState.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/dataSubDgr.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/dataSubDgr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/dataSubDr.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/dataSubDr.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,23 +44,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="France.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="France.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ui/France.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="333" column="11" lean-forward="true" selection-start-line="333" selection-start-column="11" selection-end-line="333" selection-end-column="11" />
+            <state relative-caret-position="375">
+              <caret line="392" column="15" selection-start-line="392" selection-start-column="11" selection-end-line="392" selection-end-column="15" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -60,20 +56,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="France.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/containers/France.js">
+      <file leaf-file-name="MapSettings.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/containers/MapSettings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-604">
-              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+            <state relative-caret-position="323">
+              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
+      <file leaf-file-name="MapSettings.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/ui/MapSettings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+            <state relative-caret-position="544">
+              <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapData.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/ui/MapData.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="52" column="38" lean-forward="true" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -81,8 +92,8 @@
       <file leaf-file-name="MapDescription.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ui/MapDescription.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+            <state relative-caret-position="272">
+              <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -90,20 +101,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="zone_theo_db.geojson" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/zone_theo_db.geojson">
+      <file leaf-file-name="NestedList.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/ui/NestedList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+            <state relative-caret-position="477">
+              <caret line="119" column="262" selection-start-line="119" selection-start-column="262" selection-end-line="119" selection-end-column="262" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="NestedList.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/containers/NestedList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="255">
+              <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="initialState.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/initialState.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="6" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -119,17 +145,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dgr</find>
-      <find>NestedList</find>
-      <find>handleReset</find>
-      <find>handleDgrSelection</find>
-      <find>LOAD</find>
-      <find>HOVER</find>
-      <find>Poc</find>
-      <find>geographyPaths</find>
-      <find>did</find>
-      <find>didM</find>
-      <find>didMount</find>
       <find>this.border</find>
       <find>setState</find>
       <find>getAgence</find>
@@ -138,17 +153,28 @@
       <find>geo</find>
       <find>scaleLinear</find>
       <find>path</find>
-      <find>scale</find>
       <find>render</find>
       <find>translate</find>
       <find>center</find>
       <find>state.</find>
       <find>border</find>
-      <find>projection</find>
       <find>hover</find>
       <find>GeometryC</find>
       <find>line</find>
       <find>renderBor</find>
+      <find>scale</find>
+      <find>projection</find>
+      <find>code</find>
+      <find>OUTRE</find>
+      <find>CODE_DGR</find>
+      <find>CODE_DR</find>
+      <find>click</find>
+      <find>handle</find>
+      <find>SendIcon</find>
+      <find>geoPath</find>
+      <find>dgr</find>
+      <find>MapData</find>
+      <find>clea</find>
     </findStrings>
     <replaceStrings>
       <replace>departements</replace>
@@ -168,6 +194,7 @@
       <replace>agence[i]</replace>
       <replace>id_site</replace>
       <replace>this.props.niveau</replace>
+      <replace>BorderStyle</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src</dir>
@@ -179,8 +206,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/MapDescription.js" />
-        <option value="$PROJECT_DIR$/src/components/NavMap.js" />
         <option value="$PROJECT_DIR$/src/components/TemporaryDrawer.js" />
         <option value="$PROJECT_DIR$/src/components/PermanentDrawer.js" />
         <option value="$PROJECT_DIR$/src/components/titleData.js" />
@@ -208,28 +233,30 @@
         <option value="$PROJECT_DIR$/src/components/ui/save" />
         <option value="$PROJECT_DIR$/public/zone_fusion_theo.geojson" />
         <option value="$PROJECT_DIR$/src/store/index.js" />
-        <option value="$PROJECT_DIR$/src/static/dataSubDgr.js" />
         <option value="$PROJECT_DIR$/public/zone_theo_db.geojson" />
-        <option value="$PROJECT_DIR$/src/static/dataSubDr.js" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/initialState.json" />
-        <option value="$PROJECT_DIR$/src/components/ui/MapSettings.js" />
-        <option value="$PROJECT_DIR$/src/components/containers/NestedList.js" />
-        <option value="$PROJECT_DIR$/src/components/ui/NestedList.js" />
         <option value="$PROJECT_DIR$/src/components/ui/ListData.js" />
         <option value="$PROJECT_DIR$/src/components/ui/IndicateurList.js" />
         <option value="$PROJECT_DIR$/src/components/containers/DataList.js" />
         <option value="$PROJECT_DIR$/src/components/ui/MapData.js" />
-        <option value="$PROJECT_DIR$/src/components/ui/PersistentDrawer.js" />
         <option value="$PROJECT_DIR$/src/components/containers/PersistantDrawer.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/containers/PersistentDrawer.js" />
         <option value="$PROJECT_DIR$/src/components/ui/DataList.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/components/ui/MapDescription.js" />
-        <option value="$PROJECT_DIR$/src/components/ui/France.js" />
+        <option value="$PROJECT_DIR$/src/static/dataSubDr.js" />
+        <option value="$PROJECT_DIR$/src/static/dataSubDgr.js" />
+        <option value="$PROJECT_DIR$/public/zone_theo_db_outremer.json" />
         <option value="$PROJECT_DIR$/src/components/containers/France.js" />
+        <option value="$PROJECT_DIR$/src/components/ui/MapSettings.js" />
+        <option value="$PROJECT_DIR$/src/initialState.json" />
+        <option value="$PROJECT_DIR$/src/components/ui/PersistentDrawer.js" />
+        <option value="$PROJECT_DIR$/src/components/ui/MenuData.js" />
+        <option value="$PROJECT_DIR$/src/components/ui/France.js" />
+        <option value="$PROJECT_DIR$/src/components/containers/NestedList.js" />
+        <option value="$PROJECT_DIR$/src/components/ui/MapDescription.js" />
+        <option value="$PROJECT_DIR$/src/components/ui/NestedList.js" />
       </list>
     </option>
   </component>
@@ -272,6 +299,11 @@
             <path>
               <item name="d3-simple-react-map" type="b2602c69:ProjectViewProjectNode" />
               <item name="d3-simple-react-map" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="d3-simple-react-map" type="b2602c69:ProjectViewProjectNode" />
+              <item name="d3-simple-react-map" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -298,7 +330,13 @@
               <item name="d3-simple-react-map" type="b2602c69:ProjectViewProjectNode" />
               <item name="d3-simple-react-map" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="stylesheets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="d3-simple-react-map" type="b2602c69:ProjectViewProjectNode" />
+              <item name="d3-simple-react-map" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="store" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -313,7 +351,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -360,19 +398,19 @@
       <workItem from="1534172436434" duration="234000" />
       <workItem from="1535354800095" duration="119115000" />
       <workItem from="1537184245445" duration="11000" />
-      <workItem from="1537199538514" duration="40784000" />
+      <workItem from="1537199538514" duration="58675000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="368276000" />
+    <option name="totallyTimeSpent" value="386167000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" visible="true" weight="0.2546246" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.2546246" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
@@ -426,7 +464,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/ui/France.js</url>
-          <line>29</line>
+          <line>26</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
@@ -434,27 +472,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/static/dataLyon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-756">
-          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/static/fr-departments.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret column="34108" selection-start-column="34108" selection-end-column="34108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/static/subregions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/indexRedux.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -514,13 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -545,20 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/static/dataSubDgr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/static/dataSubDr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ui/DataTable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="402">
@@ -577,13 +573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/containers/NestedList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="46" column="6" lean-forward="true" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -606,79 +595,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ui/ListData.js" />
-    <entry file="file://$PROJECT_DIR$/src/initialState.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/containers/DataList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/MapSettings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/NestedList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-531">
-          <caret line="42" column="1" lean-forward="true" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/containers/MapSettings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/PersistentDrawer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2635">
-          <caret line="170" column="27" selection-start-line="170" selection-start-column="27" selection-end-line="170" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/MapData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/containers/PersistentDrawer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/DataList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -720,7 +640,7 @@
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -737,24 +657,14 @@
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/MapDescription.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -765,19 +675,540 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/static/dataSubDr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/static/subregions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/static/dataSubDgr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/zone_theo_db_outremer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret column="825836" selection-start-column="825836" selection-end-column="825836" />
+          <caret column="826003" selection-start-column="826003" selection-end-column="826003" />
+          <caret column="826165" selection-start-column="826165" selection-end-column="826165" />
+          <caret column="826346" selection-start-column="826346" selection-end-column="826346" />
+          <caret column="826556" selection-start-column="826556" selection-end-column="826556" />
+          <caret column="826741" selection-start-column="826741" selection-end-column="826741" />
+          <caret column="826910" selection-start-column="826910" selection-end-column="826910" />
+          <caret column="827076" selection-start-column="827076" selection-end-column="827076" />
+          <caret column="827233" selection-start-column="827233" selection-end-column="827233" />
+          <caret column="827418" selection-start-column="827418" selection-end-column="827418" />
+          <caret column="827583" selection-start-column="827583" selection-end-column="827583" />
+          <caret column="827744" selection-start-column="827744" selection-end-column="827744" />
+          <caret column="827933" selection-start-column="827933" selection-end-column="827933" />
+          <caret column="828102" selection-start-column="828102" selection-end-column="828102" />
+          <caret column="828273" selection-start-column="828273" selection-end-column="828273" />
+          <caret column="828464" selection-start-column="828464" selection-end-column="828464" />
+          <caret column="828656" selection-start-column="828656" selection-end-column="828656" />
+          <caret column="828815" selection-start-column="828815" selection-end-column="828815" />
+          <caret column="828977" selection-start-column="828977" selection-end-column="828977" />
+          <caret column="829160" selection-start-column="829160" selection-end-column="829160" />
+          <caret column="829340" selection-start-column="829340" selection-end-column="829340" />
+          <caret column="829514" selection-start-column="829514" selection-end-column="829514" />
+          <caret column="829685" selection-start-column="829685" selection-end-column="829685" />
+          <caret column="829866" selection-start-column="829866" selection-end-column="829866" />
+          <caret column="830061" selection-start-column="830061" selection-end-column="830061" />
+          <caret column="830242" selection-start-column="830242" selection-end-column="830242" />
+          <caret column="830421" selection-start-column="830421" selection-end-column="830421" />
+          <caret column="830579" selection-start-column="830579" selection-end-column="830579" />
+          <caret column="830749" selection-start-column="830749" selection-end-column="830749" />
+          <caret column="830924" selection-start-column="830924" selection-end-column="830924" />
+          <caret column="831128" selection-start-column="831128" selection-end-column="831128" />
+          <caret column="831305" selection-start-column="831305" selection-end-column="831305" />
+          <caret column="831482" selection-start-column="831482" selection-end-column="831482" />
+          <caret column="831648" selection-start-column="831648" selection-end-column="831648" />
+          <caret column="831811" selection-start-column="831811" selection-end-column="831811" />
+          <caret column="831980" selection-start-column="831980" selection-end-column="831980" />
+          <caret column="832157" selection-start-column="832157" selection-end-column="832157" />
+          <caret column="832328" selection-start-column="832328" selection-end-column="832328" />
+          <caret column="832499" selection-start-column="832499" selection-end-column="832499" />
+          <caret column="832671" selection-start-column="832671" selection-end-column="832671" />
+          <caret column="832871" selection-start-column="832871" selection-end-column="832871" />
+          <caret column="833041" selection-start-column="833041" selection-end-column="833041" />
+          <caret column="833214" selection-start-column="833214" selection-end-column="833214" />
+          <caret column="833375" selection-start-column="833375" selection-end-column="833375" />
+          <caret column="833541" selection-start-column="833541" selection-end-column="833541" />
+          <caret column="833729" selection-start-column="833729" selection-end-column="833729" />
+          <caret column="833890" selection-start-column="833890" selection-end-column="833890" />
+          <caret column="834061" selection-start-column="834061" selection-end-column="834061" />
+          <caret column="834257" selection-start-column="834257" selection-end-column="834257" />
+          <caret column="834448" selection-start-column="834448" selection-end-column="834448" />
+          <caret column="834626" selection-start-column="834626" selection-end-column="834626" />
+          <caret column="834796" selection-start-column="834796" selection-end-column="834796" />
+          <caret column="834985" selection-start-column="834985" selection-end-column="834985" />
+          <caret column="835168" selection-start-column="835168" selection-end-column="835168" />
+          <caret column="835341" selection-start-column="835341" selection-end-column="835341" />
+          <caret column="835535" selection-start-column="835535" selection-end-column="835535" />
+          <caret column="835712" selection-start-column="835712" selection-end-column="835712" />
+          <caret column="835887" selection-start-column="835887" selection-end-column="835887" />
+          <caret column="836064" selection-start-column="836064" selection-end-column="836064" />
+          <caret column="836239" selection-start-column="836239" selection-end-column="836239" />
+          <caret column="836421" selection-start-column="836421" selection-end-column="836421" />
+          <caret column="836605" selection-start-column="836605" selection-end-column="836605" />
+          <caret column="836785" selection-start-column="836785" selection-end-column="836785" />
+          <caret column="836966" selection-start-column="836966" selection-end-column="836966" />
+          <caret column="837142" selection-start-column="837142" selection-end-column="837142" />
+          <caret column="837312" selection-start-column="837312" selection-end-column="837312" />
+          <caret column="837483" selection-start-column="837483" selection-end-column="837483" />
+          <caret column="837664" selection-start-column="837664" selection-end-column="837664" />
+          <caret column="837839" selection-start-column="837839" selection-end-column="837839" />
+          <caret column="838022" selection-start-column="838022" selection-end-column="838022" />
+          <caret column="838205" selection-start-column="838205" selection-end-column="838205" />
+          <caret column="838383" selection-start-column="838383" selection-end-column="838383" />
+          <caret column="838556" selection-start-column="838556" selection-end-column="838556" />
+          <caret column="838736" selection-start-column="838736" selection-end-column="838736" />
+          <caret column="838913" selection-start-column="838913" selection-end-column="838913" />
+          <caret column="839096" selection-start-column="839096" selection-end-column="839096" />
+          <caret column="839273" selection-start-column="839273" selection-end-column="839273" />
+          <caret column="839442" selection-start-column="839442" selection-end-column="839442" />
+          <caret column="839616" selection-start-column="839616" selection-end-column="839616" />
+          <caret column="839803" selection-start-column="839803" selection-end-column="839803" />
+          <caret column="839963" selection-start-column="839963" selection-end-column="839963" />
+          <caret column="840126" selection-start-column="840126" selection-end-column="840126" />
+          <caret column="840296" selection-start-column="840296" selection-end-column="840296" />
+          <caret column="840464" selection-start-column="840464" selection-end-column="840464" />
+          <caret column="840639" selection-start-column="840639" selection-end-column="840639" />
+          <caret column="840805" selection-start-column="840805" selection-end-column="840805" />
+          <caret column="840981" selection-start-column="840981" selection-end-column="840981" />
+          <caret column="841159" selection-start-column="841159" selection-end-column="841159" />
+          <caret column="841331" selection-start-column="841331" selection-end-column="841331" />
+          <caret column="841482" selection-start-column="841482" selection-end-column="841482" />
+          <caret column="841643" selection-start-column="841643" selection-end-column="841643" />
+          <caret column="841806" selection-start-column="841806" selection-end-column="841806" />
+          <caret column="841982" selection-start-column="841982" selection-end-column="841982" />
+          <caret column="842174" selection-start-column="842174" selection-end-column="842174" />
+          <caret column="842376" selection-start-column="842376" selection-end-column="842376" />
+          <caret column="842568" selection-start-column="842568" selection-end-column="842568" />
+          <caret column="842751" selection-start-column="842751" selection-end-column="842751" />
+          <caret column="842923" selection-start-column="842923" selection-end-column="842923" />
+          <caret column="843088" selection-start-column="843088" selection-end-column="843088" />
+          <caret column="843265" selection-start-column="843265" selection-end-column="843265" />
+          <caret column="843441" selection-start-column="843441" selection-end-column="843441" />
+          <caret column="843610" selection-start-column="843610" selection-end-column="843610" />
+          <caret column="843784" selection-start-column="843784" selection-end-column="843784" />
+          <caret column="843967" selection-start-column="843967" selection-end-column="843967" />
+          <caret column="844133" selection-start-column="844133" selection-end-column="844133" />
+          <caret column="844292" selection-start-column="844292" selection-end-column="844292" />
+          <caret column="844470" selection-start-column="844470" selection-end-column="844470" />
+          <caret column="844650" selection-start-column="844650" selection-end-column="844650" />
+          <caret column="844827" selection-start-column="844827" selection-end-column="844827" />
+          <caret column="845010" selection-start-column="845010" selection-end-column="845010" />
+          <caret column="845203" selection-start-column="845203" selection-end-column="845203" />
+          <caret column="845390" selection-start-column="845390" selection-end-column="845390" />
+          <caret column="845586" selection-start-column="845586" selection-end-column="845586" />
+          <caret column="845782" selection-start-column="845782" selection-end-column="845782" />
+          <caret column="845945" selection-start-column="845945" selection-end-column="845945" />
+          <caret column="846135" selection-start-column="846135" selection-end-column="846135" />
+          <caret column="846307" selection-start-column="846307" selection-end-column="846307" />
+          <caret column="846494" selection-start-column="846494" selection-end-column="846494" />
+          <caret column="846684" selection-start-column="846684" selection-end-column="846684" />
+          <caret column="846851" selection-start-column="846851" selection-end-column="846851" />
+          <caret column="847025" selection-start-column="847025" selection-end-column="847025" />
+          <caret column="847206" selection-start-column="847206" selection-end-column="847206" />
+          <caret column="847370" selection-start-column="847370" selection-end-column="847370" />
+          <caret column="847539" selection-start-column="847539" selection-end-column="847539" />
+          <caret column="847696" selection-start-column="847696" selection-end-column="847696" />
+          <caret column="847868" selection-start-column="847868" selection-end-column="847868" />
+          <caret column="848055" selection-start-column="848055" selection-end-column="848055" />
+          <caret column="848228" selection-start-column="848228" selection-end-column="848228" />
+          <caret column="848412" selection-start-column="848412" selection-end-column="848412" />
+          <caret column="848586" selection-start-column="848586" selection-end-column="848586" />
+          <caret column="848755" selection-start-column="848755" selection-end-column="848755" />
+          <caret column="848932" selection-start-column="848932" selection-end-column="848932" />
+          <caret column="849115" selection-start-column="849115" selection-end-column="849115" />
+          <caret column="849283" selection-start-column="849283" selection-end-column="849283" />
+          <caret column="849443" selection-start-column="849443" selection-end-column="849443" />
+          <caret column="849614" selection-start-column="849614" selection-end-column="849614" />
+          <caret column="849791" selection-start-column="849791" selection-end-column="849791" />
+          <caret column="849949" selection-start-column="849949" selection-end-column="849949" />
+          <caret column="850119" selection-start-column="850119" selection-end-column="850119" />
+          <caret column="850278" selection-start-column="850278" selection-end-column="850278" />
+          <caret column="850447" selection-start-column="850447" selection-end-column="850447" />
+          <caret column="850604" selection-start-column="850604" selection-end-column="850604" />
+          <caret column="850780" selection-start-column="850780" selection-end-column="850780" />
+          <caret column="850956" selection-start-column="850956" selection-end-column="850956" />
+          <caret column="851140" selection-start-column="851140" selection-end-column="851140" />
+          <caret column="851312" selection-start-column="851312" selection-end-column="851312" />
+          <caret column="851497" selection-start-column="851497" selection-end-column="851497" />
+          <caret column="851669" selection-start-column="851669" selection-end-column="851669" />
+          <caret column="851871" selection-start-column="851871" selection-end-column="851871" />
+          <caret column="852040" selection-start-column="852040" selection-end-column="852040" />
+          <caret column="852220" selection-start-column="852220" selection-end-column="852220" />
+          <caret column="852386" selection-start-column="852386" selection-end-column="852386" />
+          <caret column="852558" selection-start-column="852558" selection-end-column="852558" />
+          <caret column="852729" selection-start-column="852729" selection-end-column="852729" />
+          <caret column="852880" selection-start-column="852880" selection-end-column="852880" />
+          <caret column="853055" selection-start-column="853055" selection-end-column="853055" />
+          <caret column="853242" selection-start-column="853242" selection-end-column="853242" />
+          <caret column="853425" selection-start-column="853425" selection-end-column="853425" />
+          <caret column="853605" selection-start-column="853605" selection-end-column="853605" />
+          <caret column="853783" selection-start-column="853783" selection-end-column="853783" />
+          <caret column="853955" selection-start-column="853955" selection-end-column="853955" />
+          <caret column="854133" selection-start-column="854133" selection-end-column="854133" />
+          <caret column="854301" selection-start-column="854301" selection-end-column="854301" />
+          <caret column="854469" selection-start-column="854469" selection-end-column="854469" />
+          <caret column="854639" selection-start-column="854639" selection-end-column="854639" />
+          <caret column="854828" selection-start-column="854828" selection-end-column="854828" />
+          <caret column="854989" selection-start-column="854989" selection-end-column="854989" />
+          <caret column="855166" selection-start-column="855166" selection-end-column="855166" />
+          <caret column="855341" selection-start-column="855341" selection-end-column="855341" />
+          <caret column="855538" selection-start-column="855538" selection-end-column="855538" />
+          <caret column="855705" selection-start-column="855705" selection-end-column="855705" />
+          <caret column="855869" selection-start-column="855869" selection-end-column="855869" />
+          <caret column="856040" selection-start-column="856040" selection-end-column="856040" />
+          <caret column="856207" selection-start-column="856207" selection-end-column="856207" />
+          <caret column="856385" selection-start-column="856385" selection-end-column="856385" />
+          <caret column="856549" selection-start-column="856549" selection-end-column="856549" />
+          <caret column="856724" selection-start-column="856724" selection-end-column="856724" />
+          <caret column="856902" selection-start-column="856902" selection-end-column="856902" />
+          <caret column="857073" selection-start-column="857073" selection-end-column="857073" />
+          <caret column="857247" selection-start-column="857247" selection-end-column="857247" />
+          <caret column="857450" selection-start-column="857450" selection-end-column="857450" />
+          <caret column="857619" selection-start-column="857619" selection-end-column="857619" />
+          <caret column="857806" selection-start-column="857806" selection-end-column="857806" />
+          <caret column="857998" selection-start-column="857998" selection-end-column="857998" />
+          <caret column="858174" selection-start-column="858174" selection-end-column="858174" />
+          <caret column="858352" selection-start-column="858352" selection-end-column="858352" />
+          <caret column="858526" selection-start-column="858526" selection-end-column="858526" />
+          <caret column="858700" selection-start-column="858700" selection-end-column="858700" />
+          <caret column="858891" selection-start-column="858891" selection-end-column="858891" />
+          <caret column="859072" selection-start-column="859072" selection-end-column="859072" />
+          <caret column="859236" selection-start-column="859236" selection-end-column="859236" />
+          <caret column="859438" selection-start-column="859438" selection-end-column="859438" />
+          <caret column="859601" selection-start-column="859601" selection-end-column="859601" />
+          <caret column="859792" selection-start-column="859792" selection-end-column="859792" />
+          <caret column="859954" selection-start-column="859954" selection-end-column="859954" />
+          <caret column="860126" selection-start-column="860126" selection-end-column="860126" />
+          <caret column="860294" selection-start-column="860294" selection-end-column="860294" />
+          <caret column="860480" selection-start-column="860480" selection-end-column="860480" />
+          <caret column="860672" selection-start-column="860672" selection-end-column="860672" />
+          <caret column="860834" selection-start-column="860834" selection-end-column="860834" />
+          <caret column="860995" selection-start-column="860995" selection-end-column="860995" />
+          <caret column="861180" selection-start-column="861180" selection-end-column="861180" />
+          <caret column="861373" selection-start-column="861373" selection-end-column="861373" />
+          <caret column="861561" selection-start-column="861561" selection-end-column="861561" />
+          <caret column="861737" selection-start-column="861737" selection-end-column="861737" />
+          <caret column="861943" selection-start-column="861943" selection-end-column="861943" />
+          <caret column="862121" selection-start-column="862121" selection-end-column="862121" />
+          <caret column="862293" selection-start-column="862293" selection-end-column="862293" />
+          <caret column="862471" selection-start-column="862471" selection-end-column="862471" />
+          <caret column="862651" selection-start-column="862651" selection-end-column="862651" />
+          <caret column="862814" selection-start-column="862814" selection-end-column="862814" />
+          <caret column="862996" selection-start-column="862996" selection-end-column="862996" />
+          <caret column="863159" selection-start-column="863159" selection-end-column="863159" />
+          <caret column="863347" selection-start-column="863347" selection-end-column="863347" />
+          <caret column="863527" selection-start-column="863527" selection-end-column="863527" />
+          <caret column="863697" selection-start-column="863697" selection-end-column="863697" />
+          <caret column="863889" selection-start-column="863889" selection-end-column="863889" />
+          <caret column="864058" selection-start-column="864058" selection-end-column="864058" />
+          <caret column="864266" selection-start-column="864266" selection-end-column="864266" />
+          <caret column="864470" selection-start-column="864470" selection-end-column="864470" />
+          <caret column="864653" selection-start-column="864653" selection-end-column="864653" />
+          <caret column="864841" selection-start-column="864841" selection-end-column="864841" />
+          <caret column="865016" selection-start-column="865016" selection-end-column="865016" />
+          <caret column="865176" selection-start-column="865176" selection-end-column="865176" />
+          <caret column="865350" selection-start-column="865350" selection-end-column="865350" />
+          <caret column="865536" selection-start-column="865536" selection-end-column="865536" />
+          <caret column="865712" selection-start-column="865712" selection-end-column="865712" />
+          <caret column="865899" selection-start-column="865899" selection-end-column="865899" />
+          <caret column="866063" selection-start-column="866063" selection-end-column="866063" />
+          <caret column="866265" selection-start-column="866265" selection-end-column="866265" />
+          <caret column="866441" selection-start-column="866441" selection-end-column="866441" />
+          <caret column="866644" selection-start-column="866644" selection-end-column="866644" />
+          <caret column="866814" selection-start-column="866814" selection-end-column="866814" />
+          <caret column="866980" selection-start-column="866980" selection-end-column="866980" />
+          <caret column="867152" selection-start-column="867152" selection-end-column="867152" />
+          <caret column="867315" selection-start-column="867315" selection-end-column="867315" />
+          <caret column="867493" selection-start-column="867493" selection-end-column="867493" />
+          <caret column="867692" selection-start-column="867692" selection-end-column="867692" />
+          <caret column="867860" selection-start-column="867860" selection-end-column="867860" />
+          <caret column="868029" selection-start-column="868029" selection-end-column="868029" />
+          <caret column="868212" selection-start-column="868212" selection-end-column="868212" />
+          <caret column="868393" selection-start-column="868393" selection-end-column="868393" />
+          <caret column="868563" selection-start-column="868563" selection-end-column="868563" />
+          <caret column="868758" selection-start-column="868758" selection-end-column="868758" />
+          <caret column="868935" selection-start-column="868935" selection-end-column="868935" />
+          <caret column="869115" selection-start-column="869115" selection-end-column="869115" />
+          <caret column="869304" selection-start-column="869304" selection-end-column="869304" />
+          <caret column="869475" selection-start-column="869475" selection-end-column="869475" />
+          <caret column="869672" selection-start-column="869672" selection-end-column="869672" />
+          <caret column="869831" selection-start-column="869831" selection-end-column="869831" />
+          <caret column="870009" selection-start-column="870009" selection-end-column="870009" />
+          <caret column="870182" selection-start-column="870182" selection-end-column="870182" />
+          <caret column="870351" selection-start-column="870351" selection-end-column="870351" />
+          <caret column="870537" selection-start-column="870537" selection-end-column="870537" />
+          <caret column="870700" selection-start-column="870700" selection-end-column="870700" />
+          <caret column="870878" selection-start-column="870878" selection-end-column="870878" />
+          <caret column="871047" selection-start-column="871047" selection-end-column="871047" />
+          <caret column="871230" selection-start-column="871230" selection-end-column="871230" />
+          <caret column="871401" selection-start-column="871401" selection-end-column="871401" />
+          <caret column="871593" selection-start-column="871593" selection-end-column="871593" />
+          <caret column="871783" selection-start-column="871783" selection-end-column="871783" />
+          <caret column="871965" selection-start-column="871965" selection-end-column="871965" />
+          <caret column="872152" selection-start-column="872152" selection-end-column="872152" />
+          <caret column="872347" selection-start-column="872347" selection-end-column="872347" />
+          <caret column="872536" selection-start-column="872536" selection-end-column="872536" />
+          <caret column="872706" selection-start-column="872706" selection-end-column="872706" />
+          <caret column="872886" selection-start-column="872886" selection-end-column="872886" />
+          <caret column="873069" selection-start-column="873069" selection-end-column="873069" />
+          <caret column="873239" selection-start-column="873239" selection-end-column="873239" />
+          <caret column="873420" selection-start-column="873420" selection-end-column="873420" />
+          <caret column="873589" selection-start-column="873589" selection-end-column="873589" />
+          <caret column="873773" selection-start-column="873773" selection-end-column="873773" />
+          <caret column="873949" selection-start-column="873949" selection-end-column="873949" />
+          <caret column="874147" selection-start-column="874147" selection-end-column="874147" />
+          <caret column="874319" selection-start-column="874319" selection-end-column="874319" />
+          <caret column="874493" selection-start-column="874493" selection-end-column="874493" />
+          <caret column="874676" selection-start-column="874676" selection-end-column="874676" />
+          <caret column="874847" selection-start-column="874847" selection-end-column="874847" />
+          <caret column="875033" selection-start-column="875033" selection-end-column="875033" />
+          <caret column="875208" selection-start-column="875208" selection-end-column="875208" />
+          <caret column="875368" selection-start-column="875368" selection-end-column="875368" />
+          <caret column="875555" selection-start-column="875555" selection-end-column="875555" />
+          <caret column="875708" selection-start-column="875708" selection-end-column="875708" />
+          <caret column="875886" selection-start-column="875886" selection-end-column="875886" />
+          <caret column="876062" selection-start-column="876062" selection-end-column="876062" />
+          <caret column="876243" selection-start-column="876243" selection-end-column="876243" />
+          <caret column="876408" selection-start-column="876408" selection-end-column="876408" />
+          <caret column="876572" selection-start-column="876572" selection-end-column="876572" />
+          <caret column="876746" selection-start-column="876746" selection-end-column="876746" />
+          <caret column="876936" selection-start-column="876936" selection-end-column="876936" />
+          <caret column="877126" selection-start-column="877126" selection-end-column="877126" />
+          <caret column="877309" selection-start-column="877309" selection-end-column="877309" />
+          <caret column="877502" selection-start-column="877502" selection-end-column="877502" />
+          <caret column="877698" selection-start-column="877698" selection-end-column="877698" />
+          <caret column="877869" selection-start-column="877869" selection-end-column="877869" />
+          <caret column="878094" selection-start-column="878094" selection-end-column="878094" />
+          <caret column="878269" selection-start-column="878269" selection-end-column="878269" />
+          <caret column="878453" selection-start-column="878453" selection-end-column="878453" />
+          <caret column="878628" selection-start-column="878628" selection-end-column="878628" />
+          <caret column="878807" selection-start-column="878807" selection-end-column="878807" />
+          <caret column="878985" selection-start-column="878985" selection-end-column="878985" />
+          <caret column="879206" selection-start-column="879206" selection-end-column="879206" />
+          <caret column="879379" selection-start-column="879379" selection-end-column="879379" />
+          <caret column="879552" selection-start-column="879552" selection-end-column="879552" />
+          <caret column="879746" selection-start-column="879746" selection-end-column="879746" />
+          <caret column="879942" selection-start-column="879942" selection-end-column="879942" />
+          <caret column="880150" selection-start-column="880150" selection-end-column="880150" />
+          <caret column="880339" selection-start-column="880339" selection-end-column="880339" />
+          <caret column="880531" selection-start-column="880531" selection-end-column="880531" />
+          <caret column="880750" selection-start-column="880750" selection-end-column="880750" />
+          <caret column="880925" selection-start-column="880925" selection-end-column="880925" />
+          <caret column="881099" selection-start-column="881099" selection-end-column="881099" />
+          <caret column="881288" selection-start-column="881288" selection-end-column="881288" />
+          <caret column="881473" selection-start-column="881473" selection-end-column="881473" />
+          <caret column="881664" selection-start-column="881664" selection-end-column="881664" />
+          <caret column="881850" selection-start-column="881850" selection-end-column="881850" />
+          <caret column="882044" selection-start-column="882044" selection-end-column="882044" />
+          <caret column="882244" selection-start-column="882244" selection-end-column="882244" />
+          <caret column="882430" selection-start-column="882430" selection-end-column="882430" />
+          <caret column="882613" selection-start-column="882613" selection-end-column="882613" />
+          <caret column="882805" selection-start-column="882805" selection-end-column="882805" />
+          <caret column="882998" selection-start-column="882998" selection-end-column="882998" />
+          <caret column="883182" selection-start-column="883182" selection-end-column="883182" />
+          <caret column="883391" selection-start-column="883391" selection-end-column="883391" />
+          <caret column="883585" selection-start-column="883585" selection-end-column="883585" />
+          <caret column="883809" selection-start-column="883809" selection-end-column="883809" />
+          <caret column="883994" selection-start-column="883994" selection-end-column="883994" />
+          <caret column="884176" selection-start-column="884176" selection-end-column="884176" />
+          <caret column="884373" selection-start-column="884373" selection-end-column="884373" />
+          <caret column="884581" selection-start-column="884581" selection-end-column="884581" />
+          <caret column="884749" selection-start-column="884749" selection-end-column="884749" />
+          <caret column="884930" selection-start-column="884930" selection-end-column="884930" />
+          <caret column="885110" selection-start-column="885110" selection-end-column="885110" />
+          <caret column="885277" selection-start-column="885277" selection-end-column="885277" />
+          <caret column="885437" selection-start-column="885437" selection-end-column="885437" />
+          <caret column="885615" selection-start-column="885615" selection-end-column="885615" />
+          <caret column="885805" selection-start-column="885805" selection-end-column="885805" />
+          <caret column="885975" selection-start-column="885975" selection-end-column="885975" />
+          <caret column="886147" selection-start-column="886147" selection-end-column="886147" />
+          <caret column="886353" selection-start-column="886353" selection-end-column="886353" />
+          <caret column="886529" selection-start-column="886529" selection-end-column="886529" />
+          <caret column="886713" selection-start-column="886713" selection-end-column="886713" />
+          <caret column="886891" selection-start-column="886891" selection-end-column="886891" />
+          <caret column="887054" selection-start-column="887054" selection-end-column="887054" />
+          <caret column="887227" selection-start-column="887227" selection-end-column="887227" />
+          <caret column="887403" selection-start-column="887403" selection-end-column="887403" />
+          <caret column="887590" selection-start-column="887590" selection-end-column="887590" />
+          <caret column="887783" selection-start-column="887783" selection-end-column="887783" />
+          <caret column="887970" selection-start-column="887970" selection-end-column="887970" />
+          <caret column="888154" selection-start-column="888154" selection-end-column="888154" />
+          <caret column="888331" selection-start-column="888331" selection-end-column="888331" />
+          <caret column="888507" selection-start-column="888507" selection-end-column="888507" />
+          <caret column="888694" selection-start-column="888694" selection-end-column="888694" />
+          <caret column="888877" selection-start-column="888877" selection-end-column="888877" />
+          <caret column="889049" selection-start-column="889049" selection-end-column="889049" />
+          <caret column="889230" selection-start-column="889230" selection-end-column="889230" />
+          <caret column="889407" selection-start-column="889407" selection-end-column="889407" />
+          <caret column="889613" selection-start-column="889613" selection-end-column="889613" />
+          <caret column="889818" selection-start-column="889818" selection-end-column="889818" />
+          <caret column="890010" selection-start-column="890010" selection-end-column="890010" />
+          <caret column="890182" selection-start-column="890182" selection-end-column="890182" />
+          <caret column="890363" selection-start-column="890363" selection-end-column="890363" />
+          <caret column="890530" selection-start-column="890530" selection-end-column="890530" />
+          <caret column="890724" selection-start-column="890724" selection-end-column="890724" />
+          <caret column="890906" selection-start-column="890906" selection-end-column="890906" />
+          <caret column="891086" selection-start-column="891086" selection-end-column="891086" />
+          <caret column="891284" selection-start-column="891284" selection-end-column="891284" />
+          <caret column="891454" selection-start-column="891454" selection-end-column="891454" />
+          <caret column="891635" selection-start-column="891635" selection-end-column="891635" />
+          <caret column="891823" selection-start-column="891823" selection-end-column="891823" />
+          <caret column="892020" selection-start-column="892020" selection-end-column="892020" />
+          <caret column="892225" selection-start-column="892225" selection-end-column="892225" />
+          <caret column="892421" selection-start-column="892421" selection-end-column="892421" />
+          <caret column="892587" selection-start-column="892587" selection-end-column="892587" />
+          <caret column="892780" selection-start-column="892780" selection-end-column="892780" />
+          <caret column="893001" selection-start-column="893001" selection-end-column="893001" />
+          <caret column="893183" selection-start-column="893183" selection-end-column="893183" />
+          <caret column="893352" selection-start-column="893352" selection-end-column="893352" />
+          <caret column="893534" selection-start-column="893534" selection-end-column="893534" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/containers/PersistentDrawer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/containers/France.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-604">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        <state relative-caret-position="-357">
+          <caret line="17" column="57" lean-forward="true" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="28" column="60" lean-forward="true" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/DataList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="22" lean-forward="true" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/PersistentDrawer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="147" column="32" lean-forward="true" selection-start-line="147" selection-start-column="32" selection-end-line="147" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/MenuData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-644">
+          <caret line="19" column="48" lean-forward="true" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/initialState.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/MapData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="52" column="38" lean-forward="true" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/containers/NestedList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ui/France.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="333" column="11" lean-forward="true" selection-start-line="333" selection-start-column="11" selection-end-line="333" selection-end-column="11" />
+        <state relative-caret-position="375">
+          <caret line="392" column="15" selection-start-line="392" selection-start-column="11" selection-end-line="392" selection-end-column="15" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/MapSettings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/containers/MapSettings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/MapDescription.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/NestedList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="119" column="262" selection-start-line="119" selection-start-column="262" selection-end-line="119" selection-end-column="262" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

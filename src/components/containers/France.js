@@ -16,7 +16,8 @@ const mapStateToProps = (state) => {
     width: 800,
     height: 700,
     showHeatmap: state.options.indexOf('heatmap') !== -1,
-    data: state.data
+    data: state.data,
+    showBorder: state.options.indexOf('border') !== -1,
   }
 }
 

@@ -5,6 +5,7 @@ const dataSubDgr= [
   "CENTRE-EST",
   "SUD-EST",
   "SUD-OUEST",
+  "OUTREMER",
   "NORD-EUROPE",
 ]
 

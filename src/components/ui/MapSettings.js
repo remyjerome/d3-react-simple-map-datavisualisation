@@ -10,6 +10,7 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 import Switch from '@material-ui/core/Switch';
 import AddLocation from '@material-ui/icons/AddLocation'
 import Texture from '@material-ui/icons/Texture'
+import BorderStyle from '@material-ui/icons/BorderStyle';
 
 const styles = theme => ({
   root: {
@@ -69,6 +70,18 @@ class MapSettings extends React.Component {
               <Switch
                 onChange={this.handleToggle('heatmap')}
                 checked={this.state.checked.indexOf('heatmap') !== -1}
+              />
+            </ListItemSecondaryAction>
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <BorderStyle />
+            </ListItemIcon>
+            <ListItemText primary="Border" />
+            <ListItemSecondaryAction>
+              <Switch
+                onChange={this.handleToggle('border')}
+                checked={this.state.checked.indexOf('border') !== -1}
               />
             </ListItemSecondaryAction>
           </ListItem>
