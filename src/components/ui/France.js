@@ -56,31 +56,29 @@ class France extends React.Component  {
 
   scaleColor = (data) => {
 
-
-    var popScale = null
-    if(this.props.data === "MNT_PR") {
+    let popScale = null
+    if(this.props.data === 'MNT_PR') {
       popScale = scaleLinear()
         .domain([-1000000,0,1,25000,50000])
-        .range(["rgb(255, 0, 0)",
-          "rgb(255, 0, 0)",
-          "rgb(193, 255, 0)",
-          "rgb(147, 255, 0)",
-          "rgb(102, 255, 0)"])
-    } else if(this.props.data === "PCT_AVT") {
+        .range(["rgba(255, 0, 0, 1)",
+          "rgba(255, 0, 0, 1)",
+          "rgba(193, 255, 0, 1)",
+          "rgba(147, 255, 0, 1)",
+          "rgba(102, 255, 0, 1)"])
+    } else if(this.props.data === 'PCT_AVT') {
       popScale = scaleLinear()
         .domain([0,3,5])
-        .range(["rgb(255, 0, 0)",
-          "rgb(249, 198, 0)",
-          "rgb(102, 255, 0))"])
-    } else if (this.props.data === "MNT_CEX"){
+        .range(["rgba(255, 0, 0, 1)",
+          "rgba(249, 198, 0, 1)",
+          "rgba(102, 255, 0, 1))"])
+    } else if (this.props.data === 'MNT_CEX'){
       popScale = scaleLinear()
         .domain([0,1,25000,100000])
-        .range(["rgb(238, 255, 0)",
-          "rgb(193, 255, 0)",
-          "rgb(147, 255, 0)",
-          "rgb(102, 255, 0)"])
+        .range(["rgba(238, 255, 0, 1)",
+          "rgba(193, 255, 0, 1)",
+          "rgba(147, 255, 0, 1)",
+          "rgba(102, 255, 0, 1)"])
     }
-    console.log(popScale(data))
     return popScale(data)
   }
 
@@ -175,6 +173,7 @@ class France extends React.Component  {
   }
 
 
+
   loadPaths() {
     get("/zone_theo_db_outremer_data_2.json")
       .then(res => {
@@ -192,34 +191,54 @@ class France extends React.Component  {
 
 
         // DGR BORDER
-        var borderDgr = path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(4, 3)))
-        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(4, 6)))
-        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(4, 5)))
+        var borderDgr = path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bdDgr(4, 3)))
+        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bdDgr(4, 6)))
+        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bdDgr(4, 5)))
 
 
-        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(6, 1)))
-        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(6, 2)))
-        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(6, 5)))
+        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bdDgr(6, 1)))
+        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bdDgr(6, 2)))
+        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bdDgr(6, 5)))
 
-        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(1, 2)))
+        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bdDgr(1, 2)))
 
-        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(2, 8)))
-        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(2, 3)))
+        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bdDgr(2, 8)))
+        borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bdDgr(2, 3)))
 
         borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], function(a, b) { return a == b }))
 
 
+        // DR BORDER
+        var borderDr =  path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bdDr(14, 12)))
+        borderDr +=  path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bdDr(14, 11)))
+        // borderDr +=  path(mesh(world, world.objects[Object.keys(world.objects)[0]], () => (this.bdDgr(14 , 14)) ))
+        borderDr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], (this.bdDgrDr(14, 1))))
+
         this.setState({
           geographyPaths: france,
-          borderDgr: borderDgr
+          borderDgr: borderDgr,
+          borderDr: borderDr
         })
       })
   }
 
-  bd(id0, id1) {
+  bdDgr(id0, id1) {
     return function(a, b) {
       return a.properties.CODE_DGR === id0 && b.properties.CODE_DGR === id1
         || a.properties.CODE_DGR === id1 && b.properties.CODE_DGR === id0;
+    };
+  }
+  bdDgrDr(id0, id1) {
+    return function(a, b) {
+      return a.properties.CODE_DR === id0 && b.properties.CODE_DGR === id1
+        || a.properties.CODE_DR === id1 && b.properties.CODE_DGR === id0;
+    };
+  }
+
+  bdDr(id0, id1) {
+    return function(a, b) {
+      return a.properties.CODE_DR === id0 && b.properties.CODE_DR === id1
+        || a.properties.CODE_DR === id1 && b.properties.CODE_DR === id0;
     };
   }
 
@@ -234,16 +253,6 @@ class France extends React.Component  {
     )
   }
 
-  renderBorder(d,style) {
-
-    return(
-      <g className="rsm-lines">
-        <path className="rsm-line " tabIndex="0"
-              d={d}
-              style={style}></path>
-      </g>
-    )
-  }
 
   handleZoomIn() {
     this.props.onSetZoom(this.props.zoom*1.1)
@@ -256,7 +265,26 @@ class France extends React.Component  {
     this.props.onSetHoverInfo(hoverInfo)
   }
   colorMapStyle(geography, i) {
-    const colorMap = {
+    const colorMap = (this.props.selectedDgr != null) ? {
+        default: {
+          fill: this.props.showHeatmap && this.props.data ? geography.properties.id_site === "exp_outremer" ?'#D3D3D3':this.scaleColor(geography.properties[this.props.data]) : colorScaleDr[subDr.indexOf(geography.properties.NOM_DR)],
+          stroke: "#607D8B",
+          strokeWidth: 0.02,
+          outline: "none",
+        },
+        hover: {
+          fill: this.props.showHeatmap && this.props.data ? geography.properties.id_site === "exp_outremer" ?'#D3D3D3': this.scaleColor(geography.properties[this.props.data]) : chroma(colorScaleDr[subDr.indexOf(geography.properties.NOM_DR)]).darken(0.5),
+          stroke: "#607D8B",
+          strokeWidth: 0.075,
+          outline: "none",
+        },
+        pressed: {
+          fill: this.props.showHeatmap && this.props.data ? geography.properties.id_site === "exp_outremer" ?'#D3D3D3': this.scaleColor(geography.properties[this.props.data]) : chroma(colorScaleDr[subDr.indexOf(geography.properties.NOM_DR)]).brighten(0.5),
+          stroke: "#607D8B",
+          strokeWidth: 0.075,
+          outline: "none",
+        },
+      } : {
       default: {
         fill: this.props.showHeatmap && (this.props.data !== null) ? geography.properties.id_site === "exp_outremer" ?'#D3D3D3': this.scaleColor(geography.properties[this.props.data]) : chroma(colorScaleDgr[subDgr.indexOf(geography.properties.NOM_DGR)]),
         stroke: "#FAFAFA",
@@ -354,6 +382,7 @@ class France extends React.Component  {
               </Geographies>
               {/* this.renderBorder(this.state.line, {stroke: "rgb(102, 102, 102)", strokeWidth: 0.5, fill: "none"}) */}
               { (this.props.niveau === 3 && this.props.showBorder)&& this.renderBorder(this.state.borderDgr, {stroke: "rgb(0,0,0)", strokeWidth: 0.6, fill: "none"}) }
+              { (this.props.niveau === 2 && this.props.showBorder)&& this.renderBorder(this.state.borderDr, {stroke: "rgb(0,0,0)", strokeWidth: 0.6, fill: "none"}) }
               <Markers>
                 { this.props.showAgence && this.createMarker() }
               </Markers>
