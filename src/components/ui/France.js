@@ -9,7 +9,7 @@ import {
   Marker
 } from "react-simple-maps"
 import chroma from "chroma-js"
-import MapDescription from './MapDescription'
+import MapDescription from '../containers/MapDescription'
 import dataSubDgr from '../../static/dataSubDgr'
 import dataStructureZoom from '../../static/dataStructureZoom'
 import dataSubDr from '../../static/dataSubDr'
@@ -22,19 +22,6 @@ import '../../stylesheets/France.css';
 
 const colorScaleDgr = chroma.scale(['#fafa6e','#2A4858']).mode('lch').colors(8)
 const colorScaleDr = chroma.scale(['#fafa6e','#2A4858']).mode('lch').colors(26)
-const popScale = scaleLinear()
-  .domain([0,37,74,111,148,185,222,259,296,333,370,407])
-  .range(["rgba(102, 255, 0, 0)",
-    "rgba(102, 255, 0, 1)",
-    "rgba(147, 255, 0, 1)",
-    "rgba(193, 255, 0, 1)",
-    "rgba(238, 255, 0, 1)",
-    "rgba(244, 227, 0, 1)",
-    "rgba(249, 198, 0, 1)",
-    "rgba(255, 170, 0, 1)",
-    "rgba(255, 113, 0, 1)",
-    "rgba(255, 57, 0, 1)",
-    "rgba(255, 0, 0, 1)"])
 
 const subDr = dataSubDr
 const subDgr = dataSubDgr
@@ -64,8 +51,38 @@ class France extends React.Component  {
     this.handleDrSelection = this.handleDrSelection.bind(this)
     this.getAgence = this.getAgence.bind(this)
     this.onMouseEnterHandlerAgence = this.onMouseEnterHandlerAgence.bind(this)
+    this.scaleColor = this.scaleColor.bind(this)
   }
 
+  scaleColor = (data) => {
+
+
+    var popScale = null
+    if(this.props.data === "MNT_PR") {
+      popScale = scaleLinear()
+        .domain([-1000000,0,1,25000,50000])
+        .range(["rgb(255, 0, 0)",
+          "rgb(255, 0, 0)",
+          "rgb(193, 255, 0)",
+          "rgb(147, 255, 0)",
+          "rgb(102, 255, 0)"])
+    } else if(this.props.data === "PCT_AVT") {
+      popScale = scaleLinear()
+        .domain([0,3,5])
+        .range(["rgb(255, 0, 0)",
+          "rgb(249, 198, 0)",
+          "rgb(102, 255, 0))"])
+    } else if (this.props.data === "MNT_CEX"){
+      popScale = scaleLinear()
+        .domain([0,1,25000,100000])
+        .range(["rgb(238, 255, 0)",
+          "rgb(193, 255, 0)",
+          "rgb(147, 255, 0)",
+          "rgb(102, 255, 0)"])
+    }
+    console.log(popScale(data))
+    return popScale(data)
+  }
 
   createMarker= () => {
     let markers = []
@@ -115,7 +132,6 @@ class France extends React.Component  {
   handleDgrSelection(evt) {
     const dgrId = evt.currentTarget.getAttribute("datadgr")
     const dgr = dataStructureZoom[dgrId]
-    console.log(dgr)
     this.props.onSetLevel(2)
     this.props.onSetCenter(dgr.coordinates)
     this.props.onSetZoom(dgr.zoom)
@@ -160,7 +176,7 @@ class France extends React.Component  {
 
 
   loadPaths() {
-    get("/zone_theo_db_outremer.json")
+    get("/zone_theo_db_outremer_data_2.json")
       .then(res => {
         if (res.status !== 200) return
         const world = res.data
@@ -176,7 +192,6 @@ class France extends React.Component  {
 
 
         // DGR BORDER
-        // console.log(path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(4, 3))))
         var borderDgr = path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(4, 3)))
         borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(4, 6)))
         borderDgr += path(mesh(world, world.objects[Object.keys(world.objects)[0]], this.bd(4, 5)))
@@ -241,40 +256,21 @@ class France extends React.Component  {
     this.props.onSetHoverInfo(hoverInfo)
   }
   colorMapStyle(geography, i) {
-    const colorMap = (this.props.selectedDgr != null) ? {
-        default: {
-          fill: this.props.showHeatmap ? popScale(i) : colorScaleDr[subDr.indexOf(geography.properties.NOM_DR)],
-          stroke: "#607D8B",
-          strokeWidth: 0.02,
-          outline: "none",
-        },
-        hover: {
-          fill: this.props.showHeatmap ? popScale(i) : chroma(colorScaleDr[subDr.indexOf(geography.properties.NOM_DR)]).darken(0.5),
-          stroke: "#607D8B",
-          strokeWidth: 0.075,
-          outline: "none",
-        },
-        pressed: {
-          fill: this.props.showHeatmap ? popScale(i) : chroma(colorScaleDr[subDr.indexOf(geography.properties.NOM_DR)]).brighten(0.5),
-          stroke: "#607D8B",
-          strokeWidth: 0.075,
-          outline: "none",
-        },
-      } : {
+    const colorMap = {
       default: {
-        fill: this.props.showHeatmap ? popScale(i) : colorScaleDgr[subDgr.indexOf(geography.properties.NOM_DGR)],
+        fill: this.props.showHeatmap && (this.props.data !== null) ? geography.properties.id_site === "exp_outremer" ?'#D3D3D3': this.scaleColor(geography.properties[this.props.data]) : chroma(colorScaleDgr[subDgr.indexOf(geography.properties.NOM_DGR)]),
         stroke: "#FAFAFA",
         strokeWidth: 0.075,
         outline: "none",
     },
       hover: {
-        fill: this.props.showHeatmap ? popScale(i) : chroma(colorScaleDgr[subDgr.indexOf(geography.properties.NOM_DGR)]).darken(0.5),
+        fill: this.props.showHeatmap && this.props.data ? geography.properties.id_site === "exp_outremer" ?'#D3D3D3': this.scaleColor(geography.properties[this.props.data]) : chroma(colorScaleDgr[subDgr.indexOf(geography.properties.NOM_DGR)]).darken(0.5),
           stroke: "#607D8B",
           strokeWidth: 0.075,
           outline: "none",
       },
       pressed: {
-        fill: this.props.showHeatmap ? popScale(i) : chroma(colorScaleDgr[subDgr.indexOf(geography.properties.NOM_DGR)]).brighten(0.5),
+        fill: this.props.showHeatmap && this.props.data ? geography.properties.id_site === "exp_outremer" ?'#D3D3D3': this.scaleColor(geography.properties[this.props.data]) : chroma(colorScaleDgr[subDgr.indexOf(geography.properties.NOM_DGR)]).brighten(0.5),
           stroke: "#607D8B",
           strokeWidth: 0.075,
           outline: "none",
@@ -338,9 +334,9 @@ class France extends React.Component  {
                 {
                   (geographies, projection) => {
                     return (
-                  geographies.filter(geography =>
-                      this.props.selectedDgr ? this.props.selectedDr ? this.props.selectedDr.id === geography.properties.CODE_DR :this.props.selectedDgr.id === geography.properties.CODE_DGR : true
-                  ).map((geography, i) =>
+                  geographies.filter(geography => {
+                    return this.props.selectedDgr ? this.props.selectedDr ? this.props.selectedDr.id === geography.properties.CODE_DR : this.props.selectedDgr.id === geography.properties.CODE_DGR : true
+                  }).map((geography, i) =>
                       <Geography
 
                         key={`${geography.properties.id_site}-${i}`}

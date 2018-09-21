@@ -13,7 +13,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 
-import MenuData from '../ui/MenuData'
+import MenuData from '../containers/MenuData'
 import MapSettings from '../containers/MapSettings'
 
 const drawerWidth = 240;
@@ -101,7 +101,7 @@ const styles = theme => ({
 const menuData = [{
   label: 'them-1',
   name: 'Them 1',
-  idc: [{name: 'indicateur-1', label: 'MCD'}, {name: 'indicateur-2', label: 'P-R'}]
+  idc: [{name: 'Montant Production - Résiliation', label: 'MNT_PR'}, {name: 'Pourcentage avenant', label: 'PCT_AVT'}, {name: '', label: 'MNT_CEX'}]
 }, {
   label: 'them-2',
   name: 'Them 2',
@@ -116,7 +116,7 @@ class PersistentDrawer extends React.Component {
   state = {
     open: false,
     anchor: 'left',
-  };
+  }
 
   handleDrawerOpen = () => {
     this.setState({ open: true });
@@ -151,7 +151,7 @@ class PersistentDrawer extends React.Component {
         <Divider />
         <MapSettings/>
         <Divider />
-        <MenuData data={menuData}/>
+        <MenuData dataMenu={menuData}/>
       </Drawer>
     );
 

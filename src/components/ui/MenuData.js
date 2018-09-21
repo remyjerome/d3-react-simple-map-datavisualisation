@@ -11,7 +11,7 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 
-const RenderItem = ({classes, open, handleClick, data}) => (
+const RenderItem = ({classes, open, handleClick, data, handleData}) => (
   <div>
     <ListItem button onClick={() => handleClick(data.label)}>
       <ListItemIcon>
@@ -24,7 +24,7 @@ const RenderItem = ({classes, open, handleClick, data}) => (
       <List component="div" disablePadding>
         {
           data.idc.map((d,i) => (
-            <ListItem button className={classes.nested} key={i}>
+            <ListItem button className={classes.nested} key={i} onClick={()=> handleData(d.label)}>
               <ListItemText inset primary={d.label} />
             </ListItem>
           ))
@@ -48,11 +48,25 @@ const styles = theme => ({
 
 
 class MenuData extends React.Component {
-  state = {
-    open: [],
-  };
+  constructor(props){
+    super(props)
+    this.state = {
+      open: [],
+    }
+  }
+
+
+  handleData = (data) => {
+
+
+    console.log(data)
+    // this.props.onClearData()
+    this.props.onSetData(data)
+
+  }
 
   handleClick = (d) => {
+    console.log(d)
     if((this.state.open.indexOf(d) !== -1)){
       const newOpen = this.state.open.filter((o)=> o !== d)
       this.setState({ open: newOpen });
@@ -62,16 +76,16 @@ class MenuData extends React.Component {
   };
 
   render() {
-    const { classes, data } = this.props;
+    const { classes, dataMenu } = this.props;
 
     return (
       <div className={classes.root}>
         <List
           component="nav"
-          subheader={<ListSubheader component="div">Indicateurs / Thématiques</ListSubheader>}
+          subheader={<ListSubheader component="div">Thématiques</ListSubheader>}
         >
           {
-            data.map( (d,i) => <RenderItem classes={classes} open={this.state.open} handleClick={this.handleClick} data={d} key={i}/> )
+            dataMenu.map( (d,i) => <RenderItem handleData={this.handleData} classes={classes} open={this.state.open} handleClick={this.handleClick} data={d} key={i}/> )
           }
         </List>
       </div>
