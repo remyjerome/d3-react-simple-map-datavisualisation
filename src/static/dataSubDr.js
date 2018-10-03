@@ -22,7 +22,9 @@ const dataSubDr= [
   'TOULOUSE',
   'LIMOGES',
   'PAU',
-  'LILLE'
+  'LILLE',
+  'ANTILLES-GUYANE',
+  'OCEAN-INDIEN'
 ]
 
 export default dataSubDr

@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/components/ui/France.js" line="22" />
+    <bookmark url="file://$PROJECT_DIR$/src/components/ui/France.js" line="24" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8434e9e-1594-430b-a1b5-266b4f417c71" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/public/idc_map.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Legend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Legend_v2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stylesheets/Legend_v2.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fr-departments.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/test.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/world-110m.json.save" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/zone_fusion.geojson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/zone_fusion.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/zone_fusion_theo.geojson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/zone_theo_db.geojson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/zone_theo_db.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/zone_theo_db_outremer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/zone_theo_db_outremer_data - Copie.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/zone_theo_db_outremer_data.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/France.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/France.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/dataSubDr.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/dataSubDr.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,71 +49,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PersistentDrawer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ui/PersistentDrawer.js">
+      <file leaf-file-name="main.6ff793c8.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build/static/js/main.6ff793c8.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="101" column="18" lean-forward="true" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="160">
+              <caret column="359801" selection-start-column="359801" selection-end-column="359801" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuData.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/containers/MenuData.js">
+      <file leaf-file-name="idc_map.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build/idc_map.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuData.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ui/MenuData.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PersistentDrawer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/containers/PersistentDrawer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MapDescription.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ui/MapDescription.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="113" lean-forward="true" selection-start-line="14" selection-start-column="113" selection-end-line="14" selection-end-column="113" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="France.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/ui/France.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="214" column="103" selection-start-line="214" selection-start-column="103" selection-end-line="214" selection-end-column="103" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="3" column="218" selection-start-line="3" selection-start-column="198" selection-end-line="3" selection-end-column="218" />
             </state>
           </provider>
         </entry>
@@ -111,36 +78,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>ull</find>
+      <find>ul</find>
+      <find>&quot;CODE_DGR&quot;:null</find>
+      <find>&quot;CODE_DR&quot;:null</find>
+      <find>&quot;NOM_DR&quot;:null</find>
+      <find>&quot;NOM_DR&quot;:&quot;VIDE&quot;</find>
+      <find>&quot;id_site&quot;:</find>
+      <find>colorScaleDgr</find>
+      <find>CENTRE EST</find>
+      <find>colorMap</find>
+      <find>colorMapStyle</find>
+      <find>&quot;CODE_DGR&quot;:&quot;</find>
+      <find>&quot;CODE_DR&quot;:&quot;</find>
+      <find>colorScale</find>
+      <find>CODE_DR&quot;:7</find>
+      <find>exp-riberac</find>
+      <find>renderBor</find>
+      <find>exp-gail</find>
       <find>handle</find>
-      <find>SendIcon</find>
-      <find>geoPath</find>
-      <find>clea</find>
-      <find>dgr</find>
-      <find>MapData</find>
-      <find>CODE_DGR</find>
-      <find>&quot;CODE_DR&quot;:62</find>
-      <find>id_site</find>
-      <find>exp_outremer</find>
-      <find>popScale</find>
-      <find>&quot;PCT_AVT&quot;</find>
-      <find>PCT</find>
-      <find>properties</find>
-      <find>data</find>
+      <find>somData</find>
+      <find>legendWidth</find>
+      <find>300</find>
+      <find>title</find>
+      <find>legendTitle</find>
+      <find>legendsvg</find>
+      <find>h</find>
+      <find>.json</find>
       <find>scaleColor</find>
-      <find>MenuData</find>
-      <find>exp-foix</find>
-      <find>-0</find>
-      <find>&quot;-1,</find>
-      <find>console.log</find>
-      <find>PCT_AVT&quot;:&quot;-0</find>
-      <find>PCT_AVT</find>
-      <find>json</find>
-      <find>parse</find>
-      <find>popscale</find>
-      <find>scaleLinear</find>
-      <find>bd</find>
-      <find>renderBorder</find>
-      <find>bdDgr</find>
+      <find>console.log(</find>
+      <find>offset</find>
     </findStrings>
     <replaceStrings>
       <replace>departements</replace>
@@ -164,9 +131,14 @@
       <replace>0</replace>
       <replace>MapDescription</replace>
       <replace>bdDgr</replace>
+      <replace>&quot;NOM_DR&quot;:&quot;OUTRE-MER&quot;</replace>
+      <replace>CENTRE-EST</replace>
+      <replace>interpolateHcl</replace>
+      <replace>CODE_DR&quot;:70</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src</dir>
+      <dir>C:\dev\work\DATA_VISUALISATION\d3-simple-react-map</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -175,15 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/MapMenu.js" />
-        <option value="$PROJECT_DIR$/src/components/France.js" />
-        <option value="$PROJECT_DIR$/src/components/ListMenuMap.js" />
-        <option value="$PROJECT_DIR$/src/components/SelectMap.js" />
-        <option value="$PROJECT_DIR$/src/indexRedux.js" />
-        <option value="$PROJECT_DIR$/src/components/SwitchListSecondary.js" />
-        <option value="$PROJECT_DIR$/src/components/PersistentDrawer.js" />
-        <option value="$PROJECT_DIR$/src/components/containers/MapSettings.js" />
-        <option value="$PROJECT_DIR$/src/components/containers/MapLocation.js" />
         <option value="$PROJECT_DIR$/src/components/ui/MapLocation.js" />
         <option value="$PROJECT_DIR$/src/components/ui/Test.js" />
         <option value="$PROJECT_DIR$/src/components/ui/SelectMap.js" />
@@ -211,7 +174,6 @@
         <option value="$PROJECT_DIR$/src/components/ui/DataList.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/static/dataSubDr.js" />
         <option value="$PROJECT_DIR$/src/static/dataSubDgr.js" />
         <option value="$PROJECT_DIR$/public/zone_theo_db_outremer.json" />
         <option value="$PROJECT_DIR$/src/components/containers/France.js" />
@@ -225,7 +187,17 @@
         <option value="$PROJECT_DIR$/src/components/ui/MenuData.js" />
         <option value="$PROJECT_DIR$/public/zone_theo_db_outremer_data.json" />
         <option value="$PROJECT_DIR$/src/components/ui/MapDescription.js" />
+        <option value="$PROJECT_DIR$/src/idc_map.jsp" />
+        <option value="$PROJECT_DIR$/public/idc_map.jsp" />
+        <option value="$PROJECT_DIR$/build/idc_map.jsp" />
+        <option value="$PROJECT_DIR$/build/static/js/main.92eb2f03.js" />
+        <option value="$PROJECT_DIR$/src/static/dataSubDr.js" />
+        <option value="$PROJECT_DIR$/public/zone_theo_db_noblank.json" />
+        <option value="$PROJECT_DIR$/src/components/ui/Legend.js" />
+        <option value="$PROJECT_DIR$/src/stylesheets/Legend_v2.css" />
+        <option value="$PROJECT_DIR$/src/components/ui/Legend_v2.js" />
         <option value="$PROJECT_DIR$/src/components/ui/France.js" />
+        <option value="$PROJECT_DIR$/build/static/js/main.6ff793c8.js" />
       </list>
     </option>
   </component>
@@ -268,44 +240,20 @@
             <path>
               <item name="d3-simple-react-map" type="b2602c69:ProjectViewProjectNode" />
               <item name="d3-simple-react-map" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="build" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="d3-simple-react-map" type="b2602c69:ProjectViewProjectNode" />
               <item name="d3-simple-react-map" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="d3-simple-react-map" type="b2602c69:ProjectViewProjectNode" />
-              <item name="d3-simple-react-map" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="d3-simple-react-map" type="b2602c69:ProjectViewProjectNode" />
-              <item name="d3-simple-react-map" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="containers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="d3-simple-react-map" type="b2602c69:ProjectViewProjectNode" />
-              <item name="d3-simple-react-map" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ui" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="d3-simple-react-map" type="b2602c69:ProjectViewProjectNode" />
-              <item name="d3-simple-react-map" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="build" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="d3-simple-react-map" type="b2602c69:ProjectViewProjectNode" />
               <item name="d3-simple-react-map" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="store" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="build" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -324,9 +272,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\public" />
       <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src\components\ui" />
       <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src" />
-      <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\public" />
       <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src\static" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -367,12 +315,12 @@
       <workItem from="1534172436434" duration="234000" />
       <workItem from="1535354800095" duration="119115000" />
       <workItem from="1537184245445" duration="11000" />
-      <workItem from="1537199538514" duration="79131000" />
+      <workItem from="1537199538514" duration="122684000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="406623000" />
+    <option name="totallyTimeSpent" value="450176000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -384,10 +332,11 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" visible="true" weight="0.2546246" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24360341" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" visible="true" weight="0.2546246" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24360341" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295099" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -397,7 +346,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3295099" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -430,99 +378,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/ui/MapOption.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/ui/AgencyMarkers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="54" column="11" lean-forward="true" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/static/dataStructureZoom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="28" lean-forward="true" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/zone_fusion.geojson">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/zone_fusion.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret column="2292" selection-start-column="2292" selection-end-column="2292" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/zone_fusion_theo.geojson">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="759" column="3361" selection-start-line="759" selection-end-line="759" selection-end-column="3361" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/france-dr.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="255">
-            <caret line="15" column="65" lean-forward="true" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/dataStructureZoom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/DataTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="47" column="15" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/containers/MapLocation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/MapLocation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/save" />
     <entry file="file://L:/STAFFING/DSI/MR/Doc/Doc applications/RT_Tableau de bord/Doc fonctionnelle/Cartographie/KM - Principes fonctionnement cartographie V1.0.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -545,13 +404,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="55" lean-forward="true" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -590,13 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/static/dataSubDr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1111,59 +956,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/PersistentDrawer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="101" column="18" lean-forward="true" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/containers/MapDescription.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/containers/MenuData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/containers/PersistentDrawer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/MenuData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/containers/France.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1182,23 +980,176 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/containers/PersistentDrawer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/containers/MenuData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/PersistentDrawer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="101" column="18" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/MenuData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ui/MapDescription.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="113" lean-forward="true" selection-start-line="14" selection-start-column="113" selection-end-line="14" selection-end-column="113" />
+          <caret line="14" column="113" selection-start-line="14" selection-start-column="113" selection-end-line="14" selection-end-column="113" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/France.js">
+    <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="214" column="103" selection-start-line="214" selection-start-column="103" selection-end-line="214" selection-end-column="103" />
+        <state relative-caret-position="357">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/test.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/containers/France.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/fr-departments.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/france-dr.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-890571">
+          <caret line="42" column="18" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/main.92eb2f03.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret column="359708" selection-start-column="359708" selection-end-column="359708" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="40" selection-start-column="40" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/zone_theo_db_noblank.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret column="443003" selection-start-column="443003" selection-end-column="443003" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/static/dataSubDr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stylesheets/France.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stylesheets/Legend_v2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/idc_map.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="613" selection-start-line="3" selection-start-column="613" selection-end-line="3" selection-end-column="613" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/Legend_v2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="66" column="22" selection-start-line="66" selection-start-column="22" selection-end-line="66" selection-end-column="22" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/Legend.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1253">
+          <caret line="75" column="61" selection-start-line="75" selection-start-column="61" selection-end-line="75" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/France.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="521" column="39" selection-start-line="521" selection-start-column="29" selection-end-line="521" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/idc_map.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="218" selection-start-line="3" selection-start-column="198" selection-end-line="3" selection-end-column="218" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/main.6ff793c8.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret column="359801" selection-start-column="359801" selection-end-column="359801" />
         </state>
       </provider>
     </entry>
