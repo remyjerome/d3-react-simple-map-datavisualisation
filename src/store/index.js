@@ -7,9 +7,9 @@ const consoleMessages = store => next => action => {
   console.groupCollapsed(`dispatching action => ${action.type}`)
   result = next(action)
 
-  let { level, options, dgr, dr, zoom, center, hoverInfo, hoverAgency, map, data } = store.getState()
+  // let { level, options, dgr, dr, zoom, center, hoverInfo, hoverAgency, map, data } = store.getState()
 
-  console.log(`
+  /*console.log(`
     level: ${level}
     options: ${options}
     dgr: ${dgr}
@@ -20,7 +20,9 @@ const consoleMessages = store => next => action => {
     agency: ${hoverAgency}
     map: ${map}
     data: ${data}
-    `)
+    `)*/
+
+  console.log(store.getState())
 
   console.groupEnd()
   return result

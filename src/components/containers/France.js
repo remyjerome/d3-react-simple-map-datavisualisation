@@ -23,6 +23,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => {
   return {
+
     onSetLevel(level) {
       dispatch(
         setLevel(level)
