@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8434e9e-1594-430b-a1b5-266b4f417c71" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/containers/Zoom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/Zoom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/containers/Francev2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/containers/Retour.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Agence.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Francev2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Retour.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stylesheets/Agence.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build2.tar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/containers/France.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/containers/France.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/France.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/France.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/NestedList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/NestedList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/France.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/France.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,49 +39,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="France.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ui/France.js">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="492" lean-forward="true" selection-start-line="492" selection-end-line="492" />
+            <state relative-caret-position="204">
+              <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
               <folding>
-                <element signature="e#0#25#0" expanded="true" />
-                <element signature="n#!!block;n#constructor#0;n#France#0" />
-                <element signature="n#!!block;n#componentDidMount#0;n#France#0" />
-                <element signature="n#!!block;n#loadPaths#0;n#France#0" />
-                <element signature="n#!!block;n#projection#0;n#France#0" />
-                <element signature="e#8791#9595#0" />
-                <element signature="e#9618#11115#0" />
-                <element signature="n#!!block;n#handleDgrSelection#0;n#France#0" />
-                <element signature="n#!!block;n#handleDrSelection#0;n#France#0" />
-                <element signature="n#!!block;n#handleGeographyClick#0;n#France#0" />
-                <element signature="e#11797#12075#0" />
-                <element signature="n#!!block;n#bdDgr#0;n#France#0" />
-                <element signature="n#!!block;n#bdDgrDr#0;n#France#0" />
-                <element signature="n#!!block;n#bdDr#0;n#France#0" />
-                <element signature="n#!!block;n#renderBorder#0;n#France#0" />
-                <element signature="n#!!block;n#getAgence#0;n#France#0" />
-                <element signature="n#!!block;n#handleZoomIn#0;n#France#0" />
-                <element signature="n#!!block;n#handleZoomOut#0;n#France#0" />
-                <element signature="n#!!block;n#onMouseEnterHandler#0;n#France#0" />
-                <element signature="n#!!block;n#onMouseEnterHandlerAgence#0;n#France#0" />
-                <element signature="n#!!block;n#handleReset#0;n#France#0" />
-                <element signature="n#!!block;n#handleMove#0;n#France#0" />
-                <element signature="n#!!block;n#handleLeave#0;n#France#0" />
-                <element signature="n#!!block;n#colorMapStyle#0;n#France#0" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Legend_v2.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/ui/Legend_v2.js">
+      <file leaf-file-name="Francev2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/ui/Francev2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="84" column="21" lean-forward="true" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
+            <state relative-caret-position="170">
+              <caret line="418" column="34" lean-forward="true" selection-start-line="418" selection-start-column="34" selection-end-line="418" selection-end-column="34" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="France.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stylesheets/France.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NestedList.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/ui/NestedList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="94" column="29" lean-forward="true" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Retour.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/ui/Retour.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="433">
+              <caret line="53" column="17" lean-forward="true" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Zoom.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/containers/Zoom.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="15" lean-forward="true" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Retour.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/containers/Retour.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Agence.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/ui/Agence.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="France.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/containers/France.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-614">
+              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -93,41 +149,38 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>colorMap</find>
-      <find>colorMapStyle</find>
-      <find>&quot;CODE_DGR&quot;:&quot;</find>
-      <find>&quot;CODE_DR&quot;:&quot;</find>
-      <find>colorScale</find>
-      <find>CODE_DR&quot;:7</find>
-      <find>exp-riberac</find>
-      <find>renderBor</find>
-      <find>exp-gail</find>
-      <find>somData</find>
-      <find>legendWidth</find>
-      <find>300</find>
-      <find>title</find>
-      <find>legendTitle</find>
-      <find>legendsvg</find>
-      <find>h</find>
-      <find>.json</find>
-      <find>scaleColor</find>
-      <find>console.log(</find>
-      <find>offset</find>
-      <find>move</find>
-      <find>handleLeave</find>
-      <find>handleMove</find>
-      <find>dataIdc</find>
-      <find>subDgr</find>
-      <find>opti</find>
-      <find>handle</find>
-      <find>tooltip</find>
       <find>reset</find>
       <find>onSetZoom</find>
+      <find>renderBor</find>
+      <find>data</find>
+      <find>d3</find>
+      <find>d3.geo.path</find>
+      <find>vis.sele</find>
+      <find>topojson</find>
+      <find>geo</find>
+      <find>topos</find>
+      <find>1</find>
+      <find>code_dgr</find>
+      <find>id_site</find>
+      <find>zone_theo_db_noblank</find>
+      <find>bourg-en-bress</find>
+      <find>json</find>
+      <find>zone_cp_dbv2</find>
+      <find>effective</find>
+      <find>state</find>
+      <find>zoom</find>
+      <find>geographyPath</find>
+      <find>france</find>
+      <find>console.log</find>
+      <find>did</find>
+      <find>this.load</find>
+      <find>loadPath</find>
+      <find>clermont</find>
+      <find>loadPaths</find>
+      <find>;</find>
+      <find>Zoom</find>
     </findStrings>
     <replaceStrings>
-      <replace>departements</replace>
-      <replace>city</replace>
-      <replace>valeur</replace>
       <replace>dataSubDgr</replace>
       <replace>NOM_DR</replace>
       <replace>dataStructureZoom</replace>
@@ -139,7 +192,6 @@
       <replace>showAgence</replace>
       <replace>this.props.agence</replace>
       <replace>agence[i]</replace>
-      <replace>id_site</replace>
       <replace>this.props.niveau</replace>
       <replace>BorderStyle</replace>
       <replace>MenuData</replace>
@@ -150,6 +202,15 @@
       <replace>CENTRE-EST</replace>
       <replace>interpolateHcl</replace>
       <replace>CODE_DR&quot;:70</replace>
+      <replace>geoMercator()</replace>
+      <replace>code_dgr</replace>
+      <replace>id_site</replace>
+      <replace>[champ]</replace>
+      <replace>valeur</replace>
+      <replace>zone_cp_dbv2</replace>
+      <replace>geoCentroid</replace>
+      <replace>[file]</replace>
+      <replace>Retour</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src</dir>
@@ -162,16 +223,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/ui/SelectMap.js" />
-        <option value="$PROJECT_DIR$/src/constants.js" />
-        <option value="$PROJECT_DIR$/src/components/containers/MapData.js" />
-        <option value="$PROJECT_DIR$/src/components/ui/MapOption.js" />
-        <option value="$PROJECT_DIR$/src/components/ui/NavMap.js" />
-        <option value="$PROJECT_DIR$/src/actions.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/components/ui/Markers.js" />
-        <option value="$PROJECT_DIR$/src/components/ui/AgencyMarkers.js" />
-        <option value="$PROJECT_DIR$/src/components/ui/save" />
         <option value="$PROJECT_DIR$/public/zone_fusion_theo.geojson" />
         <option value="$PROJECT_DIR$/public/zone_theo_db.geojson" />
         <option value="$PROJECT_DIR$/README.md" />
@@ -180,7 +231,6 @@
         <option value="$PROJECT_DIR$/src/components/containers/DataList.js" />
         <option value="$PROJECT_DIR$/src/components/ui/MapData.js" />
         <option value="$PROJECT_DIR$/src/components/containers/PersistantDrawer.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/containers/PersistentDrawer.js" />
         <option value="$PROJECT_DIR$/src/components/ui/DataList.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
@@ -188,7 +238,6 @@
         <option value="$PROJECT_DIR$/public/zone_theo_db_outremer.json" />
         <option value="$PROJECT_DIR$/src/components/ui/MapSettings.js" />
         <option value="$PROJECT_DIR$/src/components/containers/NestedList.js" />
-        <option value="$PROJECT_DIR$/src/components/ui/NestedList.js" />
         <option value="$PROJECT_DIR$/src/components/ui/PersistentDrawer.js" />
         <option value="$PROJECT_DIR$/src/components/containers/MenuData.js" />
         <option value="$PROJECT_DIR$/src/components/containers/MapDescription.js" />
@@ -212,7 +261,19 @@
         <option value="$PROJECT_DIR$/src/store/reducers.js" />
         <option value="$PROJECT_DIR$/src/components/containers/France.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/public/zone_cp_id.json" />
+        <option value="$PROJECT_DIR$/public/zone_cp_agence.json" />
+        <option value="$PROJECT_DIR$/src/components/containers/Francev2.js" />
+        <option value="$PROJECT_DIR$/public/zone_cp_agence_v2.json" />
         <option value="$PROJECT_DIR$/src/components/ui/France.js" />
+        <option value="$PROJECT_DIR$/src/stylesheets/Agence.css" />
+        <option value="$PROJECT_DIR$/src/components/ui/Agence.js" />
+        <option value="$PROJECT_DIR$/src/stylesheets/France.css" />
+        <option value="$PROJECT_DIR$/src/components/containers/Retour.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/ui/Francev2.js" />
+        <option value="$PROJECT_DIR$/src/components/ui/NestedList.js" />
+        <option value="$PROJECT_DIR$/src/components/ui/Retour.js" />
       </list>
     </option>
   </component>
@@ -244,31 +305,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="d3-simple-react-map" type="b2602c69:ProjectViewProjectNode" />
               <item name="d3-simple-react-map" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="d3-simple-react-map" type="b2602c69:ProjectViewProjectNode" />
-              <item name="d3-simple-react-map" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="build" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="d3-simple-react-map" type="b2602c69:ProjectViewProjectNode" />
-              <item name="d3-simple-react-map" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="build" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="d3-simple-react-map" type="b2602c69:ProjectViewProjectNode" />
-              <item name="d3-simple-react-map" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="build" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="d3-simple-react-map" type="b2602c69:ProjectViewProjectNode" />
@@ -291,17 +333,31 @@
               <item name="d3-simple-react-map" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="containers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="d3-simple-react-map" type="b2602c69:ProjectViewProjectNode" />
+              <item name="d3-simple-react-map" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="ui" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="d3-simple-react-map" type="b2602c69:ProjectViewProjectNode" />
+              <item name="d3-simple-react-map" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="stylesheets" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-simple-maps/examples/custom-projection" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -309,18 +365,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src\components\containers" />
+      <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src\components\ui" />
+      <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src\static" />
+      <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src" />
+      <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\public" />
       <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src\components\ui" />
       <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src" />
       <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src\static" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src\components\containers" />
-      <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src\static" />
-      <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src" />
-      <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\public" />
-      <recent name="C:\dev\work\DATA_VISUALISATION\d3-simple-react-map\src\components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -353,15 +409,17 @@
       <workItem from="1534172436434" duration="234000" />
       <workItem from="1535354800095" duration="119115000" />
       <workItem from="1537184245445" duration="11000" />
-      <workItem from="1537199538514" duration="140850000" />
+      <workItem from="1537199538514" duration="161653000" />
+      <workItem from="1539000823456" duration="20052000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="468342000" />
+    <option name="totallyTimeSpent" value="509197000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.2546246" />
@@ -369,11 +427,10 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" visible="true" weight="0.2546246" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24360341" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" visible="true" weight="0.2546246" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15938166" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3295099" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -383,28 +440,29 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295099" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24360341" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295099" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49946696" weight="0.2546246" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49946696" visible="true" weight="0.2546246" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.2546246" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24360341" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,514 +473,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="8" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/react-simple-maps/lib/Markers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/static/francedom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" selection-start-column="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/zone_theo_db.geojson">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/static/subregions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/static/dataSubDgr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/zone_theo_db_outremer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret column="825836" selection-start-column="825836" selection-end-column="825836" />
-          <caret column="826003" selection-start-column="826003" selection-end-column="826003" />
-          <caret column="826165" selection-start-column="826165" selection-end-column="826165" />
-          <caret column="826346" selection-start-column="826346" selection-end-column="826346" />
-          <caret column="826556" selection-start-column="826556" selection-end-column="826556" />
-          <caret column="826741" selection-start-column="826741" selection-end-column="826741" />
-          <caret column="826910" selection-start-column="826910" selection-end-column="826910" />
-          <caret column="827076" selection-start-column="827076" selection-end-column="827076" />
-          <caret column="827233" selection-start-column="827233" selection-end-column="827233" />
-          <caret column="827418" selection-start-column="827418" selection-end-column="827418" />
-          <caret column="827583" selection-start-column="827583" selection-end-column="827583" />
-          <caret column="827744" selection-start-column="827744" selection-end-column="827744" />
-          <caret column="827933" selection-start-column="827933" selection-end-column="827933" />
-          <caret column="828102" selection-start-column="828102" selection-end-column="828102" />
-          <caret column="828273" selection-start-column="828273" selection-end-column="828273" />
-          <caret column="828464" selection-start-column="828464" selection-end-column="828464" />
-          <caret column="828656" selection-start-column="828656" selection-end-column="828656" />
-          <caret column="828815" selection-start-column="828815" selection-end-column="828815" />
-          <caret column="828977" selection-start-column="828977" selection-end-column="828977" />
-          <caret column="829160" selection-start-column="829160" selection-end-column="829160" />
-          <caret column="829340" selection-start-column="829340" selection-end-column="829340" />
-          <caret column="829514" selection-start-column="829514" selection-end-column="829514" />
-          <caret column="829685" selection-start-column="829685" selection-end-column="829685" />
-          <caret column="829866" selection-start-column="829866" selection-end-column="829866" />
-          <caret column="830061" selection-start-column="830061" selection-end-column="830061" />
-          <caret column="830242" selection-start-column="830242" selection-end-column="830242" />
-          <caret column="830421" selection-start-column="830421" selection-end-column="830421" />
-          <caret column="830579" selection-start-column="830579" selection-end-column="830579" />
-          <caret column="830749" selection-start-column="830749" selection-end-column="830749" />
-          <caret column="830924" selection-start-column="830924" selection-end-column="830924" />
-          <caret column="831128" selection-start-column="831128" selection-end-column="831128" />
-          <caret column="831305" selection-start-column="831305" selection-end-column="831305" />
-          <caret column="831482" selection-start-column="831482" selection-end-column="831482" />
-          <caret column="831648" selection-start-column="831648" selection-end-column="831648" />
-          <caret column="831811" selection-start-column="831811" selection-end-column="831811" />
-          <caret column="831980" selection-start-column="831980" selection-end-column="831980" />
-          <caret column="832157" selection-start-column="832157" selection-end-column="832157" />
-          <caret column="832328" selection-start-column="832328" selection-end-column="832328" />
-          <caret column="832499" selection-start-column="832499" selection-end-column="832499" />
-          <caret column="832671" selection-start-column="832671" selection-end-column="832671" />
-          <caret column="832871" selection-start-column="832871" selection-end-column="832871" />
-          <caret column="833041" selection-start-column="833041" selection-end-column="833041" />
-          <caret column="833214" selection-start-column="833214" selection-end-column="833214" />
-          <caret column="833375" selection-start-column="833375" selection-end-column="833375" />
-          <caret column="833541" selection-start-column="833541" selection-end-column="833541" />
-          <caret column="833729" selection-start-column="833729" selection-end-column="833729" />
-          <caret column="833890" selection-start-column="833890" selection-end-column="833890" />
-          <caret column="834061" selection-start-column="834061" selection-end-column="834061" />
-          <caret column="834257" selection-start-column="834257" selection-end-column="834257" />
-          <caret column="834448" selection-start-column="834448" selection-end-column="834448" />
-          <caret column="834626" selection-start-column="834626" selection-end-column="834626" />
-          <caret column="834796" selection-start-column="834796" selection-end-column="834796" />
-          <caret column="834985" selection-start-column="834985" selection-end-column="834985" />
-          <caret column="835168" selection-start-column="835168" selection-end-column="835168" />
-          <caret column="835341" selection-start-column="835341" selection-end-column="835341" />
-          <caret column="835535" selection-start-column="835535" selection-end-column="835535" />
-          <caret column="835712" selection-start-column="835712" selection-end-column="835712" />
-          <caret column="835887" selection-start-column="835887" selection-end-column="835887" />
-          <caret column="836064" selection-start-column="836064" selection-end-column="836064" />
-          <caret column="836239" selection-start-column="836239" selection-end-column="836239" />
-          <caret column="836421" selection-start-column="836421" selection-end-column="836421" />
-          <caret column="836605" selection-start-column="836605" selection-end-column="836605" />
-          <caret column="836785" selection-start-column="836785" selection-end-column="836785" />
-          <caret column="836966" selection-start-column="836966" selection-end-column="836966" />
-          <caret column="837142" selection-start-column="837142" selection-end-column="837142" />
-          <caret column="837312" selection-start-column="837312" selection-end-column="837312" />
-          <caret column="837483" selection-start-column="837483" selection-end-column="837483" />
-          <caret column="837664" selection-start-column="837664" selection-end-column="837664" />
-          <caret column="837839" selection-start-column="837839" selection-end-column="837839" />
-          <caret column="838022" selection-start-column="838022" selection-end-column="838022" />
-          <caret column="838205" selection-start-column="838205" selection-end-column="838205" />
-          <caret column="838383" selection-start-column="838383" selection-end-column="838383" />
-          <caret column="838556" selection-start-column="838556" selection-end-column="838556" />
-          <caret column="838736" selection-start-column="838736" selection-end-column="838736" />
-          <caret column="838913" selection-start-column="838913" selection-end-column="838913" />
-          <caret column="839096" selection-start-column="839096" selection-end-column="839096" />
-          <caret column="839273" selection-start-column="839273" selection-end-column="839273" />
-          <caret column="839442" selection-start-column="839442" selection-end-column="839442" />
-          <caret column="839616" selection-start-column="839616" selection-end-column="839616" />
-          <caret column="839803" selection-start-column="839803" selection-end-column="839803" />
-          <caret column="839963" selection-start-column="839963" selection-end-column="839963" />
-          <caret column="840126" selection-start-column="840126" selection-end-column="840126" />
-          <caret column="840296" selection-start-column="840296" selection-end-column="840296" />
-          <caret column="840464" selection-start-column="840464" selection-end-column="840464" />
-          <caret column="840639" selection-start-column="840639" selection-end-column="840639" />
-          <caret column="840805" selection-start-column="840805" selection-end-column="840805" />
-          <caret column="840981" selection-start-column="840981" selection-end-column="840981" />
-          <caret column="841159" selection-start-column="841159" selection-end-column="841159" />
-          <caret column="841331" selection-start-column="841331" selection-end-column="841331" />
-          <caret column="841482" selection-start-column="841482" selection-end-column="841482" />
-          <caret column="841643" selection-start-column="841643" selection-end-column="841643" />
-          <caret column="841806" selection-start-column="841806" selection-end-column="841806" />
-          <caret column="841982" selection-start-column="841982" selection-end-column="841982" />
-          <caret column="842174" selection-start-column="842174" selection-end-column="842174" />
-          <caret column="842376" selection-start-column="842376" selection-end-column="842376" />
-          <caret column="842568" selection-start-column="842568" selection-end-column="842568" />
-          <caret column="842751" selection-start-column="842751" selection-end-column="842751" />
-          <caret column="842923" selection-start-column="842923" selection-end-column="842923" />
-          <caret column="843088" selection-start-column="843088" selection-end-column="843088" />
-          <caret column="843265" selection-start-column="843265" selection-end-column="843265" />
-          <caret column="843441" selection-start-column="843441" selection-end-column="843441" />
-          <caret column="843610" selection-start-column="843610" selection-end-column="843610" />
-          <caret column="843784" selection-start-column="843784" selection-end-column="843784" />
-          <caret column="843967" selection-start-column="843967" selection-end-column="843967" />
-          <caret column="844133" selection-start-column="844133" selection-end-column="844133" />
-          <caret column="844292" selection-start-column="844292" selection-end-column="844292" />
-          <caret column="844470" selection-start-column="844470" selection-end-column="844470" />
-          <caret column="844650" selection-start-column="844650" selection-end-column="844650" />
-          <caret column="844827" selection-start-column="844827" selection-end-column="844827" />
-          <caret column="845010" selection-start-column="845010" selection-end-column="845010" />
-          <caret column="845203" selection-start-column="845203" selection-end-column="845203" />
-          <caret column="845390" selection-start-column="845390" selection-end-column="845390" />
-          <caret column="845586" selection-start-column="845586" selection-end-column="845586" />
-          <caret column="845782" selection-start-column="845782" selection-end-column="845782" />
-          <caret column="845945" selection-start-column="845945" selection-end-column="845945" />
-          <caret column="846135" selection-start-column="846135" selection-end-column="846135" />
-          <caret column="846307" selection-start-column="846307" selection-end-column="846307" />
-          <caret column="846494" selection-start-column="846494" selection-end-column="846494" />
-          <caret column="846684" selection-start-column="846684" selection-end-column="846684" />
-          <caret column="846851" selection-start-column="846851" selection-end-column="846851" />
-          <caret column="847025" selection-start-column="847025" selection-end-column="847025" />
-          <caret column="847206" selection-start-column="847206" selection-end-column="847206" />
-          <caret column="847370" selection-start-column="847370" selection-end-column="847370" />
-          <caret column="847539" selection-start-column="847539" selection-end-column="847539" />
-          <caret column="847696" selection-start-column="847696" selection-end-column="847696" />
-          <caret column="847868" selection-start-column="847868" selection-end-column="847868" />
-          <caret column="848055" selection-start-column="848055" selection-end-column="848055" />
-          <caret column="848228" selection-start-column="848228" selection-end-column="848228" />
-          <caret column="848412" selection-start-column="848412" selection-end-column="848412" />
-          <caret column="848586" selection-start-column="848586" selection-end-column="848586" />
-          <caret column="848755" selection-start-column="848755" selection-end-column="848755" />
-          <caret column="848932" selection-start-column="848932" selection-end-column="848932" />
-          <caret column="849115" selection-start-column="849115" selection-end-column="849115" />
-          <caret column="849283" selection-start-column="849283" selection-end-column="849283" />
-          <caret column="849443" selection-start-column="849443" selection-end-column="849443" />
-          <caret column="849614" selection-start-column="849614" selection-end-column="849614" />
-          <caret column="849791" selection-start-column="849791" selection-end-column="849791" />
-          <caret column="849949" selection-start-column="849949" selection-end-column="849949" />
-          <caret column="850119" selection-start-column="850119" selection-end-column="850119" />
-          <caret column="850278" selection-start-column="850278" selection-end-column="850278" />
-          <caret column="850447" selection-start-column="850447" selection-end-column="850447" />
-          <caret column="850604" selection-start-column="850604" selection-end-column="850604" />
-          <caret column="850780" selection-start-column="850780" selection-end-column="850780" />
-          <caret column="850956" selection-start-column="850956" selection-end-column="850956" />
-          <caret column="851140" selection-start-column="851140" selection-end-column="851140" />
-          <caret column="851312" selection-start-column="851312" selection-end-column="851312" />
-          <caret column="851497" selection-start-column="851497" selection-end-column="851497" />
-          <caret column="851669" selection-start-column="851669" selection-end-column="851669" />
-          <caret column="851871" selection-start-column="851871" selection-end-column="851871" />
-          <caret column="852040" selection-start-column="852040" selection-end-column="852040" />
-          <caret column="852220" selection-start-column="852220" selection-end-column="852220" />
-          <caret column="852386" selection-start-column="852386" selection-end-column="852386" />
-          <caret column="852558" selection-start-column="852558" selection-end-column="852558" />
-          <caret column="852729" selection-start-column="852729" selection-end-column="852729" />
-          <caret column="852880" selection-start-column="852880" selection-end-column="852880" />
-          <caret column="853055" selection-start-column="853055" selection-end-column="853055" />
-          <caret column="853242" selection-start-column="853242" selection-end-column="853242" />
-          <caret column="853425" selection-start-column="853425" selection-end-column="853425" />
-          <caret column="853605" selection-start-column="853605" selection-end-column="853605" />
-          <caret column="853783" selection-start-column="853783" selection-end-column="853783" />
-          <caret column="853955" selection-start-column="853955" selection-end-column="853955" />
-          <caret column="854133" selection-start-column="854133" selection-end-column="854133" />
-          <caret column="854301" selection-start-column="854301" selection-end-column="854301" />
-          <caret column="854469" selection-start-column="854469" selection-end-column="854469" />
-          <caret column="854639" selection-start-column="854639" selection-end-column="854639" />
-          <caret column="854828" selection-start-column="854828" selection-end-column="854828" />
-          <caret column="854989" selection-start-column="854989" selection-end-column="854989" />
-          <caret column="855166" selection-start-column="855166" selection-end-column="855166" />
-          <caret column="855341" selection-start-column="855341" selection-end-column="855341" />
-          <caret column="855538" selection-start-column="855538" selection-end-column="855538" />
-          <caret column="855705" selection-start-column="855705" selection-end-column="855705" />
-          <caret column="855869" selection-start-column="855869" selection-end-column="855869" />
-          <caret column="856040" selection-start-column="856040" selection-end-column="856040" />
-          <caret column="856207" selection-start-column="856207" selection-end-column="856207" />
-          <caret column="856385" selection-start-column="856385" selection-end-column="856385" />
-          <caret column="856549" selection-start-column="856549" selection-end-column="856549" />
-          <caret column="856724" selection-start-column="856724" selection-end-column="856724" />
-          <caret column="856902" selection-start-column="856902" selection-end-column="856902" />
-          <caret column="857073" selection-start-column="857073" selection-end-column="857073" />
-          <caret column="857247" selection-start-column="857247" selection-end-column="857247" />
-          <caret column="857450" selection-start-column="857450" selection-end-column="857450" />
-          <caret column="857619" selection-start-column="857619" selection-end-column="857619" />
-          <caret column="857806" selection-start-column="857806" selection-end-column="857806" />
-          <caret column="857998" selection-start-column="857998" selection-end-column="857998" />
-          <caret column="858174" selection-start-column="858174" selection-end-column="858174" />
-          <caret column="858352" selection-start-column="858352" selection-end-column="858352" />
-          <caret column="858526" selection-start-column="858526" selection-end-column="858526" />
-          <caret column="858700" selection-start-column="858700" selection-end-column="858700" />
-          <caret column="858891" selection-start-column="858891" selection-end-column="858891" />
-          <caret column="859072" selection-start-column="859072" selection-end-column="859072" />
-          <caret column="859236" selection-start-column="859236" selection-end-column="859236" />
-          <caret column="859438" selection-start-column="859438" selection-end-column="859438" />
-          <caret column="859601" selection-start-column="859601" selection-end-column="859601" />
-          <caret column="859792" selection-start-column="859792" selection-end-column="859792" />
-          <caret column="859954" selection-start-column="859954" selection-end-column="859954" />
-          <caret column="860126" selection-start-column="860126" selection-end-column="860126" />
-          <caret column="860294" selection-start-column="860294" selection-end-column="860294" />
-          <caret column="860480" selection-start-column="860480" selection-end-column="860480" />
-          <caret column="860672" selection-start-column="860672" selection-end-column="860672" />
-          <caret column="860834" selection-start-column="860834" selection-end-column="860834" />
-          <caret column="860995" selection-start-column="860995" selection-end-column="860995" />
-          <caret column="861180" selection-start-column="861180" selection-end-column="861180" />
-          <caret column="861373" selection-start-column="861373" selection-end-column="861373" />
-          <caret column="861561" selection-start-column="861561" selection-end-column="861561" />
-          <caret column="861737" selection-start-column="861737" selection-end-column="861737" />
-          <caret column="861943" selection-start-column="861943" selection-end-column="861943" />
-          <caret column="862121" selection-start-column="862121" selection-end-column="862121" />
-          <caret column="862293" selection-start-column="862293" selection-end-column="862293" />
-          <caret column="862471" selection-start-column="862471" selection-end-column="862471" />
-          <caret column="862651" selection-start-column="862651" selection-end-column="862651" />
-          <caret column="862814" selection-start-column="862814" selection-end-column="862814" />
-          <caret column="862996" selection-start-column="862996" selection-end-column="862996" />
-          <caret column="863159" selection-start-column="863159" selection-end-column="863159" />
-          <caret column="863347" selection-start-column="863347" selection-end-column="863347" />
-          <caret column="863527" selection-start-column="863527" selection-end-column="863527" />
-          <caret column="863697" selection-start-column="863697" selection-end-column="863697" />
-          <caret column="863889" selection-start-column="863889" selection-end-column="863889" />
-          <caret column="864058" selection-start-column="864058" selection-end-column="864058" />
-          <caret column="864266" selection-start-column="864266" selection-end-column="864266" />
-          <caret column="864470" selection-start-column="864470" selection-end-column="864470" />
-          <caret column="864653" selection-start-column="864653" selection-end-column="864653" />
-          <caret column="864841" selection-start-column="864841" selection-end-column="864841" />
-          <caret column="865016" selection-start-column="865016" selection-end-column="865016" />
-          <caret column="865176" selection-start-column="865176" selection-end-column="865176" />
-          <caret column="865350" selection-start-column="865350" selection-end-column="865350" />
-          <caret column="865536" selection-start-column="865536" selection-end-column="865536" />
-          <caret column="865712" selection-start-column="865712" selection-end-column="865712" />
-          <caret column="865899" selection-start-column="865899" selection-end-column="865899" />
-          <caret column="866063" selection-start-column="866063" selection-end-column="866063" />
-          <caret column="866265" selection-start-column="866265" selection-end-column="866265" />
-          <caret column="866441" selection-start-column="866441" selection-end-column="866441" />
-          <caret column="866644" selection-start-column="866644" selection-end-column="866644" />
-          <caret column="866814" selection-start-column="866814" selection-end-column="866814" />
-          <caret column="866980" selection-start-column="866980" selection-end-column="866980" />
-          <caret column="867152" selection-start-column="867152" selection-end-column="867152" />
-          <caret column="867315" selection-start-column="867315" selection-end-column="867315" />
-          <caret column="867493" selection-start-column="867493" selection-end-column="867493" />
-          <caret column="867692" selection-start-column="867692" selection-end-column="867692" />
-          <caret column="867860" selection-start-column="867860" selection-end-column="867860" />
-          <caret column="868029" selection-start-column="868029" selection-end-column="868029" />
-          <caret column="868212" selection-start-column="868212" selection-end-column="868212" />
-          <caret column="868393" selection-start-column="868393" selection-end-column="868393" />
-          <caret column="868563" selection-start-column="868563" selection-end-column="868563" />
-          <caret column="868758" selection-start-column="868758" selection-end-column="868758" />
-          <caret column="868935" selection-start-column="868935" selection-end-column="868935" />
-          <caret column="869115" selection-start-column="869115" selection-end-column="869115" />
-          <caret column="869304" selection-start-column="869304" selection-end-column="869304" />
-          <caret column="869475" selection-start-column="869475" selection-end-column="869475" />
-          <caret column="869672" selection-start-column="869672" selection-end-column="869672" />
-          <caret column="869831" selection-start-column="869831" selection-end-column="869831" />
-          <caret column="870009" selection-start-column="870009" selection-end-column="870009" />
-          <caret column="870182" selection-start-column="870182" selection-end-column="870182" />
-          <caret column="870351" selection-start-column="870351" selection-end-column="870351" />
-          <caret column="870537" selection-start-column="870537" selection-end-column="870537" />
-          <caret column="870700" selection-start-column="870700" selection-end-column="870700" />
-          <caret column="870878" selection-start-column="870878" selection-end-column="870878" />
-          <caret column="871047" selection-start-column="871047" selection-end-column="871047" />
-          <caret column="871230" selection-start-column="871230" selection-end-column="871230" />
-          <caret column="871401" selection-start-column="871401" selection-end-column="871401" />
-          <caret column="871593" selection-start-column="871593" selection-end-column="871593" />
-          <caret column="871783" selection-start-column="871783" selection-end-column="871783" />
-          <caret column="871965" selection-start-column="871965" selection-end-column="871965" />
-          <caret column="872152" selection-start-column="872152" selection-end-column="872152" />
-          <caret column="872347" selection-start-column="872347" selection-end-column="872347" />
-          <caret column="872536" selection-start-column="872536" selection-end-column="872536" />
-          <caret column="872706" selection-start-column="872706" selection-end-column="872706" />
-          <caret column="872886" selection-start-column="872886" selection-end-column="872886" />
-          <caret column="873069" selection-start-column="873069" selection-end-column="873069" />
-          <caret column="873239" selection-start-column="873239" selection-end-column="873239" />
-          <caret column="873420" selection-start-column="873420" selection-end-column="873420" />
-          <caret column="873589" selection-start-column="873589" selection-end-column="873589" />
-          <caret column="873773" selection-start-column="873773" selection-end-column="873773" />
-          <caret column="873949" selection-start-column="873949" selection-end-column="873949" />
-          <caret column="874147" selection-start-column="874147" selection-end-column="874147" />
-          <caret column="874319" selection-start-column="874319" selection-end-column="874319" />
-          <caret column="874493" selection-start-column="874493" selection-end-column="874493" />
-          <caret column="874676" selection-start-column="874676" selection-end-column="874676" />
-          <caret column="874847" selection-start-column="874847" selection-end-column="874847" />
-          <caret column="875033" selection-start-column="875033" selection-end-column="875033" />
-          <caret column="875208" selection-start-column="875208" selection-end-column="875208" />
-          <caret column="875368" selection-start-column="875368" selection-end-column="875368" />
-          <caret column="875555" selection-start-column="875555" selection-end-column="875555" />
-          <caret column="875708" selection-start-column="875708" selection-end-column="875708" />
-          <caret column="875886" selection-start-column="875886" selection-end-column="875886" />
-          <caret column="876062" selection-start-column="876062" selection-end-column="876062" />
-          <caret column="876243" selection-start-column="876243" selection-end-column="876243" />
-          <caret column="876408" selection-start-column="876408" selection-end-column="876408" />
-          <caret column="876572" selection-start-column="876572" selection-end-column="876572" />
-          <caret column="876746" selection-start-column="876746" selection-end-column="876746" />
-          <caret column="876936" selection-start-column="876936" selection-end-column="876936" />
-          <caret column="877126" selection-start-column="877126" selection-end-column="877126" />
-          <caret column="877309" selection-start-column="877309" selection-end-column="877309" />
-          <caret column="877502" selection-start-column="877502" selection-end-column="877502" />
-          <caret column="877698" selection-start-column="877698" selection-end-column="877698" />
-          <caret column="877869" selection-start-column="877869" selection-end-column="877869" />
-          <caret column="878094" selection-start-column="878094" selection-end-column="878094" />
-          <caret column="878269" selection-start-column="878269" selection-end-column="878269" />
-          <caret column="878453" selection-start-column="878453" selection-end-column="878453" />
-          <caret column="878628" selection-start-column="878628" selection-end-column="878628" />
-          <caret column="878807" selection-start-column="878807" selection-end-column="878807" />
-          <caret column="878985" selection-start-column="878985" selection-end-column="878985" />
-          <caret column="879206" selection-start-column="879206" selection-end-column="879206" />
-          <caret column="879379" selection-start-column="879379" selection-end-column="879379" />
-          <caret column="879552" selection-start-column="879552" selection-end-column="879552" />
-          <caret column="879746" selection-start-column="879746" selection-end-column="879746" />
-          <caret column="879942" selection-start-column="879942" selection-end-column="879942" />
-          <caret column="880150" selection-start-column="880150" selection-end-column="880150" />
-          <caret column="880339" selection-start-column="880339" selection-end-column="880339" />
-          <caret column="880531" selection-start-column="880531" selection-end-column="880531" />
-          <caret column="880750" selection-start-column="880750" selection-end-column="880750" />
-          <caret column="880925" selection-start-column="880925" selection-end-column="880925" />
-          <caret column="881099" selection-start-column="881099" selection-end-column="881099" />
-          <caret column="881288" selection-start-column="881288" selection-end-column="881288" />
-          <caret column="881473" selection-start-column="881473" selection-end-column="881473" />
-          <caret column="881664" selection-start-column="881664" selection-end-column="881664" />
-          <caret column="881850" selection-start-column="881850" selection-end-column="881850" />
-          <caret column="882044" selection-start-column="882044" selection-end-column="882044" />
-          <caret column="882244" selection-start-column="882244" selection-end-column="882244" />
-          <caret column="882430" selection-start-column="882430" selection-end-column="882430" />
-          <caret column="882613" selection-start-column="882613" selection-end-column="882613" />
-          <caret column="882805" selection-start-column="882805" selection-end-column="882805" />
-          <caret column="882998" selection-start-column="882998" selection-end-column="882998" />
-          <caret column="883182" selection-start-column="883182" selection-end-column="883182" />
-          <caret column="883391" selection-start-column="883391" selection-end-column="883391" />
-          <caret column="883585" selection-start-column="883585" selection-end-column="883585" />
-          <caret column="883809" selection-start-column="883809" selection-end-column="883809" />
-          <caret column="883994" selection-start-column="883994" selection-end-column="883994" />
-          <caret column="884176" selection-start-column="884176" selection-end-column="884176" />
-          <caret column="884373" selection-start-column="884373" selection-end-column="884373" />
-          <caret column="884581" selection-start-column="884581" selection-end-column="884581" />
-          <caret column="884749" selection-start-column="884749" selection-end-column="884749" />
-          <caret column="884930" selection-start-column="884930" selection-end-column="884930" />
-          <caret column="885110" selection-start-column="885110" selection-end-column="885110" />
-          <caret column="885277" selection-start-column="885277" selection-end-column="885277" />
-          <caret column="885437" selection-start-column="885437" selection-end-column="885437" />
-          <caret column="885615" selection-start-column="885615" selection-end-column="885615" />
-          <caret column="885805" selection-start-column="885805" selection-end-column="885805" />
-          <caret column="885975" selection-start-column="885975" selection-end-column="885975" />
-          <caret column="886147" selection-start-column="886147" selection-end-column="886147" />
-          <caret column="886353" selection-start-column="886353" selection-end-column="886353" />
-          <caret column="886529" selection-start-column="886529" selection-end-column="886529" />
-          <caret column="886713" selection-start-column="886713" selection-end-column="886713" />
-          <caret column="886891" selection-start-column="886891" selection-end-column="886891" />
-          <caret column="887054" selection-start-column="887054" selection-end-column="887054" />
-          <caret column="887227" selection-start-column="887227" selection-end-column="887227" />
-          <caret column="887403" selection-start-column="887403" selection-end-column="887403" />
-          <caret column="887590" selection-start-column="887590" selection-end-column="887590" />
-          <caret column="887783" selection-start-column="887783" selection-end-column="887783" />
-          <caret column="887970" selection-start-column="887970" selection-end-column="887970" />
-          <caret column="888154" selection-start-column="888154" selection-end-column="888154" />
-          <caret column="888331" selection-start-column="888331" selection-end-column="888331" />
-          <caret column="888507" selection-start-column="888507" selection-end-column="888507" />
-          <caret column="888694" selection-start-column="888694" selection-end-column="888694" />
-          <caret column="888877" selection-start-column="888877" selection-end-column="888877" />
-          <caret column="889049" selection-start-column="889049" selection-end-column="889049" />
-          <caret column="889230" selection-start-column="889230" selection-end-column="889230" />
-          <caret column="889407" selection-start-column="889407" selection-end-column="889407" />
-          <caret column="889613" selection-start-column="889613" selection-end-column="889613" />
-          <caret column="889818" selection-start-column="889818" selection-end-column="889818" />
-          <caret column="890010" selection-start-column="890010" selection-end-column="890010" />
-          <caret column="890182" selection-start-column="890182" selection-end-column="890182" />
-          <caret column="890363" selection-start-column="890363" selection-end-column="890363" />
-          <caret column="890530" selection-start-column="890530" selection-end-column="890530" />
-          <caret column="890724" selection-start-column="890724" selection-end-column="890724" />
-          <caret column="890906" selection-start-column="890906" selection-end-column="890906" />
-          <caret column="891086" selection-start-column="891086" selection-end-column="891086" />
-          <caret column="891284" selection-start-column="891284" selection-end-column="891284" />
-          <caret column="891454" selection-start-column="891454" selection-end-column="891454" />
-          <caret column="891635" selection-start-column="891635" selection-end-column="891635" />
-          <caret column="891823" selection-start-column="891823" selection-end-column="891823" />
-          <caret column="892020" selection-start-column="892020" selection-end-column="892020" />
-          <caret column="892225" selection-start-column="892225" selection-end-column="892225" />
-          <caret column="892421" selection-start-column="892421" selection-end-column="892421" />
-          <caret column="892587" selection-start-column="892587" selection-end-column="892587" />
-          <caret column="892780" selection-start-column="892780" selection-end-column="892780" />
-          <caret column="893001" selection-start-column="893001" selection-end-column="893001" />
-          <caret column="893183" selection-start-column="893183" selection-end-column="893183" />
-          <caret column="893352" selection-start-column="893352" selection-end-column="893352" />
-          <caret column="893534" selection-start-column="893534" selection-end-column="893534" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/MapSettings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/NestedList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="107" column="12" lean-forward="true" selection-start-line="107" selection-start-column="12" selection-end-line="107" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/MapData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="926">
-          <caret line="68" column="26" lean-forward="true" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/containers/DataList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/DataList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="43" column="28" lean-forward="true" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/containers/NestedList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/containers/MapData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ui/NavMap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -934,26 +488,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/zone_theo_db_outremer_data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret column="936666" lean-forward="true" selection-start-column="936666" selection-end-column="936666" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/test.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret column="832144" lean-forward="true" selection-start-column="832144" selection-end-column="832144" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/zone_theo_db_outremer_data.json" />
+    <entry file="file://$PROJECT_DIR$/public/test.json" />
     <entry file="file://$PROJECT_DIR$/src/components/containers/PersistentDrawer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -965,9 +504,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -975,9 +511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="582">
           <caret line="101" column="18" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -985,9 +518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7">
           <caret line="46" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1008,12 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/test.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/fr-departments.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/france-dr.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-890571">
@@ -1021,13 +545,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/static/js/main.92eb2f03.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret column="359708" selection-start-column="359708" selection-end-column="359708" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/main.92eb2f03.js" />
     <entry file="file://$PROJECT_DIR$/public/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1048,9 +566,6 @@
           <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stylesheets/France.css">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stylesheets/Legend_v2.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -1112,9 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="3" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1122,19 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/containers/Zoom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1152,36 +651,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/src/components/ui/Legend.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        <state relative-caret-position="187">
+          <caret line="91" column="28" lean-forward="true" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/containers/France.js">
+    <entry file="file://$PROJECT_DIR$/src/components/ui/Legend_v2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        <state relative-caret-position="255">
+          <caret line="72" column="28" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/zone_cp_dbv2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret column="1316706" selection-start-column="1316706" selection-end-column="1316725" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/zone_cp_id.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret column="1582747" selection-start-column="1582747" selection-end-column="1582747" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/test_cp2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret column="1955377" selection-start-column="1955377" selection-end-column="1955377" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/zone_cp_agence_v2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret column="345683" selection-start-column="345674" selection-end-column="345683" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/zone_cp_agence_v3.json">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-116980">
+          <caret column="963" selection-start-column="963" selection-end-column="963" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/save09102018.geojson">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="450" lean-forward="true" selection-start-line="8" selection-start-column="450" selection-end-line="8" selection-end-column="450" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/zone_cp_ids_data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-646">
+          <caret column="1440" selection-start-column="1440" selection-end-column="1440" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/zone_cp_agence.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret column="63293" selection-start-column="63273" selection-end-column="63293" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ui/France.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="492" lean-forward="true" selection-start-line="492" selection-end-line="492" />
+        <state relative-caret-position="289">
+          <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <element signature="n#!!block;n#constructor#0;n#France#0" />
-            <element signature="n#!!block;n#componentDidMount#0;n#France#0" />
-            <element signature="n#!!block;n#loadPaths#0;n#France#0" />
-            <element signature="n#!!block;n#projection#0;n#France#0" />
-            <element signature="e#8791#9595#0" />
-            <element signature="e#9618#11115#0" />
             <element signature="n#!!block;n#handleDgrSelection#0;n#France#0" />
             <element signature="n#!!block;n#handleDrSelection#0;n#France#0" />
             <element signature="n#!!block;n#handleGeographyClick#0;n#France#0" />
-            <element signature="e#11797#12075#0" />
             <element signature="n#!!block;n#bdDgr#0;n#France#0" />
             <element signature="n#!!block;n#bdDgrDr#0;n#France#0" />
             <element signature="n#!!block;n#bdDr#0;n#France#0" />
@@ -1199,20 +753,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/Legend.js">
+    <entry file="file://$PROJECT_DIR$/src/stylesheets/Agence.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="91" column="28" lean-forward="true" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
+        <state relative-caret-position="170">
+          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/containers/Francev2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="28" column="23" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/containers/France.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-614">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/Agence.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/Legend_v2.js">
+    <entry file="file://$PROJECT_DIR$/src/components/containers/Zoom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="84" column="21" lean-forward="true" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
+        <state relative-caret-position="221">
+          <caret line="13" column="15" lean-forward="true" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stylesheets/France.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/containers/NestedList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="82" column="3" lean-forward="true" selection-start-line="82" selection-start-column="3" selection-end-line="82" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/NestedList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="94" column="29" lean-forward="true" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/containers/Retour.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/Francev2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="418" column="34" lean-forward="true" selection-start-line="418" selection-start-column="34" selection-end-line="418" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/Retour.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="53" column="17" lean-forward="true" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

@@ -16,11 +16,11 @@ import { geoPath } from 'd3-geo'
 import { geoConicConformalFrance } from 'd3-composite-projections'
 import Legend_v2 from '../ui/Legend_v2'
 import Zoom from '../containers/Zoom'
-import ReactTooltip from 'react-tooltip'
+import Retour from '../containers/Retour'
 
-import '../../stylesheets/France.css'
+import '../../stylesheets/France.css';
 
-class France extends React.Component  {
+class Francev2 extends React.Component  {
   constructor(props) {
     super(props)
     this.state = {
@@ -59,6 +59,7 @@ class France extends React.Component  {
         const world = res.data
 
         const projection = geoConicConformalFrance()
+
 
 
         const path = geoPath()
@@ -348,7 +349,6 @@ class France extends React.Component  {
     this.props.onSetHoverAgency(a)
   }
   handleReset() {
-
     this.props.onSetLevel(3)
     this.props.onSetCenter([2.454071, 46.279229])
     this.props.onSetZoom(1.4641000000000006)
@@ -359,7 +359,6 @@ class France extends React.Component  {
   handleMove(geography, evt) {
     const x = evt.clientX
     const y = evt.clientY + window.pageYOffset
-
   }
   handleLeave() {
 
@@ -417,8 +416,10 @@ class France extends React.Component  {
     return (
       <div>
         <div className="wrapperDataVisualisationStyles">
-          <ReactTooltip/>
-          <Zoom/>
+          <div className="mapNav">
+            <Zoom/>
+            <Retour/>
+          </div>
           <ComposableMap
             projection={this.projection}
             width={this.props.width}
@@ -523,4 +524,4 @@ class France extends React.Component  {
   }
 }
 
-export default France
+export default Francev2

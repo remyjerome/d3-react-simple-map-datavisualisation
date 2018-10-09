@@ -22,3 +22,10 @@
 .wrapperMapStyles {
     flex: 3;
 }
+
+.mapNav {
+    min-height: 80px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

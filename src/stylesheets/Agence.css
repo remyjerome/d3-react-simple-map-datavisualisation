@@ -1,0 +1,21 @@
+#vis {
+
+}
+
+.feature {
+    fill: #ccc;
+    stroke: #2f25ff;
+}
+
+.mesh {
+    fill: none;
+    stroke: #2f25ff;
+    stroke-width: .5px;
+    stroke-linejoin: round;
+}
+
+.outline {
+    fill: none;
+    stroke: #000;
+    stroke-width: 1.5px;
+}
