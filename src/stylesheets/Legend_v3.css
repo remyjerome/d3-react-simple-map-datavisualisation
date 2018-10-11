@@ -1,0 +1,13 @@
+#legend1.axis text {
+    font: 10px sans-serif;
+}
+
+#legend1.axis line, .axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+#legend1 svg{
+    padding-left: 50px;
+    padding-right: 50px;
+}

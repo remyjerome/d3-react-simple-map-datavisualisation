@@ -1,6 +1,6 @@
 import France from '../ui/Francev2'
 import { connect } from 'react-redux'
-import { setLevel, setCenter, setZoom, setHoverInfo, clearHoverInfo, setHoverAgency, clearHoverAgency, setDgr, clearDgr, setDr, clearDr } from "../../actions";
+import { setLevel, setCenter, setZoom, setHoverInfo, clearHoverInfo, setHoverAgency, clearHoverAgency, setDgr, clearDgr, setDr, clearDr, setAgence, clearAgence } from "../../actions";
 
 const mapStateToProps = (state) => {
   return {
@@ -18,6 +18,7 @@ const mapStateToProps = (state) => {
     showHeatmap: state.options.indexOf('heatmap') !== -1,
     data: state.data,
     showBorder: state.options.indexOf('border') !== -1,
+    selectedAgence: state.agence
   }
 }
 

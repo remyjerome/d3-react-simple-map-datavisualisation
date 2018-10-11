@@ -49,7 +49,7 @@ class Retour extends React.Component {
   render () {
     return (
       <div>
-        <Button onClick={this.props.niveau === 2 ?  this.handleReset : this.props.niveau === 1 ? () => this.handleDgrSelection(this.props.dgr) : null} variant="outlined" size="small">
+        <Button onClick={this.props.niveau === 2 ?  this.handleReset : ((this.props.niveau===1)||(this.props.niveau===0)) ? () => this.handleDgrSelection(this.props.dgr) : null} variant="outlined" size="small">
           retour
         </Button>
       </div>

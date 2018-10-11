@@ -17,6 +17,8 @@ import { geoConicConformalFrance } from 'd3-composite-projections'
 import Legend_v2 from '../ui/Legend_v2'
 import Zoom from '../containers/Zoom'
 import Retour from '../containers/Retour'
+import Agence from '../ui/Agence'
+import Legend_v3 from '../ui/Legend_v3'
 
 import '../../stylesheets/France.css';
 
@@ -412,7 +414,8 @@ class Francev2 extends React.Component  {
   }
 
   render() {
-    const data = this.props.niveau === 3 ? dataStructureZoom : this.props.niveau === 2 ? this.props.selectedDgr.dr : this.props.niveau===1 ? this.props.selectedDr.agence : null
+    const data = this.props.niveau === 3 ? dataStructureZoom : this.props.niveau === 2 ? this.props.selectedDgr.dr : ((this.props.niveau===1)||(this.props.niveau===0)) ? this.props.selectedDr.agence : null
+    const agenceName = this.props.niveau===0 ? `exp-${this.props.selectedAgence.name.toLocaleLowerCase().replace(' ', '-')}` : null
     return (
       <div>
         <div className="wrapperDataVisualisationStyles">
@@ -420,7 +423,7 @@ class Francev2 extends React.Component  {
             <Zoom/>
             <Retour/>
           </div>
-          <ComposableMap
+          { (this.props.niveau !== 0) ? <ComposableMap
             projection={this.projection}
             width={this.props.width}
             height={this.props.height}
@@ -490,10 +493,14 @@ class Francev2 extends React.Component  {
                 )): ''}
               </Markers>
             </ZoomableGroup>
-          </ComposableMap>
+          </ComposableMap> : <Agence className="wrapperMapStyles" width={this.props.width} height={this.props.height} champ={'id_site'} valeur={agenceName} className="map" file={"zone_cp_agence"}/> }
 
           <MapDescription niveau={this.props.niveau} className="wrapperDescriptionStyles" structure={data} hoverInfo={this.props.hoverInfo}/>
 
+
+          {
+            this.props.niveau === 0 && (<Legend_v3/>)
+          }
           { this.props.data === 'MNT_PR' && (<Legend_v2
               width={300}
               domain={[-10000,50000]}

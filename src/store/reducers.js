@@ -61,6 +61,20 @@ export const dgr = (state=null, action) => {
   }
 }
 
+export const agence = (state=null, action) => {
+  switch (action.type) {
+
+    case C.SET_AGENCE:
+      return action.payload
+
+    case C.CLEAR_AGENCE:
+      return null
+
+    default:
+      return state
+  }
+}
+
 export const hoverInfo = (state=null, action) => {
   switch (action.type) {
 
@@ -117,6 +131,7 @@ export default combineReducers({
   options,
   dr,
   dgr,
+  agence,
   hoverInfo,
   hoverAgency,
   map,

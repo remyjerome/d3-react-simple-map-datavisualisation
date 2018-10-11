@@ -46,6 +46,19 @@ export function clearDr() {
   }
 }
 
+export function setAgence(agence) {
+  return {
+    type: C.SET_AGENCE,
+    payload: agence
+  }
+}
+
+export function clearAgence() {
+  return {
+    type: C.CLEAR_AGENCE
+  }
+}
+
 export function setZoom(zoom) {
   return {
     type: C.SET_ZOOM,

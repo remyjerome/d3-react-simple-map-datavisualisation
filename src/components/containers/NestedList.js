@@ -11,7 +11,9 @@ import {
   setDgr,
   setDr,
   addOption,
-  clearOption
+  clearOption,
+  setAgence,
+  clearAgence
 } from '../../actions'
 
 const mapStateToProps = (state) => {
@@ -19,6 +21,7 @@ const mapStateToProps = (state) => {
     niveau: state.level,
     dgr: state.dgr,
     dr: state.dr,
+    agence: state.agence,
     options: state.options
   }
 }
@@ -65,6 +68,11 @@ const mapDispatchToProps = dispatch => {
         clearDr()
       )
     },
+    onClearAgence() {
+      dispatch(
+        clearAgence()
+      )
+    },
     onClearHoverInfo() {
       dispatch(
         clearHoverInfo()
@@ -78,6 +86,11 @@ const mapDispatchToProps = dispatch => {
     onSetDr(dr) {
       dispatch(
         setDr(dr)
+      )
+    },
+    onSetAgence(agence) {
+      dispatch(
+        setAgence(agence)
       )
     }
   }

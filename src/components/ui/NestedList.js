@@ -108,6 +108,12 @@ class NestedList extends React.Component {
       this.props.onAddOption('agence')
     }
   }
+
+  handleAgSelection = (data) => {
+    this.props.onSetLevel(0)
+    this.props.onClearHoverInfo()
+    this.props.onSetAgence(data)
+  }
   render() {
     const { classes, data } = this.props
     return (
@@ -124,8 +130,8 @@ class NestedList extends React.Component {
           { this.props.niveau===3 && (data.map( (data, i) => (<Expend icon={<ScatterPlot />} key={i} open={this.state.open} classes={classes.nested} name={data.name} data={`${data.id}%`} handleClick={() => this.handleDgrSelection(data)} />))) }
           { (this.props.niveau ===2 || this.props.niveau ===1 ) && ( <ListItemNm  type={`DR ${ this.props.dr ? this.props.dr.name :''}`} data="99%" icon={<Grain />} toggle={this.props.niveau===2?true:false} open={this.state.open} handleClick={this.props.niveau===2?this.handleClick:() => this.handleDgrSelection(this.props.dgr)}/>) }
           { this.props.niveau===2 && (data.map( (data, i) => (<Expend key={i} open={this.state.open} classes={classes.nested} name={data.name} data={`${data.id}%`} handleClick={() => this.handleDrSelection(data)} />))) }
-          { this.props.niveau ===1 && (<ListItemNm type="Agence" data="99%" icon={<Business />} toggle={this.props.niveau===1?true:false} open={this.state.open} handleClick={this.props.niveau===1?this.handleClick:null}/>) }
-          { this.props.niveau===1 && (data.map( (data, i) => (<Expend icon={<Business />} key={i} open={this.state.open} classes={classes.nested} name={data.name} data={`${data.id}%`} />))) }
+          { ((this.props.niveau ===1 ) || (this.props.niveau ===0) )  && (<ListItemNm type="Agence" data="99%" icon={<Business />} toggle={this.props.niveau===1?true:false} open={this.state.open} handleClick={this.props.niveau===1?this.handleClick:null}/>) }
+          { ((this.props.niveau ===1 ) || (this.props.niveau ===0) ) && (data.map( (data, i) => (<Expend icon={<Business />} key={i} open={this.state.open} classes={classes.nested} name={data.name} data={`${data.id}%`} handleClick={((this.props.niveau ===1 ) || (this.props.niveau ===0) )? () => this.handleAgSelection(data):null} />))) }
         </List>
       </div>
     );

@@ -2,6 +2,7 @@ import React from 'react'
 import {get} from "axios"
 import * as d3 from "d3"
 import {mesh, feature, merge} from "topojson-client"
+import { legendSize } from 'd3-svg-legend'
 
 
 import {geoConicConformalFrance} from 'd3-composite-projections'
@@ -60,12 +61,14 @@ class Agence extends React.Component {
 
         })
 
+        console.log(effAgence)
+
         projection
           .scale(1)
           .translate([0, 0])
 
         var b = path.bounds(test),
-          s = .20 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
+          s = .30 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
           t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2]
 
         projection
@@ -75,7 +78,23 @@ class Agence extends React.Component {
         tmp.map(d => svg.append("path")
           .datum(d)
           .attr("class", "feature")
-          .attr("d", path))
+          .attr("d", path)
+          .on("mouseover", function(d,i) {
+            d3.select(this).interrupt();
+            d3.select(this)
+              .transition(t)
+              .style("fill", "red");
+          })
+          .on("mouseout", function(d,i) {
+            d3.select(this).interrupt();
+            d3.select(this)
+              .transition(t)
+              .style("fill", "#aca");
+          })
+
+
+        )
+
 
         svg.append("path")
           .datum(mesh(us, us.objects[file], function (a, b) {
@@ -96,13 +115,15 @@ class Agence extends React.Component {
 
   }
 
+
+
   componentDidMount() {
     this.renderMapAgence()
   }
 
   render() {
     return (
-      <div>
+      <div id="wrappermap">
         <h2>{this.props.valeur}</h2>
         <div id="vis">
         </div>
