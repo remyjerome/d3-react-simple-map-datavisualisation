@@ -11,9 +11,13 @@ import '../../stylesheets/Agence.css'
 
 class Agence extends React.Component {
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return true
+  }
+
   renderMapAgence() {
 
-    const {width, height, valeur, champ, file} = this.props
+    const {width, height, valeur, champ, file, scaleColor} = this.props
 
 
     var projection = geoConicConformalFrance()
@@ -47,10 +51,20 @@ class Agence extends React.Component {
           }),
           effAgence = states.features.filter(function (d) {
             return (d.properties[champ] === valeur) && (d.properties['zone'] === 'effective')
+          }),
+          allAgence = states.features.filter(function (d) {
+            return (d.properties[champ] === valeur) && (d.properties['zone'] === null)
+          }),
+          theoAgence = states.features.filter(function (d) {
+            return (d.properties[champ] === valeur) && (d.properties['zone'] === 'theorique')
+          }),
+          dataAgence = states.features.filter(function (d) {
+            return (d.properties[champ] === valeur) && (d.properties['nb_cli'] !== null)
           })
 
+/*
         var tmp = []
-        effAgence.map((d) => {
+        theoAgence.map((d) => {
 
           state.map((x) => {
             if (d.properties.ID === x.properties.ID) {
@@ -61,7 +75,31 @@ class Agence extends React.Component {
 
         })
 
-        console.log(effAgence)
+        var tmp2 = []
+        effAgence.map((d) => {
+
+          state.map((x) => {
+            if (d.properties.ID === x.properties.ID) {
+              return tmp2.push(x)
+            }
+          })
+
+        })
+*/
+
+        var tmp = []
+        dataAgence.map((d) => {
+
+          state.map((x) => {
+            if (d.properties.ID === x.properties.ID) {
+              x.properties = d.properties
+              return tmp.push(x)
+            }
+          })
+
+
+        })
+      console.log(dataAgence)
 
         projection
           .scale(1)
@@ -75,7 +113,7 @@ class Agence extends React.Component {
           .scale(s)
           .translate(t)
 
-        tmp.map(d => svg.append("path")
+       /*tmp.map(d => svg.append("path")
           .datum(d)
           .attr("class", "feature")
           .attr("d", path)
@@ -91,19 +129,66 @@ class Agence extends React.Component {
               .transition(t)
               .style("fill", "#aca");
           })
-
-
         )
 
 
+
+        tmp2.map(d => svg.append("path")
+          .datum(d)
+          .attr("class", "feature")
+          .attr("d", path)
+          .on("mouseover", function(d,i) {
+            d3.select(this).interrupt();
+            d3.select(this)
+              .transition(t)
+              .style("fill", "red");
+          })
+          .on("mouseout", function(d,i) {
+            d3.select(this).interrupt();
+            d3.select(this)
+              .transition(t)
+              .style("fill", "#aca");
+          })
+        )
+
+        allAgence.map(d => svg.append("path")
+          .datum(d)
+          .attr("class", "feature")
+          .attr("d", path)
+          .on("mouseover", function(d,i) {
+            d3.select(this).interrupt();
+            d3.select(this)
+              .transition(t)
+              .style("fill", "red");
+          })
+          .on("mouseout", function(d,i) {
+            d3.select(this).interrupt();
+            d3.select(this)
+              .transition(t)
+              .style("fill", "#aca");
+          })
+        )*/
+
+
+        // allAgence = allAgence.concat(tmp).concat(tmp2)
+
+        // console.log(allAgence)
+
+        console.log(tmp)
+
+        tmp.map(d => svg.append("path")
+          .datum(d)
+          .attr("class", "feature")
+          .attr("d", path)
+          .attr("fill", this.props.data ? scaleColor(d.properties['nb_cli']) : "red")
+        )
+/*
         svg.append("path")
           .datum(mesh(us, us.objects[file], function (a, b) {
             return a.properties[champ] === valeur || b.properties[champ] === valeur
           }))
           .attr("class", "mesh")
-          .attr("d", path)
-
-
+          .attr("d", path)*/
 
 
         svg.append("path")

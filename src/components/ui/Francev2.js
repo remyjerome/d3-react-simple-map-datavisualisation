@@ -17,8 +17,9 @@ import { geoConicConformalFrance } from 'd3-composite-projections'
 import Legend_v2 from '../ui/Legend_v2'
 import Zoom from '../containers/Zoom'
 import Retour from '../containers/Retour'
-import Agence from '../ui/Agence'
+import Agence from '../ui/Agence_v2'
 import Legend_v3 from '../ui/Legend_v3'
+import ReactTooltip from 'react-tooltip'
 
 import '../../stylesheets/France.css';
 
@@ -55,7 +56,7 @@ class Francev2 extends React.Component  {
    *  Fichier au format TOPOJSON
    */
   loadPaths() {
-    get("/zone_theo_db_noblank.json")
+    get("/zone_theo_db_noblank_v2.json")
       .then(res => {
         if (res.status !== 200) return
         const world = res.data
@@ -189,6 +190,12 @@ class Francev2 extends React.Component  {
           "rgba(193, 255, 0, 1)",
           "rgba(147, 255, 0, 1)",
           "rgba(102, 255, 0, 1)"])
+    } else if (this.props.data.startsWith('nb_entr')){
+      popScale = scaleLinear()
+        .domain([0,50, 40000])
+        .range(["rgb(252, 252, 253)",
+        "rgb(101, 51, 151)",
+          "rgb(101, 51, 151)"])
     }
     return popScale(data)
   }
@@ -248,7 +255,6 @@ class Francev2 extends React.Component  {
   }
   handleDrSelection(evt) {
     const dr = this.props.selectedDgr.dr[evt.currentTarget.getAttribute("datadr")]
-
     this.props.onSetLevel(1)
     this.props.onSetCenter(dr.coordinates)
     this.props.onSetZoom(dr.zoom)
@@ -274,6 +280,18 @@ class Francev2 extends React.Component  {
       this.props.onSetCenter(dr.coordinates)
       this.props.onSetZoom(dr.zoom)
       this.props.onSetDr(dr)
+    }
+    else if(this.props.niveau === 1) {
+ /*     const agenceId = geography.properties.id_site
+
+      console.log(agenceId)
+      console.log(this.props.selectedDr)*/
+      // const dr = this.props.selectedDgr.dr.filter((dr) => dr.id === drId)[0]
+
+      /*this.props.onSetLevel(1)
+      this.props.onSetCenter(dr.coordinates)
+      this.props.onSetZoom(dr.zoom)
+      this.props.onSetDr(dr)*/
     }
   }
 
@@ -346,6 +364,7 @@ class Francev2 extends React.Component  {
   onMouseEnterHandler(a) {
     let hoverInfo = a.properties
     this.props.onSetHoverInfo(hoverInfo)
+    ReactTooltip.rebuild()
   }
   onMouseEnterHandlerAgence(a) {
     this.props.onSetHoverAgency(a)
@@ -413,9 +432,31 @@ class Francev2 extends React.Component  {
     return colorMap
   }
 
+  tooltipContent(){
+
+    const { hoverInfo, data } = this.props
+
+
+    return (
+      <div style={{
+        textAlign: 'left'
+      }}>
+        { hoverInfo && ( <h3>{hoverInfo.id_site}</h3> ) }
+        {
+          data && (
+            <div>
+              <p>{data}: <span>{hoverInfo[data]}</span></p>
+            </div>
+          )
+        }
+
+      </div>
+    )
+  }
+
   render() {
     const data = this.props.niveau === 3 ? dataStructureZoom : this.props.niveau === 2 ? this.props.selectedDgr.dr : ((this.props.niveau===1)||(this.props.niveau===0)) ? this.props.selectedDr.agence : null
-    const agenceName = this.props.niveau===0 ? `exp-${this.props.selectedAgence.name.toLocaleLowerCase().replace(' ', '-')}` : null
+    const agenceName = this.props.niveau===0 ? `exp-lyon` : null
     return (
       <div>
         <div className="wrapperDataVisualisationStyles">
@@ -452,6 +493,7 @@ class Francev2 extends React.Component  {
                         onClick={this.handleGeographyClick}
                         cacheId={`path-${geography.properties.id_site}-${i}`}
                         data-tip={geography.properties.id_site}
+                        data-for='nat'
                         id={`${geography.properties.id_site}`}
                         round
                         geography={geography}
@@ -465,7 +507,7 @@ class Francev2 extends React.Component  {
               <Markers>
                 { this.props.showAgence && this.createMarker() }
               </Markers>
-              <Markers>
+{/*              <Markers>
                 { (data !== null && this.props.niveau !== 1) ? data.map((item, i) => (
                 <Marker
                     key={i}
@@ -491,9 +533,12 @@ class Francev2 extends React.Component  {
                     </text>
                   </Marker>
                 )): ''}
-              </Markers>
+              </Markers>*/}
             </ZoomableGroup>
-          </ComposableMap> : <Agence className="wrapperMapStyles" width={this.props.width} height={this.props.height} champ={'id_site'} valeur={agenceName} className="map" file={"zone_cp_agence"}/> }
+
+          </ComposableMap> : <Agence data={this.props.data} className="wrapperMapStyles" width={this.props.width} height={this.props.height} champ={'id_site'} valeur={agenceName} className="map" file={"zone_cp_agence"} scaleColor={this.scaleColor} agences={data}/> }
+
+
 
           <MapDescription niveau={this.props.niveau} className="wrapperDescriptionStyles" structure={data} hoverInfo={this.props.hoverInfo}/>
 
@@ -525,7 +570,18 @@ class Francev2 extends React.Component  {
             title={`Indicateur ${this.props.data}`}
             scaleColor={this.scaleColor}
           />) }
+          { this.props.data && this.props.data.startsWith('nb_entr') && (<Legend_v2
+            width={300}
+            domain={[0,50]}
+            value={[{offset:'0%',color:0},{offset:'100%',color:50}]}
+            ticks={5}
+            title={`Indicateur ${this.props.data}`}
+            scaleColor={this.scaleColor}
+          />) }
         </div>
+        <ReactTooltip id='nat' getContent={() =>
+          this.tooltipContent()
+        }/>
       </div>
     )
   }

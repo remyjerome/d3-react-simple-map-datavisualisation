@@ -20,18 +20,18 @@ class Legend_v3 extends React.Component {
   render() {
     return (
       <div style={style} id="legend">
-        <svg height={200} width={200} id="legend1">
+        <svg height={200} width={400} id="legend2">
           <g transform="translate(0 10)">
-            <line x1="0" y1="0" x2="40" y2="0" stroke="#000" stroke-width="4"  />
-            <text x={45} y="5" text-anchor="center">Zone Théorique</text>
+            <line x1="0" y1="0" x2="40" y2="0" stroke="#000" strokeWidth="4"  />
+            <text x={45} y="5" textAnchor="center">Zone Théorique</text>
           </g>
           <g transform="translate(0 40)">
             <rect width="30" height="20" />
-            <text x={45} y="15" text-anchor="center">Zone Effective</text>
+            <text x={45} y="15" textAnchor="center">Zone Effective</text>
           </g>
           <g transform="translate(0 80)">
             <rect width="30" height="20" />
-            <text x={45} y="15" text-anchor="center">Zone Théorique</text>
+            <text x={45} y="15" textAnchor="center">Zone Théorique</text>
           </g>
         </svg>
       </div>

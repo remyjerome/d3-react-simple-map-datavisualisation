@@ -2,22 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8434e9e-1594-430b-a1b5-266b4f417c71" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ui/Legend_v3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stylesheets/Legend_v3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/containers/Francev3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Agence_v2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Francev3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/IDC.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.tar" beforeDir="false" afterPath="$PROJECT_DIR$/build.tar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/containers/Francev2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/containers/Francev2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/containers/NestedList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/containers/NestedList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/idc_map.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/public/idc_map.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/Agence.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Agence.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/Francev2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Francev2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/Legend_v3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Legend_v3.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/NestedList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/NestedList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/Retour.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Retour.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/PersistentDrawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/PersistentDrawer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/initialState.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/initialState.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stylesheets/Agence.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/Agence.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/France.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/France.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,86 +43,65 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NestedList.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ui/NestedList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="94" selection-start-line="94" selection-end-line="95" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Francev2.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ui/Francev2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="504" column="25" lean-forward="true" selection-start-line="504" selection-start-column="25" selection-end-line="504" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Agence.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ui/Agence.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Legend_v3.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/ui/Legend_v3.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="72" lean-forward="true" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Legend_v2.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ui/Legend_v2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1033">
-              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Agence.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stylesheets/Agence.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Legend_v3.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stylesheets/Legend_v3.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.44272447">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="Francev2.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/components/ui/Francev2.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="441">
+                  <caret line="584" column="12" lean-forward="true" selection-start-line="584" selection-start-column="12" selection-end-line="584" selection-end-column="12" />
+                  <folding>
+                    <element signature="e#0#25#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Agence.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/ui/Agence.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="203">
+                  <caret line="42" column="10" lean-forward="true" selection-start-line="42" selection-start-column="10" selection-end-line="44" selection-end-column="13" />
+                  <folding>
+                    <element signature="e#0#25#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Francev3.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/ui/Francev3.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="288">
+                  <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+                  <folding>
+                    <element signature="e#0#25#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="Agence_v2.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/components/ui/Agence_v2.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="423">
+                  <caret line="211" column="32" lean-forward="true" selection-start-line="211" selection-start-column="32" selection-end-line="211" selection-end-column="32" />
+                  <folding>
+                    <element signature="e#0#25#0" expanded="true" />
+                    <element signature="n#!!block;n#renderMapAgence#0;n#Agence_v2#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -131,39 +112,38 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>d3.geo.path</find>
-      <find>vis.sele</find>
-      <find>topojson</find>
-      <find>geo</find>
-      <find>topos</find>
-      <find>1</find>
-      <find>code_dgr</find>
-      <find>id_site</find>
-      <find>zone_theo_db_noblank</find>
-      <find>bourg-en-bress</find>
-      <find>json</find>
-      <find>zone_cp_dbv2</find>
-      <find>effective</find>
-      <find>state</find>
-      <find>zoom</find>
-      <find>geographyPath</find>
+      <find>zone_</find>
+      <find>age</find>
+      <find>file</find>
+      <find>.json</find>
+      <find>compon</find>
+      <find>reactTool</find>
+      <find>reactt</find>
+      <find>hover</find>
+      <find>tooltip</find>
+      <find>class</find>
+      <find>tooltipContent</find>
+      <find>menuData</find>
+      <find>handleData</find>
+      <find>data</find>
+      <find>stroke</find>
+      <find>stroke-width</find>
+      <find>idc_</find>
+      <find>wrapperStyles</find>
+      <find>geogra</find>
+      <find>this.state.geographyPaths</find>
+      <find>us</find>
+      <find>geographyPaths</find>
+      <find>loadPa</find>
+      <find>states</find>
       <find>france</find>
-      <find>console.log</find>
-      <find>did</find>
-      <find>this.load</find>
+      <find>projection</find>
+      <find>ojection</find>
       <find>loadPath</find>
-      <find>clermont</find>
-      <find>loadPaths</find>
-      <find>Zoom</find>
-      <find>;</find>
-      <find>lyon</find>
-      <find>MapDes</find>
-      <find>legend</find>
-      <find>Agence</find>
-      <find>legendSize</find>
+      <find>test</find>
+      <find>onMouseEnterHandler</find>
     </findStrings>
     <replaceStrings>
-      <replace>dataSubDgr</replace>
       <replace>NOM_DR</replace>
       <replace>dataStructureZoom</replace>
       <replace>hoverInfo</replace>
@@ -192,6 +172,7 @@
       <replace>zone_cp_dbv2</replace>
       <replace>geoCentroid</replace>
       <replace>[file]</replace>
+      <replace>world</replace>
       <replace>Retour</replace>
     </replaceStrings>
     <dirStrings>
@@ -205,24 +186,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/ui/IndicateurList.js" />
-        <option value="$PROJECT_DIR$/src/components/containers/DataList.js" />
-        <option value="$PROJECT_DIR$/src/components/ui/MapData.js" />
-        <option value="$PROJECT_DIR$/src/components/containers/PersistantDrawer.js" />
-        <option value="$PROJECT_DIR$/src/components/containers/PersistentDrawer.js" />
         <option value="$PROJECT_DIR$/src/components/ui/DataList.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/static/dataSubDgr.js" />
         <option value="$PROJECT_DIR$/public/zone_theo_db_outremer.json" />
         <option value="$PROJECT_DIR$/src/components/ui/MapSettings.js" />
-        <option value="$PROJECT_DIR$/src/components/ui/PersistentDrawer.js" />
         <option value="$PROJECT_DIR$/src/components/containers/MenuData.js" />
         <option value="$PROJECT_DIR$/src/components/containers/MapDescription.js" />
-        <option value="$PROJECT_DIR$/src/components/ui/MenuData.js" />
         <option value="$PROJECT_DIR$/public/zone_theo_db_outremer_data.json" />
         <option value="$PROJECT_DIR$/src/components/ui/MapDescription.js" />
         <option value="$PROJECT_DIR$/src/idc_map.jsp" />
-        <option value="$PROJECT_DIR$/public/idc_map.jsp" />
         <option value="$PROJECT_DIR$/build/static/js/main.92eb2f03.js" />
         <option value="$PROJECT_DIR$/src/static/dataSubDr.js" />
         <option value="$PROJECT_DIR$/public/zone_theo_db_noblank.json" />
@@ -230,7 +203,6 @@
         <option value="$PROJECT_DIR$/src/stylesheets/Legend_v2.css" />
         <option value="$PROJECT_DIR$/src/components/ui/Legend_v2.js" />
         <option value="$PROJECT_DIR$/build/static/js/main.6ff793c8.js" />
-        <option value="$PROJECT_DIR$/build/idc_map.jsp" />
         <option value="$PROJECT_DIR$/src/store/index.js" />
         <option value="$PROJECT_DIR$/src/components/containers/Zoom.js" />
         <option value="$PROJECT_DIR$/src/components/ui/Zoom.js" />
@@ -240,22 +212,31 @@
         <option value="$PROJECT_DIR$/public/zone_cp_agence.json" />
         <option value="$PROJECT_DIR$/public/zone_cp_agence_v2.json" />
         <option value="$PROJECT_DIR$/src/components/ui/France.js" />
-        <option value="$PROJECT_DIR$/src/stylesheets/France.css" />
         <option value="$PROJECT_DIR$/src/components/containers/Retour.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/store/reducers.js" />
         <option value="$PROJECT_DIR$/src/constants.js" />
         <option value="$PROJECT_DIR$/src/actions.js" />
         <option value="$PROJECT_DIR$/src/components/containers/NestedList.js" />
-        <option value="$PROJECT_DIR$/src/initialState.json" />
         <option value="$PROJECT_DIR$/src/components/containers/Francev2.js" />
-        <option value="$PROJECT_DIR$/src/stylesheets/Agence.css" />
         <option value="$PROJECT_DIR$/src/components/ui/Retour.js" />
-        <option value="$PROJECT_DIR$/src/components/ui/NestedList.js" />
-        <option value="$PROJECT_DIR$/src/components/ui/Francev2.js" />
         <option value="$PROJECT_DIR$/src/stylesheets/Legend_v3.css" />
+        <option value="$PROJECT_DIR$/src/components/containers/Francev3.js" />
+        <option value="$PROJECT_DIR$/src/initialState.json" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/ui/Francev3.js" />
+        <option value="$PROJECT_DIR$/src/components/ui/NestedList.js" />
+        <option value="$PROJECT_DIR$/src/static/IDC.txt" />
+        <option value="$PROJECT_DIR$/src/stylesheets/Agence.css" />
+        <option value="$PROJECT_DIR$/build/static/js/main.ac2b0b4a.js" />
+        <option value="$PROJECT_DIR$/public/idc_map.jsp" />
+        <option value="$PROJECT_DIR$/build/idc_map.jsp" />
         <option value="$PROJECT_DIR$/src/components/ui/Agence.js" />
+        <option value="$PROJECT_DIR$/src/stylesheets/France.css" />
+        <option value="$PROJECT_DIR$/src/components/ui/MenuData.js" />
+        <option value="$PROJECT_DIR$/src/components/ui/PersistentDrawer.js" />
         <option value="$PROJECT_DIR$/src/components/ui/Legend_v3.js" />
+        <option value="$PROJECT_DIR$/src/components/ui/Francev2.js" />
+        <option value="$PROJECT_DIR$/src/components/ui/Agence_v2.js" />
       </list>
     </option>
   </component>
@@ -387,12 +368,12 @@
       <workItem from="1535354800095" duration="119115000" />
       <workItem from="1537184245445" duration="11000" />
       <workItem from="1537199538514" duration="161653000" />
-      <workItem from="1539000823456" duration="36751000" />
+      <workItem from="1539000823456" duration="81376000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="525896000" />
+    <option name="totallyTimeSpent" value="570521000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -404,8 +385,8 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4989339" weight="0.2546246" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15938166" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4989339" visible="true" weight="0.2546246" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1391258" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -450,98 +431,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/ui/Francev2.js</url>
+          <line>545</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="9" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/containers/MenuData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/PersistentDrawer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="101" column="18" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/MenuData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/france-dr.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-890571">
-          <caret line="42" column="18" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/static/js/main.92eb2f03.js" />
-    <entry file="file://$PROJECT_DIR$/public/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/zone_theo_db_noblank.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret column="443003" selection-start-column="443003" selection-end-column="443003" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/static/dataSubDr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/idc_map.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="613" selection-start-line="3" selection-start-column="613" selection-end-line="3" selection-end-column="613" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/static/js/main.6ff793c8.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret column="359801" selection-start-column="359801" selection-end-column="359801" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="40" selection-end-column="548" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/idc_map.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/indexRedux.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -560,6 +461,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -633,38 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/France.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding>
-            <element signature="n#!!block;n#handleDgrSelection#0;n#France#0" />
-            <element signature="n#!!block;n#handleDrSelection#0;n#France#0" />
-            <element signature="n#!!block;n#handleGeographyClick#0;n#France#0" />
-            <element signature="n#!!block;n#bdDgr#0;n#France#0" />
-            <element signature="n#!!block;n#bdDgrDr#0;n#France#0" />
-            <element signature="n#!!block;n#bdDr#0;n#France#0" />
-            <element signature="n#!!block;n#renderBorder#0;n#France#0" />
-            <element signature="n#!!block;n#getAgence#0;n#France#0" />
-            <element signature="n#!!block;n#handleZoomIn#0;n#France#0" />
-            <element signature="n#!!block;n#handleZoomOut#0;n#France#0" />
-            <element signature="n#!!block;n#onMouseEnterHandler#0;n#France#0" />
-            <element signature="n#!!block;n#onMouseEnterHandlerAgence#0;n#France#0" />
-            <element signature="n#!!block;n#handleReset#0;n#France#0" />
-            <element signature="n#!!block;n#handleMove#0;n#France#0" />
-            <element signature="n#!!block;n#handleLeave#0;n#France#0" />
-            <element signature="n#!!block;n#colorMapStyle#0;n#France#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/containers/France.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-614">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/containers/Zoom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -672,13 +544,6 @@
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stylesheets/France.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -712,23 +577,6 @@
           <caret line="58" column="12" lean-forward="true" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/initialState.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -767,32 +615,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/MapDescription.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ui/Retour.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/containers/Francev2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -804,53 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/NestedList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="94" selection-start-line="94" selection-end-line="95" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/Francev2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="504" column="25" lean-forward="true" selection-start-line="504" selection-start-column="25" selection-end-line="504" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/Legend_v2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1033">
-          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stylesheets/Agence.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/Agence.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/stylesheets/Legend_v3.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -858,12 +639,243 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/Legend_v3.js">
+    <entry file="file://$PROJECT_DIR$/src/initialState.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="72" lean-forward="true" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
+        <state relative-caret-position="187">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/MapDescription.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/static/IDC.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/Legend_v2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="69" column="38" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/containers/Francev2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/containers/France.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/France.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="447" column="58" selection-start-line="447" selection-start-column="38" selection-end-line="447" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <element signature="n#!!block;n#handleDrSelection#0;n#France#0" />
+            <element signature="n#!!block;n#bdDgr#0;n#France#0" />
+            <element signature="n#!!block;n#bdDgrDr#0;n#France#0" />
+            <element signature="n#!!block;n#bdDr#0;n#France#0" />
+            <element signature="n#!!block;n#renderBorder#0;n#France#0" />
+            <element signature="n#!!block;n#getAgence#0;n#France#0" />
+            <element signature="n#!!block;n#handleZoomIn#0;n#France#0" />
+            <element signature="n#!!block;n#handleZoomOut#0;n#France#0" />
+            <element signature="n#!!block;n#onMouseEnterHandler#0;n#France#0" />
+            <element signature="n#!!block;n#onMouseEnterHandlerAgence#0;n#France#0" />
+            <element signature="n#!!block;n#handleReset#0;n#France#0" />
+            <element signature="n#!!block;n#handleMove#0;n#France#0" />
+            <element signature="n#!!block;n#handleLeave#0;n#France#0" />
+            <element signature="n#!!block;n#colorMapStyle#0;n#France#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stylesheets/Agence.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/main.ac2b0b4a.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret column="876384" selection-start-column="876384" selection-end-column="876384" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/idc_map.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="122" selection-start-line="3" selection-start-column="122" selection-end-line="3" selection-end-column="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/main.698747ca.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/idc_map.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="52" selection-end-column="548" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stylesheets/France.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/NestedList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret line="101" column="35" lean-forward="true" selection-start-line="101" selection-start-column="35" selection-end-line="101" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/MapSettings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="75" column="20" lean-forward="true" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/MapData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="53" column="44" lean-forward="true" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/PersistentDrawer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="107" column="616" selection-start-line="107" selection-start-column="616" selection-end-line="107" selection-end-column="616" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/MenuData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-648">
+          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/containers/Francev3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/Legend_v3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="33" column="73" lean-forward="true" selection-start-line="33" selection-start-column="73" selection-end-line="33" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/Francev3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/Agence.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="42" column="10" lean-forward="true" selection-start-line="42" selection-start-column="10" selection-end-line="44" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/Francev2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="584" column="12" lean-forward="true" selection-start-line="584" selection-start-column="12" selection-end-line="584" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/Agence_v2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="211" column="32" lean-forward="true" selection-start-line="211" selection-start-column="32" selection-end-line="211" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <element signature="n#!!block;n#renderMapAgence#0;n#Agence_v2#0" />
           </folding>
         </state>
       </provider>
