@@ -282,16 +282,16 @@ class Francev2 extends React.Component  {
       this.props.onSetDr(dr)
     }
     else if(this.props.niveau === 1) {
- /*     const agenceId = geography.properties.id_site
 
-      console.log(agenceId)
-      console.log(this.props.selectedDr)*/
-      // const dr = this.props.selectedDgr.dr.filter((dr) => dr.id === drId)[0]
 
-      /*this.props.onSetLevel(1)
-      this.props.onSetCenter(dr.coordinates)
-      this.props.onSetZoom(dr.zoom)
-      this.props.onSetDr(dr)*/
+      const agn = geography.properties.id_site
+
+      this.setState({
+        agenceSel: agn
+      })
+      this.props.onSetLevel(0)
+      this.props.onClearHoverInfo()
+      // this.props.onSetAgence()
     }
   }
 
@@ -436,14 +436,13 @@ class Francev2 extends React.Component  {
 
     const { hoverInfo, data } = this.props
 
-
     return (
       <div style={{
         textAlign: 'left'
       }}>
         { hoverInfo && ( <h3>{hoverInfo.id_site}</h3> ) }
         {
-          data && (
+          (hoverInfo && data) && (
             <div>
               <p>{data}: <span>{hoverInfo[data]}</span></p>
             </div>
@@ -456,7 +455,7 @@ class Francev2 extends React.Component  {
 
   render() {
     const data = this.props.niveau === 3 ? dataStructureZoom : this.props.niveau === 2 ? this.props.selectedDgr.dr : ((this.props.niveau===1)||(this.props.niveau===0)) ? this.props.selectedDr.agence : null
-    const agenceName = this.props.niveau===0 ? `exp-lyon` : null
+    const agenceName = this.props.niveau===0 ? this.state.agenceSel : null
     return (
       <div>
         <div className="wrapperDataVisualisationStyles">
@@ -503,7 +502,7 @@ class Francev2 extends React.Component  {
                 ))}}
               </Geographies>
               { (this.props.niveau === 3 && this.props.showBorder)&& this.renderBorder(this.state.borderDgr, {stroke: "rgb(0,0,0)", strokeWidth: 0.6, fill: "none"}) }
-              { (this.props.niveau === 2 && this.props.showBorder)&& this.renderBorder(this.state.borderDr[this.props.selectedDgr.id-1], {stroke: "#384F59", strokeWidth: 0.6, fill: "none"}) }
+              { (this.props.niveau === 2 && this.props.showBorder)&& this.renderBorder(this.state.borderDr[this.props.selectedDgr.id-1], {stroke: "rgb(0,0,0)", strokeWidth: 0.2, fill: "none"}) }
               <Markers>
                 { this.props.showAgence && this.createMarker() }
               </Markers>
@@ -579,9 +578,11 @@ class Francev2 extends React.Component  {
             scaleColor={this.scaleColor}
           />) }
         </div>
-        <ReactTooltip id='nat' getContent={() =>
+        {
+          this.props.niveau !== 0 && (<ReactTooltip id='nat' getContent={() =>
           this.tooltipContent()
-        }/>
+          }/>)
+        }
       </div>
     )
   }

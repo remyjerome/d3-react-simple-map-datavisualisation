@@ -1,7 +1,7 @@
 import React from 'react'
 import {get} from "axios"
 import * as d3 from "d3"
-import { feature, merge } from "topojson-client"
+import {feature, merge, mesh} from "topojson-client"
 import ReactTooltip from 'react-tooltip'
 
 import {
@@ -15,6 +15,7 @@ import {
 import {geoConicConformalFrance} from 'd3-composite-projections'
 
 import '../../stylesheets/Agence.css'
+import {geoPath} from "d3-geo";
 
 class Agence_v2 extends React.Component {
 
@@ -159,22 +160,62 @@ class Agence_v2 extends React.Component {
             return (d.properties[champ] === valeur) && (d.properties['nb_cli'] !== null)
           })
 
+        const projection = geoConicConformalFrance().fitSize([this.props.width, this.props.height], agenceCible)
+
+        const path = geoPath()
+          .projection(projection)
+
+
+        var borderAgn = path(agenceCible)
+
+
+        var tmp = []
+        agenceCibleData.map((d) => {
+
+          agenceTheo.map((x) => {
+            if (d.properties.ID === x.properties.ID) {
+              x.properties = d.properties
+              return tmp.push(x)
+            }
+          })
+
+
+        })
+
+        console.log(tmp)
+        console.log(world)
+        console.log(agenceCible)
+
         this.setState({
           objAgence: agenceCible,
-          geographyPaths: agenceCibleF
+          geographyPaths: tmp,
+          borderAgn: borderAgn
         })
       })
   }
 
+  renderBorder(d, style) {
+
+    return(
+      <g className="rsm-lines">
+        <path className="rsm-line " tabIndex="0"
+              d={d}
+              style={style}></path>
+      </g>
+    )
+  }
   render() {
     return (
       <div className="wrapperMapStyles">
+        <h2>{this.props.valeur}</h2>
         <ComposableMap
           projection={this.projection}
           width={this.props.width}
           height={this.props.height}
         >
-          <ZoomableGroup center={[0,20]} disablePanning>
+          <ZoomableGroup
+            center={this.props.center}
+            zoom={0.20}>
             <Geographies geography={this.state.geographyPaths}>
               {(geographies, projection) => geographies.map((geography, i) => (
                 <Geography
@@ -207,6 +248,7 @@ class Agence_v2 extends React.Component {
                 />
               ))}
             </Geographies>
+            { this.renderBorder(this.state.borderAgn, {stroke: "rgb(0,0,0)",strokeDasharray:"20,20", strokeWidth: 2, fill: "none"}) }
           </ZoomableGroup>
         </ComposableMap>
         <ReactTooltip id='agn'/>
