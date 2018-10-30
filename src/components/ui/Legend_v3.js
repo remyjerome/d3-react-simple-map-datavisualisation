@@ -22,17 +22,17 @@ class Legend_v3 extends React.Component {
       <div style={style} id="legend">
         <svg height={200} width={400} id="legend2">
           <g transform="translate(0 10)">
-            <line x1="0" y1="0" x2="40" y2="0" stroke="#000" strokeWidth="4"  />
+            <line x1="0" y1="0" x2="40" y2="0" stroke="rgb(0,0,0)" strokeWidth="4" fill="none" strokeDasharray="5,5" />
             <text x={45} y="5" textAnchor="center">Zone Théorique</text>
           </g>
-          <g transform="translate(0 40)">
+ {/*         <g transform="translate(0 40)">
             <rect width="30" height="20" />
             <text x={45} y="15" textAnchor="center">Zone Effective</text>
-          </g>
-          <g transform="translate(0 80)">
+          </g>*/}
+{/*          <g transform="translate(0 80)">
             <rect width="30" height="20" />
             <text x={45} y="15" textAnchor="center">Zone Théorique</text>
-          </g>
+          </g>*/}
         </svg>
       </div>
     )

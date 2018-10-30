@@ -17,7 +17,7 @@ import { geoConicConformalFrance } from 'd3-composite-projections'
 import Legend_v2 from '../ui/Legend_v2'
 import Zoom from '../containers/Zoom'
 import Retour from '../containers/Retour'
-import Agence from '../ui/Agence_v2'
+import Agence from '../containers/Agence'
 import Legend_v3 from '../ui/Legend_v3'
 import ReactTooltip from 'react-tooltip'
 
@@ -535,7 +535,7 @@ class Francev2 extends React.Component  {
               </Markers>*/}
             </ZoomableGroup>
 
-          </ComposableMap> : <Agence data={this.props.data} className="wrapperMapStyles" width={this.props.width} height={this.props.height} champ={'id_site'} valeur={agenceName} className="map" file={"zone_cp_agence"} scaleColor={this.scaleColor} agences={data}/> }
+          </ComposableMap> : <Agence   className="wrapperMapStyles" champ={'id_site'} valeur={agenceName} className="map" file={"codes_postaux_region_db_3"} scaleColor={this.scaleColor} agences={data}/> }
 
 
 

@@ -1,8 +1,5 @@
 import React from 'react'
 import * as d3 from "d3"
-import { scaleLinear } from "d3-scale"
-import { axisBottom } from "d3-axis"
-
 import '../../stylesheets/Legend_v2.css'
 
 const style = {
@@ -15,8 +12,6 @@ class Legend_v2 extends React.PureComponent {
   renderLegend() {
 
     const { width, domain, ticks, title, scaleColor, value } = this.props
-
-    // console.log(scaleColor('100%'))
 
     var w = width, h = 70;
 
@@ -34,30 +29,7 @@ class Legend_v2 extends React.PureComponent {
       .attr("y2", "100%")
       .attr("spreadMethod", "pad");
 
-/*    legend.append("stop")
-      .attr("offset", "0%")
-      .attr("stop-color", "#f7fcf0")
-      .attr("stop-opacity", 1);
-
-    legend.append("stop")
-      .attr("offset", "10%")
-      .attr("stop-color", "#bae4bc")
-      .attr("stop-opacity", 1);
-
-    legend.append("stop")
-      .attr("offset", "15%")
-      .attr("stop-color", "#7bccc4")
-      .attr("stop-opacity", 1);
-
-    legend.append("stop")
-      .attr("offset", "100%")
-      .attr("stop-color", "#084081")
-      .attr("stop-opacity", 1);*/
-
-
-    // console.log(d3.range(0, 1, 1.0 / (value.length - 1)))
     value.map((data) => {
-      // console.log(((data.color+Math.abs(domain[0]))*100)/(domain[1]+Math.abs(domain[0])))
       legend.append("stop")
         .attr("offset", `${((data.color+Math.abs(domain[0]))*100)/(domain[1]+Math.abs(domain[0]))}%`)
         .attr("stop-color", scaleColor(data.color))
