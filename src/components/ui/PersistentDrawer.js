@@ -23,8 +23,10 @@ const drawerWidth = 240;
 const styles = theme => ({
   root: {
     flexGrow: 1,
+    backgroundColor: '#D5E8EC',
   },
   appFrame: {
+    backgroundColor: '#D5E8EC',
     height: "1ev",
     zIndex: 1,
     overflow: 'hidden',
@@ -74,7 +76,7 @@ const styles = theme => ({
   },
   content: {
     flexGrow: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#D5E8EC",
     padding: theme.spacing.unit * 3,
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
@@ -175,7 +177,7 @@ class PersistentDrawer extends React.Component {
                 <MenuIcon />
               </IconButton>
               <Typography variant="title" color="inherit" noWrap>
-                { this.props.data != null ?  this.props.data : null }
+               Outil Cartographie { this.props.data != null ?  ` / ${this.props.data}` : null }
               </Typography>
             </Toolbar>
           </AppBar>

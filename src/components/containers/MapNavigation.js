@@ -1,10 +1,11 @@
-import MapDescription from '../ui/MapDescription'
+import MapNavigation from '../ui/MapNavigation'
 import { connect } from 'react-redux'
 import { setData, clearData } from "../../actions";
 
 const mapStateToProps = (state) => {
   return {
-    data: state.data
+    data: state.data,
+    niveau: state.level
   }
 }
 
@@ -23,6 +24,6 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-const Container = connect(mapStateToProps, mapDispatchToProps)(MapDescription)
+const Container = connect(mapStateToProps, mapDispatchToProps)(MapNavigation)
 
 export default Container

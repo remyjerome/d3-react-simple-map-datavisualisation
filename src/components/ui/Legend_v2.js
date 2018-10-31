@@ -3,8 +3,7 @@ import * as d3 from "d3"
 import '../../stylesheets/Legend_v2.css'
 
 const style = {
-  position: 'absolute',
-  bottom: '24px'
+
 }
 
 class Legend_v2 extends React.PureComponent {

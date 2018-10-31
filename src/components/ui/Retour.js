@@ -1,5 +1,15 @@
 import React from 'react'
 import Button from '@material-ui/core/Button'
+import SetBack from '@material-ui/icons/SettingsBackupRestore'
+import { withStyles } from '@material-ui/core/styles';
+
+const styles = theme => ({
+  fab: {
+    position: 'relative',
+    right: 0,
+    backgroundColor: "#fff"
+  },
+});
 
 class Retour extends React.Component {
 
@@ -47,14 +57,13 @@ class Retour extends React.Component {
   }
 
   render () {
+    const { classes, theme } = this.props;
     return (
-      <div>
-        <Button onClick={this.props.niveau === 2 ?  this.handleReset : this.props.niveau===1 ? () => this.handleDgrSelection(this.props.dgr) : this.props.niveau===0 ?() => this.handleDrSelection(this.props.dr) : null } variant="outlined" size="small">
-          retour
+        <Button className={classes.fab} style={{color:"#7BACA8"}} onClick={this.props.niveau === 2 ?  this.handleReset : this.props.niveau===1 ? () => this.handleDgrSelection(this.props.dgr) : this.props.niveau===0 ?() => this.handleDrSelection(this.props.dr) : null }  variant="fab">
+          <SetBack/>
         </Button>
-      </div>
     )
   }
 }
 
-export default Retour
+export default withStyles(styles)(Retour);

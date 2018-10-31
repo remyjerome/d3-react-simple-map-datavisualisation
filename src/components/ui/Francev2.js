@@ -8,7 +8,6 @@ import {
   Markers,
   Marker
 } from "react-simple-maps"
-import MapDescription from '../containers/MapDescription'
 import dataStructureZoom from '../../static/dataStructureZoom'
 import { scaleLinear } from "d3-scale"
 import { mesh, feature } from "topojson-client"
@@ -20,6 +19,8 @@ import Retour from '../containers/Retour'
 import Agence from '../containers/Agence'
 import Legend_v3 from '../ui/Legend_v3'
 import ReactTooltip from 'react-tooltip'
+import MapNavigation from '../containers/MapNavigation'
+import MapLegend from './MapLegend'
 
 import '../../stylesheets/France.css';
 
@@ -499,6 +500,7 @@ class Francev2 extends React.Component  {
   render() {
     const data = this.props.niveau === 3 ? dataStructureZoom : this.props.niveau === 2 ? this.props.selectedDgr.dr : ((this.props.niveau===1)||(this.props.niveau===0)) ? this.props.selectedDr.agence : null
     const agenceName = this.props.niveau===0 ? this.state.agenceSel : null
+
     return (
       <div>
         <div className="wrapperDataVisualisationStyles">
@@ -582,60 +584,69 @@ class Francev2 extends React.Component  {
 
 
 
-          <MapDescription niveau={this.props.niveau} className="wrapperDescriptionStyles" structure={data} hoverInfo={this.props.hoverInfo}/>
+         {/* <MapDescription niveau={this.props.niveau} className="wrapperDescriptionStyles" structure={data} hoverInfo={this.props.hoverInfo}/>*/}
 
 
-          {
-            this.props.niveau === 0 && (<Legend_v3/>)
-          }
-          { this.props.data === 'MNT_PR' && (<Legend_v2
-              width={300}
-              domain={[-10000,50000]}
-              value={[{offset:'0%',color:-10000},{offset:'5%',color:0},{offset:'8%',color:1},{offset:'80%',color:25000},{offset:'100%',color:50000}]}
-              ticks={5}
-              title={`Indicateur ${this.props.data}`}
-              scaleColor={this.scaleColor}
-            />) }
-          { this.props.data === 'MNT_CEX' && (<Legend_v2
-            width={300}
-            domain={[0,100000]}
-            value={[{offset:'0%',color:0},{offset:'5%',color:1},{offset:'50%',color:25000},{offset:'100%',color:100000}]}
-            ticks={5}
-            title={`Indicateur ${this.props.data}`}
-            scaleColor={this.scaleColor}
-          />) }
-          { this.props.data === 'PCT_AVT' && (<Legend_v2
-            width={300}
-            domain={[0,5]}
-            value={[{offset:'0%',color:0},{offset:'50%',color:3},{offset:'100%',color:5}]}
-            ticks={5}
-            title={`Indicateur ${this.props.data}`}
-            scaleColor={this.scaleColor}
-          />) }
-          { this.props.data && this.props.data.startsWith('nb_entr') && (<Legend_v2
-            width={300}
-            domain={[0,50]}
-            value={[{offset:'0%',color:0},{offset:'100%',color:50}]}
-            ticks={5}
-            title={`Indicateur ${this.props.data}`}
-            scaleColor={this.scaleColor}
-          />) }
-          { this.props.data === 'NB_CLI_AB_NA' && (<Legend_v2
-            width={300}
-            domain={this.props.niveau === 0 ?[1,15]:[1,500]}
-            value={[{offset:'0%',color:1},{offset:'100%',color:this.props.niveau === 0 ? 15: 500}]}
-            ticks={5}
-            title={`Indicateur ${this.props.data}`}
-            scaleColor={this.scaleColor}
-          />) }
-          { this.props.data === 'MNT_PTF_AB_NA' && (<Legend_v2
-            width={300}
-            domain={[0,600000]}
-            value={[{offset:'0%',color:0},{offset:'100%',color:600000}]}
-            ticks={5}
-            title={`Indicateur ${this.props.data}`}
-            scaleColor={this.scaleColor}
-          />) }
+         <div style={{
+           display: 'flex',
+           flexDirection: 'column',
+           height: 'calc(100vh - 200px)'
+         }}>
+           <MapNavigation niveau={this.props.niveau} className="wrapperDescriptionStyles" structure={data} hoverInfo={this.props.hoverInfo}/>
+           <MapLegend>
+    {/*         {
+               this.props.niveau === 0 && (<Legend_v3/>)
+             }*/}
+             { this.props.data === 'MNT_PR' && (<Legend_v2
+               width={250}
+               domain={[-10000,50000]}
+               value={[{offset:'0%',color:-10000},{offset:'5%',color:0},{offset:'8%',color:1},{offset:'80%',color:25000},{offset:'100%',color:50000}]}
+               ticks={5}
+               title={`Indicateur ${this.props.data}`}
+               scaleColor={this.scaleColor}
+             />) }
+             { this.props.data === 'MNT_CEX' && (<Legend_v2
+               width={250}
+               domain={[0,100000]}
+               value={[{offset:'0%',color:0},{offset:'5%',color:1},{offset:'50%',color:25000},{offset:'100%',color:100000}]}
+               ticks={5}
+               title={`Indicateur ${this.props.data}`}
+               scaleColor={this.scaleColor}
+             />) }
+             { this.props.data === 'PCT_AVT' && (<Legend_v2
+               width={250}
+               domain={[0,5]}
+               value={[{offset:'0%',color:0},{offset:'50%',color:3},{offset:'100%',color:5}]}
+               ticks={5}
+               title={`Indicateur ${this.props.data}`}
+               scaleColor={this.scaleColor}
+             />) }
+             { this.props.data && this.props.data.startsWith('nb_entr') && (<Legend_v2
+               width={250}
+               domain={[0,50]}
+               value={[{offset:'0%',color:0},{offset:'100%',color:50}]}
+               ticks={5}
+               title={`Indicateur ${this.props.data}`}
+               scaleColor={this.scaleColor}
+             />) }
+             { this.props.data === 'NB_CLI_AB_NA' && (<Legend_v2
+               width={250}
+               domain={this.props.niveau === 0 ?[1,15]:[1,500]}
+               value={[{offset:'0%',color:1},{offset:'100%',color:this.props.niveau === 0 ? 15: 500}]}
+               ticks={5}
+               title={`Indicateur ${this.props.data}`}
+               scaleColor={this.scaleColor}
+             />) }
+             { this.props.data === 'MNT_PTF_AB_NA' && (<Legend_v2
+               width={250}
+               domain={[0,600000]}
+               value={[{offset:'0%',color:0},{offset:'100%',color:600000}]}
+               ticks={5}
+               title={`Indicateur ${this.props.data}`}
+               scaleColor={this.scaleColor}
+             />) }
+           </MapLegend>
+         </div>
 
         </div>
         {

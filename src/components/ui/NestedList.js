@@ -120,7 +120,7 @@ class NestedList extends React.Component {
       <div className={classes.root}>
         <List
           component="nav"
-          subheader={<ListSubheader component="div">Data</ListSubheader>}
+
         >
           <ListItemNm type="National" data=""
                       icon={<FiberManualRecord />}

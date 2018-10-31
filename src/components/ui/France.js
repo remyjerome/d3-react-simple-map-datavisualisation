@@ -8,7 +8,7 @@ import {
   Markers,
   Marker
 } from "react-simple-maps"
-import MapDescription from '../containers/MapDescription'
+import MapDescription from '../containers/MapNavigation'
 import dataStructureZoom from '../../static/dataStructureZoom'
 import { scaleLinear } from "d3-scale"
 import { mesh, feature } from "topojson-client"

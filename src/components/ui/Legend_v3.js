@@ -5,8 +5,7 @@ import { legendSize } from 'd3-svg-legend'
 import '../../stylesheets/Legend_v3.css'
 
 const style = {
-  position: 'absolute',
-  bottom: '24px'
+
 }
 
 class Legend_v3 extends React.Component {
