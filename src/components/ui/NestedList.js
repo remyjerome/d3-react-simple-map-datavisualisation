@@ -127,7 +127,7 @@ class NestedList extends React.Component {
                       handleClick={this.handleReset}
           />
           <ListItemNm type={`DGR ${ this.props.dgr ? this.props.dgr.name :''}`} data="" icon={<ScatterPlot />} toggle={this.props.niveau===3} open={this.state.open} handleClick={this.props.niveau===3?this.handleClick:this.props.niveau === 2 ? this.handleReset :() => this.handleDgrSelection(this.props.dgr)}/>
-          { this.props.niveau===3 && (data.map( (data, i) => (<Expend icon={<ScatterPlot />} key={i} open={this.state.open} classes={classes.nested} name={data.name} data={`${data.id}%`} handleClick={() => this.handleDgrSelection(data)} />))) }
+          { this.props.niveau===3 && (data.map( (data, i) => (<Expend icon={<ScatterPlot />} key={i} open={this.state.open} classes={classes.nested} name={data.name} data={``} handleClick={() => this.handleDgrSelection(data)} />))) }
           { (this.props.niveau ===2 || this.props.niveau ===1 ) && ( <ListItemNm  type={`DR ${ this.props.dr ? this.props.dr.name :''}`} data="" icon={<Grain />} toggle={this.props.niveau===2?true:false} open={this.state.open} handleClick={this.props.niveau===2?this.handleClick:() => this.handleDgrSelection(this.props.dgr)}/>) }
           { this.props.niveau===2 && (data.map( (data, i) => (<Expend key={i} open={this.state.open} classes={classes.nested} name={data.name} data={``} handleClick={() => this.handleDrSelection(data)} />))) }
           { ((this.props.niveau ===1 ) || (this.props.niveau ===0) )  && (<ListItemNm type="Agence" data="" icon={<Business />} toggle={this.props.niveau===1?true:false} open={this.state.open} handleClick={this.props.niveau===1?this.handleClick:null}/>) }

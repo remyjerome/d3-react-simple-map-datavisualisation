@@ -18,11 +18,11 @@ class Retour extends React.Component {
     this.props.onClearHoverAgency()
     this.props.onClearDgr()
     this.props.onClearDr()
-    const currentIndex = this.props.options.indexOf('agence')
+    /*const currentIndex = this.props.options.indexOf('agence')
     if (currentIndex !== -1) {
       this.props.onClearOption(currentIndex)
-    }
-    console.log('RESET')
+    }*/
+
   }
   handleDgrSelection = (data) => {
     this.props.onSetLevel(2)

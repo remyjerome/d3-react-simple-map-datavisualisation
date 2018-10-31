@@ -150,9 +150,10 @@ class Agence_v3 extends React.Component {
 
 
   render() {
+    const name = this.props.valeur.substring(4).replace(/-/gi,' ')
     return (
       <div className="wrapperMapStyles">
-        <h2>{this.props.valeur}</h2>
+        <h2>{name.charAt(0).toUpperCase()+name.slice(1)}</h2>
         <ComposableMap
           projection={this.projection}
           width={this.props.width}
@@ -161,7 +162,8 @@ class Agence_v3 extends React.Component {
           <ZoomableGroup
             center={this.props.center}
             zoom={this.props.zoom}>
-            <Geographies geography={this.state.geographyPaths}>
+            <Geographies geography={this.state.geographyPaths}
+                         disableOptimization>
               {(geographies, projection) => geographies.map((geography, i) => (
                 <Geography
                   key={i}

@@ -10,22 +10,28 @@ import Collapse from '@material-ui/core/Collapse';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: { main: '#7baca8' },
+    secondary: { main: '#7baca8' },
+  }
+});
 
 const RenderItem = ({classes, open, handleClick, data, handleData}) => (
   <div>
     <ListItem button onClick={() => handleClick(data.label)}>
-      <ListItemIcon>
-        <InboxIcon />
-      </ListItemIcon>
-      <ListItemText inset primary={data.name} />
+
+      <ListItemText primary={data.name} />
       { (open.indexOf(data.label) !== -1) ? <ExpandLess /> : <ExpandMore />}
     </ListItem>
     <Collapse in={(open.indexOf(data.label) !== -1)} timeout="auto" unmountOnExit>
       <List component="div" disablePadding>
         {
           data.idc.map((d,i) => (
-            <ListItem button className={classes.nested} key={i} onClick={()=> handleData(d.label)}>
-              <ListItemText inset primary={d.label} />
+            <ListItem button key={i} onClick={()=> handleData(d.label)}>
+              <ListItemText inset primary={d.name} />
             </ListItem>
           ))
         }
@@ -41,9 +47,12 @@ const styles = theme => ({
     backgroundColor: theme.palette.background.paper,
   },
   nested: {
-    paddingLeft: theme.spacing.unit * 4,
+    paddingLeft: 20,
   },
+
 });
+
+console.log(styles)
 
 
 
@@ -79,16 +88,18 @@ class MenuData extends React.Component {
     const { classes, dataMenu } = this.props;
 
     return (
+      <MuiThemeProvider theme={theme}>
       <div className={classes.root}>
         <List
           component="nav"
-          subheader={<ListSubheader component="div">Thématiques</ListSubheader>}
+          subheader={<ListSubheader color="primary" component="div">THÉMATIQUES</ListSubheader>}
         >
           {
             dataMenu.map( (d,i) => <RenderItem handleData={this.handleData} classes={classes} open={this.state.open} handleClick={this.handleClick} data={d} key={i}/> )
           }
         </List>
       </div>
+      </MuiThemeProvider>
     );
   }
 }

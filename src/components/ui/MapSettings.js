@@ -11,14 +11,25 @@ import Switch from '@material-ui/core/Switch';
 import AddLocation from '@material-ui/icons/AddLocation'
 import Texture from '@material-ui/icons/Texture'
 import BorderStyle from '@material-ui/icons/BorderStyle';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
 
 const styles = theme => ({
   root: {
+    color: 'primary',
     width: '100%',
     maxWidth: 360,
     backgroundColor: theme.palette.background.paper,
+  }
+});
+
+const theme = createMuiTheme({
+  palette: {
+    primary: { main: '#7baca8' },
+    secondary: { main: '#7baca8' },
   },
 });
+
 
 class MapSettings extends React.Component {
   state = {
@@ -47,8 +58,9 @@ class MapSettings extends React.Component {
     const { classes } = this.props;
 
     return (
+      <MuiThemeProvider theme={theme}>
       <div className={classes.root}>
-        <List subheader={<ListSubheader>Map Settings</ListSubheader>}>
+        <List subheader={<ListSubheader color="primary" className={classes.header}>PARAMÈTRE DE LA CARTE</ListSubheader>}>
           <ListItem>
             <ListItemIcon>
               <AddLocation />
@@ -56,6 +68,7 @@ class MapSettings extends React.Component {
             <ListItemText primary="Agences" />
             <ListItemSecondaryAction>
               <Switch
+                color="primary"
                 onChange={this.handleToggle('agence')}
                 checked={this.state.checked.indexOf('agence') !== -1}
               />
@@ -87,6 +100,7 @@ class MapSettings extends React.Component {
           </ListItem>
         </List>
       </div>
+      </MuiThemeProvider>
     );
   }
 }

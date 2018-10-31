@@ -56,7 +56,7 @@ class Francev2 extends React.Component  {
    *  Fichier au format TOPOJSON
    */
   loadPaths() {
-    get("/zone_theo_db_noblank_v2.json")
+    get("/zone_theo_db_noblank_v4.json")
       .then(res => {
         if (res.status !== 200) return
         const world = res.data
@@ -190,6 +190,49 @@ class Francev2 extends React.Component  {
           "rgba(193, 255, 0, 1)",
           "rgba(147, 255, 0, 1)",
           "rgba(102, 255, 0, 1)"])
+    } else if (this.props.data === 'NB_CLI_AB_NA'){
+      popScale = scaleLinear()
+        .domain(this.props.niveau === 0 ?[1,15]:[1,500])
+        .range(["rgba(238, 255, 0, 1)",
+          "rgba(102, 255, 0, 1)"])
+    }else if (this.props.data === 'MNT_PTF_AB_NA'){
+      popScale = scaleLinear()
+        .domain([0,600000])
+        .range(["rgba(238, 255, 0, 1)",
+          "rgba(102, 255, 0, 1)"])
+    } else if (this.props.data.startsWith('nb_entr')){
+      popScale = scaleLinear()
+        .domain([0,50, 40000])
+        .range(["rgb(252, 252, 253)",
+          "rgb(101, 51, 151)",
+          "rgb(101, 51, 151)"])
+    }
+    return popScale(data)
+  }
+  /*scaleColor = (data) => {
+
+    let popScale = null
+    if(this.props.data === 'MNT_PR') {
+      popScale = scaleLinear()
+        .domain([-1000000,0,1,25000,50000])
+        .range(["rgba(255, 0, 0, 1)",
+          "rgba(255, 0, 0, 1)",
+          "rgba(193, 255, 0, 1)",
+          "rgba(147, 255, 0, 1)",
+          "rgba(102, 255, 0, 1)"])
+    } else if(this.props.data === 'PCT_AVT') {
+      popScale = scaleLinear()
+        .domain([0,3,5])
+        .range(["rgb(255, 0, 0)",
+          "rgb(249, 198, 0)",
+          "rgb(102, 255, 0)"])
+    } else if (this.props.data === 'MNT_CEX'){
+      popScale = scaleLinear()
+        .domain([0,1,25000,100000])
+        .range(["rgba(238, 255, 0, 1)",
+          "rgba(193, 255, 0, 1)",
+          "rgba(147, 255, 0, 1)",
+          "rgba(102, 255, 0, 1)"])
     } else if (this.props.data.startsWith('nb_entr')){
       popScale = scaleLinear()
         .domain([0,50, 40000])
@@ -198,7 +241,7 @@ class Francev2 extends React.Component  {
           "rgb(101, 51, 151)"])
     }
     return popScale(data)
-  }
+  }*/
   createMarker= () => {
     let markers = []
     let agence = this.getAgence()
@@ -577,6 +620,23 @@ class Francev2 extends React.Component  {
             title={`Indicateur ${this.props.data}`}
             scaleColor={this.scaleColor}
           />) }
+          { this.props.data === 'NB_CLI_AB_NA' && (<Legend_v2
+            width={300}
+            domain={this.props.niveau === 0 ?[1,15]:[1,500]}
+            value={[{offset:'0%',color:1},{offset:'100%',color:this.props.niveau === 0 ? 15: 500}]}
+            ticks={5}
+            title={`Indicateur ${this.props.data}`}
+            scaleColor={this.scaleColor}
+          />) }
+          { this.props.data === 'MNT_PTF_AB_NA' && (<Legend_v2
+            width={300}
+            domain={[0,600000]}
+            value={[{offset:'0%',color:0},{offset:'100%',color:600000}]}
+            ticks={5}
+            title={`Indicateur ${this.props.data}`}
+            scaleColor={this.scaleColor}
+          />) }
+
         </div>
         {
           this.props.niveau !== 0 && (<ReactTooltip id='nat' getContent={() =>

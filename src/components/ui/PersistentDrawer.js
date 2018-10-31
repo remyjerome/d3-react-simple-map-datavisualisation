@@ -33,6 +33,8 @@ const styles = theme => ({
     width: '100%',
   },
   appBar: {
+    color: '#7BACA8',
+    backgroundColor: '#fff',
     position: 'absolute',
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.sharp,
