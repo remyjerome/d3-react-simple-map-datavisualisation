@@ -274,9 +274,9 @@ class Francev2 extends React.Component  {
             y={agence[i].markerOffset}
             style={{
               fontFamily: "Roboto, sans-serif",
-              fill: "#ecf0f1",
-              fontSize: "0.6em",
-              textShadow: "-1px -1px 0 rgba(44,66,80,0.30),1px -1px 0 rgba(44,66,80,0.30), -1px 1px 0 rgba(44,66,80,0.30),1px 1px 0 rgba(44,66,80,0.30)",
+              fill: "rgba(0, 0, 0, 0.87)",
+              fontSize: "0.7em",
+              // textShadow: "-1px -1px 0 rgba(44,66,80,0.30),1px -1px 0 rgba(44,66,80,0.30), -1px 1px 0 rgba(44,66,80,0.30),1px 1px 0 rgba(44,66,80,0.30)",
               pointerEvents: "none",
             }}
           >
@@ -436,39 +436,39 @@ class Francev2 extends React.Component  {
 
     const colorMap = (this.props.selectedDgr != null) ? {
       default: {
-        fill: this.props.showHeatmap && this.props.data ? geography.properties.id_site === "exp_outremer" ?'#D3D3D3':this.scaleColor(geography.properties[this.props.data]) :'#D3D3D3',
-        stroke: "#607D8B",
-        strokeWidth: 0.02,
+        fill: this.props.showHeatmap && this.props.data ? geography.properties.id_site === "exp_outremer" ?'#D3D3D3':this.scaleColor(geography.properties[this.props.data]) :'#FAF9F4',
+        stroke: "#FBE4BD",
+        strokeWidth: this.props.niveau === 1 ? 0.2 : 0.4,
         outline: "none",
       },
       hover: {
-        fill: this.props.showHeatmap && this.props.data ? geography.properties.id_site === "exp_outremer" ?'#D3D3D3': this.scaleColor(geography.properties[this.props.data]) : '#D3D3D3',
-        stroke: "#607D8B",
+        fill: this.props.showHeatmap && this.props.data ? geography.properties.id_site === "exp_outremer" ?'#D3D3D3': this.scaleColor(geography.properties[this.props.data]) : '#FAF9F4',
+        stroke: "#FBE4BD",
         strokeWidth: 0.075,
         outline: "none",
       },
       pressed: {
-        fill: this.props.showHeatmap && this.props.data ? geography.properties.id_site === "exp-outremer" ?'#D3D3D3': this.scaleColor(geography.properties[this.props.data]) : '#D3D3D3',
-        stroke: "#607D8B",
+        fill: this.props.showHeatmap && this.props.data ? geography.properties.id_site === "exp-outremer" ?'#D3D3D3': this.scaleColor(geography.properties[this.props.data]) : '#FAF9F4',
+        stroke: "#FBE4BD",
         strokeWidth: 0.075,
         outline: "none",
       },
     } : {
       default: {
-        fill: this.props.showHeatmap && (this.props.data !== null) ? geography.properties.id_site === "exp-outremer" ?'#D3D3D3': this.scaleColor(geography.properties[this.props.data]) : '#D3D3D3',
-        stroke: "#FAFAFA",
-        strokeWidth: 0.075,
+        fill: this.props.showHeatmap && (this.props.data !== null) ? geography.properties.id_site === "exp-outremer" ?'#D3D3D3': this.scaleColor(geography.properties[this.props.data]) : '#FAF9F4',
+        stroke: "#FBE4BD",
+        strokeWidth: 0.75,
         outline: "none",
       },
       hover: {
-        fill: this.props.showHeatmap && this.props.data ? geography.properties.id_site === "exp-outremer" ?'#D3D3D3': this.scaleColor(geography.properties[this.props.data]) : '#D3D3D3',
-        stroke: "#607D8B",
+        fill: this.props.showHeatmap && this.props.data ? geography.properties.id_site === "exp-outremer" ?'#D3D3D3': this.scaleColor(geography.properties[this.props.data]) : '#FAF9F4',
+        stroke: "#FBE4BD",
         strokeWidth: 0.075,
         outline: "none",
       },
       pressed: {
-        fill: this.props.showHeatmap && this.props.data ? geography.properties.id_site === "exp-outremer" ?'#D3D3D3': this.scaleColor(geography.properties[this.props.data]) : '#D3D3D3',
-        stroke: "#607D8B",
+        fill: this.props.showHeatmap && this.props.data ? geography.properties.id_site === "exp-outremer" ?'#D3D3D3': this.scaleColor(geography.properties[this.props.data]) : '#FAF9F4',
+        stroke: "#FBE4BD",
         strokeWidth: 0.075,
         outline: "none",
       },

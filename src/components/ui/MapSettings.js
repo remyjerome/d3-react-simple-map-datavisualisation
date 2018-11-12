@@ -20,6 +20,10 @@ const styles = theme => ({
     width: '100%',
     maxWidth: 360,
     backgroundColor: theme.palette.background.paper,
+  },
+  titleSet: {
+    textAlign: 'left',
+    fontWeight: 'bold'
   }
 });
 
@@ -60,7 +64,7 @@ class MapSettings extends React.Component {
     return (
       <MuiThemeProvider theme={theme}>
       <div className={classes.root}>
-        <List subheader={<ListSubheader color="primary" className={classes.header}>PARAMÈTRE DE LA CARTE</ListSubheader>}>
+        <List subheader={<ListSubheader color="primary" className={classes.titleSet}>PARAMÈTRES DE LA CARTE</ListSubheader>}>
           <ListItem>
             <ListItemIcon>
               <AddLocation />
@@ -78,7 +82,7 @@ class MapSettings extends React.Component {
             <ListItemIcon>
               <Texture />
             </ListItemIcon>
-            <ListItemText primary="Heatmap" />
+            <ListItemText primary="Indicateur" />
             <ListItemSecondaryAction>
               <Switch
                 onChange={this.handleToggle('heatmap')}
@@ -86,18 +90,18 @@ class MapSettings extends React.Component {
               />
             </ListItemSecondaryAction>
           </ListItem>
-          <ListItem>
+          { (this.props.niveau === 3 || this.props.niveau === 2) && (<ListItem>
             <ListItemIcon>
               <BorderStyle />
             </ListItemIcon>
-            <ListItemText primary="Border" />
+            <ListItemText primary={this.props.niveau === 3 ?`DGR`:this.props.niveau === 2 ? 'DR' : null} />
             <ListItemSecondaryAction>
               <Switch
                 onChange={this.handleToggle('border')}
                 checked={this.state.checked.indexOf('border') !== -1}
               />
             </ListItemSecondaryAction>
-          </ListItem>
+          </ListItem>)}
         </List>
       </div>
       </MuiThemeProvider>

@@ -38,19 +38,19 @@ class Agence_v3 extends React.Component {
 
     const colorMap =  {
       default: {
-        fill: this.props.showHeatmap && this.props.data ? this.props.scaleColor(geography.properties.data) :"#ECEFF1",
+        fill: this.props.showHeatmap && this.props.data ? this.props.scaleColor(geography.properties[this.props.data]) :"#ECEFF1",
         stroke:  "#607D8B",
         strokeWidth: 0.75,
         outline: "none",
       },
       hover: {
-        fill: this.props.showHeatmap && this.props.data ? this.props.scaleColor(geography.properties.data) : "#607D8B",
+        fill: this.props.showHeatmap && this.props.data ? this.props.scaleColor(geography.properties[this.props.data]) : "#607D8B",
         stroke: "#607D8B",
         strokeWidth: 0.75,
         outline: "none",
       },
       pressed: {
-        fill: this.props.showHeatmap && this.props.data ? this.props.scaleColor(geography.properties.data) : "#FF5722",
+        fill: this.props.showHeatmap && this.props.data ? this.props.scaleColor(geography.properties[this.props.data]) : "#FF5722",
         stroke: "#607D8B",
         strokeWidth: 0.75,
         outline: "none",
@@ -77,6 +77,8 @@ class Agence_v3 extends React.Component {
   loadPaths() {
 
     const {width, height, valeur, champ, file, scaleColor} = this.props
+
+    const dataMap = this.props.data
 
     get(`/${file}.json`)
       .then(res => {
@@ -105,7 +107,9 @@ class Agence_v3 extends React.Component {
 
             return agences.features.filter(function (d) {
               agence.ID = agence.ID.length === 4 ? `0${agence.ID}`:agence.ID
-              d.properties.ID === agence.ID ? d.properties.data = agence.NB_CLI_AB_NA : null
+              // d.properties.ID === agence.ID ? d.properties[dataMap] = agence[dataMap] : null
+              d.properties.ID === agence.ID ? d.properties.NB_CLI_AB_NA = agence['NB_CLI_AB_NA'] : null
+              d.properties.ID === agence.ID ? d.properties.MNT_PTF_AB_NA = agence['MNT_PTF_AB_NA'] : null
               return (d.properties.ID === agence.ID )
             })[0]
           })
@@ -153,7 +157,9 @@ class Agence_v3 extends React.Component {
     const name = this.props.valeur.substring(4).replace(/-/gi,' ')
     return (
       <div className="wrapperMapStyles">
-        <h2>{name.charAt(0).toUpperCase()+name.slice(1)}</h2>
+        <h2 style={{
+          color: '#6C6C6C'
+        }}>{name.charAt(0).toUpperCase()+name.slice(1)}</h2>
         <ComposableMap
           projection={this.projection}
           width={this.props.width}
@@ -167,7 +173,7 @@ class Agence_v3 extends React.Component {
               {(geographies, projection) => geographies.map((geography, i) => (
                 <Geography
                   key={i}
-                  data-tip={`<h3>${geography.properties.ID}</h3><p>${this.props.data}: ${geography.properties.data}</p>`}
+                  data-tip={`<h3>${geography.properties.ID}</h3><p>${this.props.data}: ${geography.properties[this.props.data]}</p>`}
                   data-for='agn'
                   onMouseEnter={this.onMouseEnterHandler}
                   geography={geography}

@@ -18,6 +18,7 @@ import MapSettings from '../containers/MapSettings'
 import menuData from '../../static/menuData'
 
 
+
 const drawerWidth = 240;
 
 const styles = theme => ({
@@ -176,7 +177,10 @@ class PersistentDrawer extends React.Component {
               >
                 <MenuIcon />
               </IconButton>
-              <Typography variant="title" color="inherit" noWrap>
+              {/*<img src="../../static/logo_map.jpg" alt="logo map"/>*/}
+              <Typography style={{
+                fontWeight: 'bold'
+              }} variant="title" color="inherit" noWrap>
                Outil Cartographie { this.props.data != null ?  ` / ${this.props.data}` : null }
               </Typography>
             </Toolbar>

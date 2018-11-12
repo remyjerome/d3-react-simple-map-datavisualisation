@@ -4,7 +4,8 @@ import {clearOption, addOption} from "../../actions";
 
 const mapStateToProps = (state) => {
   return {
-    options: state.options
+    options: state.options,
+    niveau: state.level,
   }
 }
 

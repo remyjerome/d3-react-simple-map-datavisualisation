@@ -46,12 +46,13 @@ class SimpleCard extends Component {
   render() {
     const { classes } = this.props;
     const { structure, hoverInfo, data } = this.props
-    const dataAgence = data && hoverInfo ?hoverInfo[data] : 'NO DATA'
+    const dataAgence = data && hoverInfo ?hoverInfo[data] : ''
+    const name =hoverInfo ? hoverInfo.id_site.substring(4).replace(/-/gi,' ') : null
     return (
       <Card className={classes.card}>
         <CardContent className={classes.info}>
           <Typography className={classes.title} color="textSecondary" gutterBottom>
-            Niveau { this.props.niveau === 3 ? 'National' : this.props.niveau === 2 ? 'DGR' : this.props.niveau === 1 ? 'DR' : 'Agence'}
+            Affichage { this.props.niveau === 3 ? 'National' : this.props.niveau === 2 ? 'DGR' : this.props.niveau === 1 ? 'DR' : 'Agence'}
           </Typography>
           <Typography className={classes.titleInfo}>
             DGR   {hoverInfo === null ? '' : `${hoverInfo.CODE_DGR} / ${hoverInfo.NOM_DGR}`}
@@ -60,7 +61,7 @@ class SimpleCard extends Component {
             DR    {hoverInfo === null ? '' : `${hoverInfo.CODE_DR} / ${hoverInfo.NOM_DR}`}
           </Typography>
           <Typography className={classes.titleInfo}>
-            AGC   {hoverInfo === null ? '' : `/ ${hoverInfo.id_site} ${dataAgence}`}
+            SITE   {hoverInfo === null ? '' : `/ ${name.charAt(0).toUpperCase()+name.slice(1)} ${dataAgence}`}
           </Typography>
           {/*<Retour/>*/}
         </CardContent>

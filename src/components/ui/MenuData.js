@@ -49,7 +49,10 @@ const styles = theme => ({
   nested: {
     paddingLeft: 20,
   },
-
+  titleSet: {
+  textAlign: 'left',
+    fontWeight: 'bold'
+}
 });
 
 console.log(styles)
@@ -92,7 +95,7 @@ class MenuData extends React.Component {
       <div className={classes.root}>
         <List
           component="nav"
-          subheader={<ListSubheader color="primary" component="div">THÉMATIQUES</ListSubheader>}
+          subheader={<ListSubheader className={classes.titleSet} color="primary" component="div">THÉMATIQUES</ListSubheader>}
         >
           {
             dataMenu.map( (d,i) => <RenderItem handleData={this.handleData} classes={classes} open={this.state.open} handleClick={this.handleClick} data={d} key={i}/> )
