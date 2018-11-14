@@ -10,9 +10,6 @@ import ExpandLess from '@material-ui/icons/ExpandLess'
 import ExpandMore from '@material-ui/icons/ExpandMore'
 import Divider from '@material-ui/core/Divider'
 import FiberManualRecord from '@material-ui/icons/FiberManualRecord'
-import Business from '@material-ui/icons/Business'
-import ScatterPlot from '@material-ui/icons/ScatterPlot'
-import Grain from '@material-ui/icons/Grain'
 
 
 const styles = theme => ({
@@ -62,15 +59,11 @@ class NestedList extends React.Component {
     super(props)
     this.state = { open: true }
 
-    this.handleClick = this.handleClick.bind(this)
-    this.handleReset = this.handleReset.bind(this)
-    this.handleDgrSelection = this.handleDgrSelection.bind(this)
-    this.handleDrSelection = this.handleDrSelection.bind(this)
   }
 
 
 
-  handleClick = () => {
+  /*handleClick = () => {
     this.setState(state => ({ open: !state.open }))
   }
 
@@ -109,18 +102,10 @@ class NestedList extends React.Component {
   }
 
   handleAgSelection = (data) => {
-    console.log(data)
-    console.log(this)
     this.props.onSetLevel(0)
     this.props.onClearHoverInfo()
-    this.props.onSetAgence(data.ID_SITE)
-  }
-
-  renderName= (id_site) => {
-    const name = id_site.substring(4).replace(/-/gi,' ')
-    return name.charAt(0).toUpperCase()+name.slice(1)
-  }
-
+    this.props.onSetAgence(data)
+  }*/
   render() {
     const { classes, data } = this.props
     return (
@@ -138,7 +123,7 @@ class NestedList extends React.Component {
           { (this.props.niveau ===2 || this.props.niveau ===1 ) && ( <ListItemNm  type={`DR ${ this.props.dr ? this.props.dr.name :''}`} data="" icon={<Grain />} toggle={this.props.niveau===2?true:false} open={this.state.open} handleClick={this.props.niveau===2?this.handleClick:() => this.handleDgrSelection(this.props.dgr)}/>) }
           { this.props.niveau===2 && (data.map( (data, i) => (<Expend key={i} open={this.state.open} classes={classes.nested} name={data.name} data={``} handleClick={() => this.handleDrSelection(data)} />))) }
           { ((this.props.niveau ===1 ) || (this.props.niveau ===0) )  && (<ListItemNm type="Agence" data="" icon={<Business />} toggle={this.props.niveau===1?true:false} open={this.state.open} handleClick={this.props.niveau===1?this.handleClick:null}/>) }
-          { ((this.props.niveau ===1 ) || (this.props.niveau ===0) ) && (data.map( (data, i) => (<Expend icon={<Business />} key={i} open={this.state.open} classes={classes.nested} name={this.renderName(data.ID_SITE)} data={``} handleClick={((this.props.niveau ===1 ) || (this.props.niveau ===0) )? () => this.handleAgSelection(data):null} />))) }
+          { ((this.props.niveau ===1 ) || (this.props.niveau ===0) ) && (data.map( (data, i) => (<Expend icon={<Business />} key={i} open={this.state.open} classes={classes.nested} name={data.name} data={``} handleClick={((this.props.niveau ===1 ) || (this.props.niveau ===0) )? () => this.handleAgSelection(data):null} />))) }
         </List>
       </div>
     )

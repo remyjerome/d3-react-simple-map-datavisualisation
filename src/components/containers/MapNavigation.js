@@ -1,24 +1,63 @@
-import MapNavigation from '../ui/MapNavigation'
+import MapNavigation from '../ui/AppNav'
 import { connect } from 'react-redux'
-import { setData, clearData } from "../../actions";
+import { setLevel, setCenter, setZoom, setDgr, clearDgr, setDr, clearDr, setAgence, clearAgence } from "../../actions";
 
 const mapStateToProps = (state) => {
   return {
     data: state.data,
-    niveau: state.level
+    niveau: state.level,
+    selectedDgr: state.dgr,
+    selectedDr: state.dr,
+    zoom: state.zoom,
+    center: state.center,
+    hoverInfo: state.hoverInfo,
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    onSetData(data) {
+    onSetLevel(level) {
       dispatch(
-        setData(data)
+        setLevel(level)
       )
     },
-    onClearData() {
+    onSetCenter(center) {
       dispatch(
-        clearData()
+        setCenter(center)
+      )
+    },
+    onSetZoom(zoom) {
+      dispatch(
+        setZoom(zoom)
+      )
+    },
+    onSetDgr(dgr) {
+      dispatch(
+        setDgr(dgr)
+      )
+    },
+    onClearDgr() {
+      dispatch(
+        clearDgr()
+      )
+    },
+    onSetDr(dr) {
+      dispatch(
+        setDr(dr)
+      )
+    },
+    onClearDr() {
+      dispatch(
+        clearDr()
+      )
+    },onSetAgence(agence) {
+      dispatch(
+        setAgence(agence)
+      )
+    },
+    onClearAgence() {
+      dispatch(
+        clearAgence()
       )
     }
   }

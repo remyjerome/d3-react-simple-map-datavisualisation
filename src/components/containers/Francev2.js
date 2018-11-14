@@ -79,6 +79,15 @@ const mapDispatchToProps = dispatch => {
       dispatch(
         clearDr()
       )
+    },onSetAgence(agence) {
+      dispatch(
+        setAgence(agence)
+      )
+    },
+    onClearAgence() {
+      dispatch(
+        clearAgence()
+      )
     }
   }
 }

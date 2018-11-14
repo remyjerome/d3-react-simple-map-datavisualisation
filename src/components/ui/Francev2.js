@@ -23,6 +23,7 @@ import MapNavigation from '../containers/MapNavigation'
 import MapLegend from './MapLegend'
 
 import '../../stylesheets/France.css';
+import * as d3 from "d3";
 
 class Francev2 extends React.Component  {
   constructor(props) {
@@ -38,9 +39,7 @@ class Francev2 extends React.Component  {
     this.handleReset = this.handleReset.bind(this)
     this.onMouseEnterHandler = this.onMouseEnterHandler.bind(this)
     this.handleGeographyClick = this.handleGeographyClick.bind(this)
-    this.handleDgrSelection = this.handleDgrSelection.bind(this)
     this.colorMapStyle = this.colorMapStyle.bind(this)
-    this.handleDrSelection = this.handleDrSelection.bind(this)
     this.getAgence = this.getAgence.bind(this)
     this.onMouseEnterHandlerAgence = this.onMouseEnterHandlerAgence.bind(this)
     this.scaleColor = this.scaleColor.bind(this)
@@ -50,7 +49,38 @@ class Francev2 extends React.Component  {
 
   componentDidMount() {
     this.loadPaths()
+    this.loadStructure()
   }
+
+  loadStructure = () => {
+    d3.dsv(";", "/implentation_clients_site.csv", function(d) {
+      return {
+        // ID_SITE;NB_CLI_AB_NA;MNT_PTF_AB_NA;COD_DGR;LIB_DGR;COD_DR;LIB_DR
+        ID_SITE: d.ID_SITE,
+        COD_DGR: d.COD_DGR,
+        LIB_DGR: d.LIB_DGR,
+        COD_DR: d.COD_DR,
+        LIB_DR: d.LIB_DR,
+      }
+    }).then(data => {
+        console.log(data)
+        this.setState((state,props) => {
+          return {
+            ...state,
+            structure: data
+          }
+        })
+
+    })
+  }
+
+  removeDuplicates = (myArr, prop) => {
+    return myArr.filter((obj, pos, arr) => {
+      return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos;
+    });
+  }
+
+
 
   /**
    *  Chargement de la carte
@@ -210,39 +240,6 @@ class Francev2 extends React.Component  {
     }
     return popScale(data)
   }
-  /*scaleColor = (data) => {
-
-    let popScale = null
-    if(this.props.data === 'MNT_PR') {
-      popScale = scaleLinear()
-        .domain([-1000000,0,1,25000,50000])
-        .range(["rgba(255, 0, 0, 1)",
-          "rgba(255, 0, 0, 1)",
-          "rgba(193, 255, 0, 1)",
-          "rgba(147, 255, 0, 1)",
-          "rgba(102, 255, 0, 1)"])
-    } else if(this.props.data === 'PCT_AVT') {
-      popScale = scaleLinear()
-        .domain([0,3,5])
-        .range(["rgb(255, 0, 0)",
-          "rgb(249, 198, 0)",
-          "rgb(102, 255, 0)"])
-    } else if (this.props.data === 'MNT_CEX'){
-      popScale = scaleLinear()
-        .domain([0,1,25000,100000])
-        .range(["rgba(238, 255, 0, 1)",
-          "rgba(193, 255, 0, 1)",
-          "rgba(147, 255, 0, 1)",
-          "rgba(102, 255, 0, 1)"])
-    } else if (this.props.data.startsWith('nb_entr')){
-      popScale = scaleLinear()
-        .domain([0,50, 40000])
-        .range(["rgb(252, 252, 253)",
-        "rgb(101, 51, 151)",
-          "rgb(101, 51, 151)"])
-    }
-    return popScale(data)
-  }*/
   createMarker= () => {
     let markers = []
     let agence = this.getAgence()
@@ -287,33 +284,15 @@ class Francev2 extends React.Component  {
     }
     return markers
   }
-  handleDgrSelection(evt) {
-    const dgrId = evt.currentTarget.getAttribute("datadgr")
-    const dgr = dataStructureZoom[dgrId]
-    this.props.onSetLevel(2)
-    this.props.onSetCenter(dgr.coordinates)
-    this.props.onSetZoom(dgr.zoom)
-    this.props.onClearHoverInfo()
-    this.props.onSetDgr(dgr)
-    this.props.onClearDr()
-  }
-  handleDrSelection(evt) {
-    const dr = this.props.selectedDgr.dr[evt.currentTarget.getAttribute("datadr")]
-    this.props.onSetLevel(1)
-    this.props.onSetCenter(dr.coordinates)
-    this.props.onSetZoom(dr.zoom)
-    this.props.onClearHoverInfo()
-    this.props.onSetDr(dr)
-  }
-  handleGeographyClick(geography) {
+  handleGeographyClick =  (geography, evt) => {
     if(this.props.niveau === 3) {
       const dgrId = geography.properties.CODE_DGR
       const dgr = dataStructureZoom.filter((dgr) => dgr.id === dgrId )[0]
-
+      console.log(evt.target,geography.properties)
       this.props.onSetLevel(2)
       this.props.onSetCenter(dgr.coordinates)
       this.props.onSetZoom(dgr.zoom)
-      this.props.onSetDgr(dgr)
+      this.props.onSetDgr({ ...dgr, ...geography.properties })
 
     }
     else if(this.props.niveau === 2) {
@@ -323,7 +302,7 @@ class Francev2 extends React.Component  {
       this.props.onSetLevel(1)
       this.props.onSetCenter(dr.coordinates)
       this.props.onSetZoom(dr.zoom)
-      this.props.onSetDr(dr)
+      this.props.onSetDr({ ...dr, ...geography.properties })
     }
     else if(this.props.niveau === 1) {
 
@@ -335,7 +314,10 @@ class Francev2 extends React.Component  {
       })
       this.props.onSetLevel(0)
       this.props.onClearHoverInfo()
-      // this.props.onSetAgence()
+      console.log(geography.properties)
+      this.props.onSetAgence(
+         agn
+      )
     }
   }
 
@@ -498,8 +480,7 @@ class Francev2 extends React.Component  {
   }
 
   render() {
-    const data = this.props.niveau === 3 ? dataStructureZoom : this.props.niveau === 2 ? this.props.selectedDgr.dr : ((this.props.niveau===1)||(this.props.niveau===0)) ? this.props.selectedDr.agence : null
-    const agenceName = this.props.niveau===0 ? this.state.agenceSel : null
+    const data = this.props.niveau === 3 ? dataStructureZoom : this.props.niveau === 2 ? this.props.selectedDgr.dr : ((this.props.niveau===1)||(this.props.niveau===0)) ? this.state.structure.filter(ag => ag.COD_DGR === `${this.props.selectedDgr.id}` && ag.COD_DR === `${this.props.selectedDr.id}`) : null
 
     return (
       <div>
@@ -580,7 +561,7 @@ class Francev2 extends React.Component  {
               </Markers>*/}
             </ZoomableGroup>
 
-          </ComposableMap> : <Agence   className="wrapperMapStyles" champ={'id_site'} valeur={agenceName} className="map" file={"codes_postaux_region_db_3"} scaleColor={this.scaleColor} agences={data}/> }
+          </ComposableMap> : <Agence   className="wrapperMapStyles" champ={'id_site'} valeur={this.props.selectedAgence} className="map" file={"codes_postaux_region_db_3"} scaleColor={this.scaleColor} agences={data}/> }
 
 
 
@@ -592,7 +573,7 @@ class Francev2 extends React.Component  {
            flexDirection: 'column',
            height: 'calc(100vh - 200px)'
          }}>
-           <MapNavigation niveau={this.props.niveau} className="wrapperDescriptionStyles" structure={data} hoverInfo={this.props.hoverInfo}/>
+           <MapNavigation structure={data} className="wrapperDescriptionStyles" />
            <MapLegend>
     {/*         {
                this.props.niveau === 0 && (<Legend_v3/>)

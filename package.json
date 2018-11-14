@@ -20,6 +20,7 @@
     "material-ui-icons": "^1.0.0-beta.36",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-leaflet": "^2.1.2",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
     "react-simple-maps": "^0.12.1",
