@@ -1,4 +1,4 @@
-import Agence from '../ui/Map/Agence_v5'
+import Map from '../ui/Map/Map'
 import { connect } from 'react-redux'
 import { setLevel, setCenter, setZoom, setHoverInfo, clearHoverInfo, setHoverAgency, clearHoverAgency, setDgr, clearDgr, setDr, clearDr, setAgence, clearAgence } from "../../actions";
 
@@ -79,11 +79,20 @@ const mapDispatchToProps = dispatch => {
       dispatch(
         clearDr()
       )
+    },onSetAgence(agence) {
+      dispatch(
+        setAgence(agence)
+      )
+    },
+    onClearAgence() {
+      dispatch(
+        clearAgence()
+      )
     }
   }
 }
 
 
-const Container = connect(mapStateToProps, mapDispatchToProps)(Agence)
+const Container = connect(mapStateToProps, mapDispatchToProps)(Map)
 
 export default Container
